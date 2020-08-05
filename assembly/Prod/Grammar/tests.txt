@@ -1,0 +1,138 @@
+pour tracecarre :a
+	repete 4 [av :a td 90]
+	donne "x 255
+	fcc hasard :x hasard :x hasard :x
+fin
+
+donne "a 100
+tracecarre [:a]
+
+donne "b 50 
+td 300
+av :b
+
+tracecarre [:b]
+
+------------------------------------------------
+pour tracecarre :a
+	donne "x 255
+	fcc hasard :x hasard :x hasard :x
+	av :a
+fin
+
+donne "a 100
+tracecarre [:a]
+
+av :x
+
+------------------------------------------------
+pour carre :a
+	rends :a * :a
+fin
+
+av carre [10]
+
+------------------------------------------------
+pour mult :a :b
+	rends :a*:b
+fin
+
+pour pi
+	rends 3.14
+fin
+
+
+av mult 100 pi
+
+------------------------------------------------
+pour pi
+	rends 3.14
+fin
+
+pour mult :a :b
+	rends :a*:b
+fin
+
+donne "a 10
+donne "b 10
+
+av pi * mult :a :b
+td 90
+lc
+av 100
+td 90
+bc
+av 314
+-----------------------------------------------
+
+pour triangle :n :t
+	if :n >= 4
+	[
+		fcc hasard 255 hasard 255 hasard 255
+		repete 3 [av :n td 120]
+		donne "t :t+1
+		triangle :n/2 :t
+		lc av :n/2 bc
+		triangle :n/2 :t
+		lc td 120 av :n/2 tg 120 bc
+		triangle :n/2 :t
+		lc td 240 av :n/2 td 120 bc
+	]
+fin
+
+donne "t 0
+td 30
+triangle 325 :t
+-----------------------------------------------
+
+pour triangle :n :t
+	if :n >= 4
+	[
+		fcc hasard 255 hasard 255 hasard 255
+		repete 3 [av :n td 120]
+		donne "t :t+1
+		triangle [:n/2 :t]
+		lc av :n/2 bc
+		triangle [:n/2 :t]
+		lc td 120 av :n/2 tg 120 bc
+		triangle [:n/2 :t]
+		lc td 240 av :n/2 td 120 bc
+	]
+fin
+
+fpos 400 200
+donne "t 0
+td 30
+repete 6 [ triangle [150 :t] td 60]
+td 30
+repete 6 [ triangle [150 :t] td 60]
+-----------------------------------------------
+
+pour khor :L
+	if :L < 5 [av :L]
+		[	
+			khor [:L/3] 
+			tg 60
+			khor [:L/3]
+			td 120
+			khor [:L/3] 
+			tg 60
+			khor [:L/3] 
+		]
+fin
+
+lc av 100 bc
+repete 18 [
+	fcc hasard 255 hasard 255 hasard 255
+	store
+	td loop*20
+	repete 3 [
+		khor [90] 
+		td 120
+	]
+	move
+]
+
+
+
+
