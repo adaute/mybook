@@ -1,0 +1,2704 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 98,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adMobAppId": "",
+    "adaptGameResolutionAtRuntime": true,
+    "folderProject": true,
+    "linuxExecutableFilename": "",
+    "macExecutableFilename": "",
+    "orientation": "landscape",
+    "packageName": "com.example.gamename",
+    "projectFile": "/Users/adrienadrien/Documents/GDevelop projects/Historia/game.json",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "",
+    "useExternalSourceFiles": false,
+    "version": "1.0.0",
+    "winExecutableFilename": "",
+    "winExecutableIconFile": "",
+    "name": "Project",
+    "author": "",
+    "windowWidth": 1024,
+    "windowHeight": 768,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "showGDevelopSplash": true
+    },
+    "extensions": [
+      {
+        "name": "BuiltinObject"
+      },
+      {
+        "name": "BuiltinAudio"
+      },
+      {
+        "name": "BuiltinVariables"
+      },
+      {
+        "name": "BuiltinTime"
+      },
+      {
+        "name": "BuiltinMouse"
+      },
+      {
+        "name": "BuiltinKeyboard"
+      },
+      {
+        "name": "BuiltinJoystick"
+      },
+      {
+        "name": "BuiltinCamera"
+      },
+      {
+        "name": "BuiltinWindow"
+      },
+      {
+        "name": "BuiltinFile"
+      },
+      {
+        "name": "BuiltinNetwork"
+      },
+      {
+        "name": "BuiltinScene"
+      },
+      {
+        "name": "BuiltinAdvanced"
+      },
+      {
+        "name": "Sprite"
+      },
+      {
+        "name": "BuiltinCommonInstructions"
+      },
+      {
+        "name": "BuiltinCommonConversions"
+      },
+      {
+        "name": "BuiltinStringInstructions"
+      },
+      {
+        "name": "BuiltinMathematicalTools"
+      },
+      {
+        "name": "BuiltinExternalLayouts"
+      }
+    ],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Historia/introduction1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Historia/introduction1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Historia/progressBT.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Historia/progressBT.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Historia/modem-56k.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Historia/modem-56k.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Polices/webpixel bitmap_light.otf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Assets/Polices/webpixel bitmap_light.otf",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Introduction/Sos-morse-code.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Introduction/Sos-morse-code.mp3",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Introduction/backgroundBlack.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Introduction/backgroundBlack.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Introduction/blip.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Introduction/blip.wav",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Introduction/background-glitched.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Introduction/background-glitched.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Introduction/alert.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Introduction/alert.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Introduction/murmures inquiétants.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Introduction/murmures inquiétants.mp3",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetA.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetA.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetB.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetB.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetC.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetC.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetD.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetD.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetE.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetE.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetF.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetF.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetG.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetG.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetH.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetH.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetI.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetI.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetJ.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetJ.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetK.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetK.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetL.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetL.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetM.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetM.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetN.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetN.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetO.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetO.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetP.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetP.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetQ.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetQ.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetR.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetR.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetS.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetS.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetT.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetT.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetU.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetU.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetV.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetV.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetW.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetW.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetX.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetX.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetY.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetY.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/lettres/alphabetZ.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/lettres/alphabetZ.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/myRiddle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/myRiddle.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/traitPendu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/traitPendu.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/barreHorizontal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/barreHorizontal.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/barreVertical.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/barreVertical.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Arpanet/arpa.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Arpanet/arpa.mp3",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Introduction/background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Introduction/background.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Arpanet/pendu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Arpanet/pendu.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_stand.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_stand.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_jump.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_jump.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk01.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk02.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk03.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk04.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk05.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk06.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk07.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk08.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk09.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk10.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p1_walk11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "p1_walk11.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/brickWall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "brickWall.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/grassHalfMid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "grassHalfMid.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/castleCenter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "castleCenter.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/Left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Left.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/Right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Right.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/ladder_mid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ladder_mid.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/Grass.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "grass.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/PlayerArea.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerArea.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/slimeWalk1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "slimeWalk1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/slimeWalk2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "slimeWalk2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/slimeDead.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "slimeDead.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/flyFly1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flyFly1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/flyFly2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flyFly2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/flyDead.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "flyDead.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/cloud1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cloud1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/cloud2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cloud2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/cloud3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cloud3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bush.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bush.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/cactus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cactus.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/plant.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "plant.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/coinGold.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "coinGold.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/shadedDark06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "shadedDark06.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/shadedDark05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "shadedDark05.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/shadedDark45.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "shadedDark45.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/shadedDark09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "shadedDark09.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/font.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/font.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/header.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/header.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/body1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/body1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/fondALL.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/fondALL.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge-2-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge-3-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge-3-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge-4-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge-4-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge-5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridge 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridge 2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs-5-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs-5-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bridgeLogs-5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/bridgeLogs.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/bridgeLogs.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/h.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/h.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/y.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/y.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/p.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/p.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/e.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/e.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/r.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/r.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/l.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/l.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/i.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/i.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/n.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/n.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/s.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/s.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hh.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hh.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hy.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hp.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hp.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/he.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/he.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hr.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hr.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hl.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hl.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hi.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hi.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hn.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hn.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/hs.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hs.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Hyperliens/back.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Hyperliens/back.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Gif /g.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Gif /g.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Gif /f.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Gif /f.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Gif /hf.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Gif /hf.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Gif /hg.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Gif /hg.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/End/utcLogo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/End/utcLogo.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/End/copy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/End/copy.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/portable.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/portable.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/hit-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/hit-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/hit-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/hit-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/hit-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/hit-1-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/hit-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/hit-2-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/hit-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/hit-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack-1-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack-2-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack-4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/gameover-9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameover-9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/attack - Copy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/attack - Copy.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/playergameover-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/playergameover-7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-4 - Copy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-4 - Copy.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/background_green1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/background_green1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/youwin.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/youwin.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/defeat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/defeat.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/rays-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/rays-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-2-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-3-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-3-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-4-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-4-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-5-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-5-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-6-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-6-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-7-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-7-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-8-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-8-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/normal-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/normal-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/normal-1-Copy-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/normal-1-Copy-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/normal-1-Copy-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/normal-1-Copy-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/normal-1 - Copy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/normal-1 - Copy.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/idle-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/idle-4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/idle-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/idle-5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/idle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/idle-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/idle-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/idle-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/normal-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/normal-1-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/click-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/click-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/click-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/click-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/click-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/click-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/click-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/click-4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-8-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-8-7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/NewObject-1-10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/NewObject-1-10.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/PSD/main.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/PSD/main.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/ToucheA.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/ToucheA.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/toucheH.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/toucheH.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/toucheS.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/toucheS.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Smartphone/toucheT.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Smartphone/toucheT.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Hyperliens/hacknet.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Hyperliens/hacknet.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Plateform/jump.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Plateform/jump.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/R.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/R.wav",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/Y.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/Y.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/H.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/H.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/P.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/P.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/L.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/L.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/I.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/I.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/N.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/N.wav",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/S.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/S.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Alphabet/E.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Alphabet/E.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Smartphone/fight.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Smartphone/fight.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Smartphone/taser.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Smartphone/taser.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Smartphone/bobine.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Smartphone/bobine.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Smartphone/gameOver.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Smartphone/gameOver.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Smartphone/win.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/Smartphone/win.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/End/The Witcher 3 OST - The Wolf And The Swallow [EXTENDED] (Geralt finds Ciri scene).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/End/The Witcher 3 OST - The Wolf And The Swallow [EXTENDED] (Geralt finds Ciri scene).mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/End/theWitcher.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/End/theWitcher.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Bruitages/murmures inquietants.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Bruitages/murmures inquietants.mp3",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/a.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/a.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/b.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/b.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/c.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/c.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/d.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/d.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/e.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/e.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/f.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/f.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/g.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/g.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/h.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/h.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/i.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/i.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/j.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/j.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/k.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/k.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/l.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/l.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/m.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/m.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/o.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/o.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/p.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/p.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/q.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/q.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/r.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/r.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/s.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/s.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/t.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/t.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/u.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/u.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/v.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/v.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/w.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/w.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/x.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/y.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/y.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/z.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/z.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/ha.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/ha.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hb.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hc.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hc.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hd.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hd.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/he.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/he.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hf.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hf.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hg.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hg.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hh.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hh.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hi.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hi.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hj.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hj.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hk.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hl.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hl.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hm.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hm.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/ho.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/ho.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hp.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hp.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hq.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hq.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hr.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hr.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hs.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hs.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/ht.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/ht.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hu.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hv.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hv.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hw.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hw.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hx.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hx.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hy.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hz.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hz.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Gris/n.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Gris/n.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/General/Design/Alphabet/Couleurs/hn.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/General/Design/Alphabet/Couleurs/hn.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Skyblog/fondALL.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Skyblog/fondALL.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Formulaires/NIVEAU-90.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Formulaires\\NIVEAU-90.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Skyblog/grassHalfMid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Skyblog/grassHalfMid.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Skyblog/bridgeLogs.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Skyblog/bridgeLogs.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Formulaires/back.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets/Formulaires/back.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Reponses/hyperliens.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Reponses/hyperliens.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/Reponses/formulaires.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/Reponses/formulaires.wav",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/General/Musiques/ambiances/outlands-daft-punk.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/ambiances/outlands-daft-punk.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/ambiances/end-of-line-by-daft-punk.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/ambiances/end-of-line-by-daft-punk.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/General/Musiques/ambiances/trailer-epic-action-royalty-freemusic-licensing.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets/General/Musiques/ambiances/trailer-epic-action-royalty-freemusic-licensing.mp3",
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/historia"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/introduction"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/beforearpanet"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/arpanet"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/hyperliens"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/formulaires"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/skyblog"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/responsive"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/smartphone"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/end"
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}
