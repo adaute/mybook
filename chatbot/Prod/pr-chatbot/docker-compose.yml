@@ -1,0 +1,39 @@
+version: "3.4"
+
+services:
+
+  rasa-x:
+    image: rasax:${RASA_X_VERSION}
+    networks: ['rasa-network']
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - RASA_X_VERSION
+    environment:
+      - RASA_HOME=/app
+      - RASA_X_PASSWORD=${RASA_X_PASSWORD}
+    ports:
+      - "5005:5005"
+      - "5002:5002"
+    volumes:
+      - "./:/app"
+    command: rasa x --no-prompt -m models --enable-api --endpoints endpoints.yml --credentials credentials-local.yml --port 5005 --cors "*" --debug
+
+  app:
+    image: rasa/rasa-sdk:${RASA_SDK_VERSION}
+    networks: ['rasa-network']
+    volumes:
+      - "./actions:/app/actions"
+    ports:
+      - "5055:5055"
+
+  duckling:
+    restart: always
+    image: "rasa/duckling:latest"
+    networks: ['rasa-network']
+    ports:
+      - "8000:8000"
+    command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
+
+networks: {rasa-network: {}}

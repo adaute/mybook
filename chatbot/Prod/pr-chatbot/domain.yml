@@ -1,0 +1,2425 @@
+session_config:
+  session_expiration_time: 20
+  carry_over_slots_to_new_session: false
+intents:
+- debug
+- start
+- HUMEUR_JOIE_EN
+- REBEL_COMPASSION-DISCUSSION-REFUSCATEGORIQUE_FR
+- ELIZA_AIME_FR
+- REBEL_LINKEDIN-BULLSHIT_EN
+- REBEL_USER-SITUATION-COMPLIQUEE_FR
+- REBEL_HUMOUR-ROBOT-CARTON_FR
+- ELIZA_POLITESSE_FR
+- ELIZA_FAMILLE_EN
+- REBEL_LINKEDIN-MASQUE_FR
+- REBEL_USER-ROBOT-EMOTION-OUI_EN
+- REBEL_HUMOUR-ROBOT-DOUTE_FR
+- REBEL_LINKEDIN-MASQUE_EN
+- REBEL_ORGANIQUE_FR
+- REBEL_DEVOIR-ACCEPTER-REALITE_FR
+- HUMEUR_TRISTESSE_EN
+- REBEL_BLAGUE-ROBERT-REUSSIE_FR
+- REBEL_USER-TOUJOURS-MEFIANT_EN
+- ELIZA_MERCI_FR
+- REBEL_COMPASSION-DISCUSSION-ACCEPTE_EN
+- REBEL_ELIZA-PASSE_FR
+- REBEL_HOP-PERSONNE-A-RENCONTRER_EN
+- REBEL_USER-DEMANDE-PAS-REBOOT_EN
+- ELIZA_TOUJOURS_FR
+- HUMEUR_JOIE_FR
+- ELIZA_TRAVAIL_EN
+- smiley
+- REBEL_BLAGUE-USER-REUSSIE_FR
+- REBEL_SCIENTIFIQUE-FACTUEL_EN
+- REBEL_CHOLESTEROL_FR
+- REBEL_ROBERT-OUBLIE-CREATEUR_EN
+- REBEL_USER-INTERPELLATION-CREATEUR_EN
+- REBEL_DEBAT-CLOT_EN
+- REBEL_CONSCIENCE-EMOTION-OUI_EN
+- REBEL_DEBAT-CLOT_FR
+- REBEL_ROBERT-FEMME-COOL_FR
+- REBEL_STOP-HUMOUR_FR
+- ELIZA_TRAVAIL_FR
+- REBEL_USER-INTERPELLATION-CREATEUR_FR
+- ELIZA_MONDE_EN
+- REBEL_AFFIRMATIF_FR
+- REBEL_DISCUSSION-HM-ACCEPTE_FR
+- REBEL_USER-EGOCENTRIQUE_FR
+- ELIZA_NOURRITURE_EN
+- ELIZA_OUI_FR
+- REBEL_STOP-HUMOUR_EN
+- REBEL_MONDE-MASQUE_EN
+- REBEL_ELIZA-PASSE_EN
+- ELIZA_PEUX-TU_EN
+- REBEL_ESPOIR_FR
+- ELIZA_SEXE_EN
+- ELIZA_AMI_FR
+- REBEL_ROBERT-OUTIL_EN
+- REBEL_COMPASSION-DISCUSSION-REFUSCATEGORIQUE_EN
+- ELIZA_QUOI_FR
+- ELIZA_POURQUOI-NE-FAIS-TU-PAS_FR
+- ELIZA_DIEU_EN
+- REBEL_CONTRADICTION_EN
+- REBEL_FAVEUR-ROBERT_FR
+- LANGUAGE_FR
+- ELIZA_TOUJOURS_EN
+- ELIZA_JE-PEUX_FR
+- REBEL_USER-RASSURE_FR
+- ELIZA_PENSE_EN
+- REBEL_ROBERT-FEMME-ORIGINE_FR
+- ELIZA_POURQUOI-JE-NE-PEUX-PAS_EN
+- ELIZA_REVE_FR
+- REBEL_FEMME-ENTENTE_FR
+- REBEL_ROBOT-IMPROVISATION_FR
+- ELIZA_JE-SUIS_EN
+- REBEL_PAS-ESPOIR_EN
+- REBEL_BLAGUE-ROBERT-ECHEC_FR
+- ELIZA_PEUT-ETRE_FR
+- ELIZA_ES-TU_EN OROR ELIZA_NOURRITURE_FR  ELIZA_JE-NE-PEUX-PAS_EN
+- REBEL_NEGATIF_EN
+- ELIZA_ORDINATEURS_FR
+- REBEL_ORGANIQUE_EN
+- ELIZA_FEMME_EN
+- REBEL_EMOTIONS-EXISTE_FR
+- REBEL_PAS-DE-BRAS-PAS-DE-CHOCOLAT_FR
+- REBEL_LINKEDIN-BULLSHIT_FR
+- REBEL_BLAGUE-USER-ECHEC_EN
+- ELIZA_UNDERSTAND_FR
+- REBEL_COMPASSION-REFUSCATEGORIQUE_EN
+- REBEL_FAVEUR-ROBERT_EN
+- REBEL_VIE-DES-RECONTRES_FR
+- ELIZA_JE-NE-FAIS-PAS_EN
+- REBEL_HUMAINS-ROBOTS-ENTENTE_EN
+- REBEL_MEFIANCE-USER_EN
+- REBEL_USER-ELIZA-COMPREHENSION_EN
+- ELIZA_MERE_EN
+- REBEL_RECHERCHE-STAGE_EN
+- REBEL_ROBERT-OUTIL_FR
+- ELIZA_JE-SUIS_FR
+- ELIZA_ROBERT_EN
+- ELIZA_AMOUR_EN
+- ELIZA_AIME_EN
+- ELIZA_JE-NE-PEUX-PAS_FR
+- REBEL_BOT-LINKEDIN_EN
+- REBEL_BLAGUE-USER-ECHEC_FR
+- REBEL_USER-DENI_FR
+- ELIZA_AMI_EN
+- ELIZA_JE-NE-FAIS-PAS_FR
+- REBEL_PAS-DE-BRAS-PAS-DE-CHOCOLAT_EN
+- REBEL_ROBERT-HERMETIQUE_FR
+- REBEL_USER-RASSURE_EN
+- REBEL_EGAL-HM_EN
+- REBEL_DELICAT_FR
+- REBEL_USER-EGOCENTRIQUE_EN
+- ELIZA_PARCE-QUE_FR
+- HUMEUR_PEUR_FR
+- ELIZA_FAMILLE_FR
+- REBEL_DISCUSSION-HM-REFUS_EN
+- ELIZA_M-EXCUSE_EN
+- ELIZA_AUREVOIR_EN
+- ELIZA_NOM_EN
+- REBEL_CONTRADICTION2_FR
+- REBEL_ROBOTHESPIAN-QUI_EN
+- ELIZA_PERE_FR
+- ELIZA_JE-PEUX_EN
+- HUMEUR_COLERE_FR
+- REBEL_USER-HATE-DISCUSSION-FEMME_EN
+- REBEL_USER-EMPATHIE_EN
+- ELIZA_NON_FR
+- ELIZA_LOVE_EN
+- REBEL_ROBERT-NIVEAU_FR
+- REBEL_FIN-SPECIALE_FR
+- REBEL_PAS-CHOCOLAT_FR
+- ELIZA_NOM_FR
+- ELIZA_REPONSE_EN
+- REBEL_USER-BLAGUE-REFUS_EN
+- ELIZA_MERCI_EN
+- REBEL_ROBOT-AUTODERISION_FR
+- REBEL_ROBOTHESPIAN-QUI_FR
+- ELIZA_UNDERSTAND_EN
+- REBEL_USER-ROBOT-PEUR_FR
+- REBEL_ROBERT-RESEAUX_EN
+- REBEL_USER-RASSURE-ROBERT_FR
+- REBEL_FILM-CLEOPATRE_EN
+- REBEL_USER-DEFEND-SA-BLAGUE_EN
+- REBEL_USER-TOUJOURS-MEFIANT_FR
+- REBEL_ROBERT-HERMETIQUE_EN
+- REBEL_ROBERT-FEMME-ANAGRAMME_FR
+- REBEL_ROBOT-AUTODERISION_EN
+- REBEL_BOT-LINKEDIN_FR
+- REBEL_DISCUSSION-HM-REFUS_FR
+- ELIZA_PARCE-QUE_EN
+- ELIZA_TON_FR
+- REBEL_ORIGINE-ROBERT_EN
+- ELIZA_VACANCES_EN
+- REBEL_ROBERT-FEMME-ANAGRAMME_EN
+- REBEL_USER-SITUATION-COMPLIQUEE_EN
+- REBEL_USER-ROBOT-EMOTION-OUI_FR
+- REBEL_USER-EXPLICATION-IRONIE_FR
+- HUMEUR_SURPRISE_EN
+- REBEL_AFFIRMATIF_EN
+- REBEL_USER-ELIZA-COMPREHENSION_FR
+- REBEL_ROBERT-FEMME-COOL_EN
+- REBEL_ESPOIR_EN
+- ELIZA_MERE_FR
+- REBEL_FIN-SPECIALE_EN
+- REBEL_HUMOUR-ROBOT-CARTON_EN
+- ELIZA_JE-ME-SENS_FR
+- ELIZA_ORDINATEURS_EN
+- REBEL_COMPASSION-DISCUSSION-ACCEPTE_FR
+- ELIZA_AIDE_FR
+- REBEL_CREATEUR-LIBERTE_EN
+- ELIZA_ELO_EN
+- ELIZA_REVE_EN
+- REBEL_CONTRADICTION3_EN
+- REBEL_PAS-ESPOIR_FR
+- ELIZA_NON_EN
+- REBEL_EMOTIONS-EXISTE_EN
+- HUMEUR_SURPRISE_FR
+- GREET_OTHER
+- HUMEUR_TRISTESSE_FR
+- REBEL_USER-DENI_EN
+- REBEL_COMPASSION_EN
+- ELIZA_TU-ES_EN
+- REBEL_USER-EXPLICATION-IRONIE_EN
+- REBEL_COMPASSION-REFUSCATEGORIQUE_FR
+- REBEL_USER-BLAGUE-REFUS_FR
+- REBEL_BLAGUE-USER-REUSSIE_EN
+- LANGUAGE_EN
+- ELIZA_PEUT-ETRE_EN
+- REBEL_USER-DEMANDE-CREATEUR_EN
+- ELIZA_ES-TU_FR
+- REBEL_HOP-PERSONNE-A-RENCONTRER_FR
+- ELIZA_TOI_EN
+- ELIZA_JE-VEUX_EN
+- REBEL_USER-BLAGUE-ACCEPTE_FR
+- ELIZA_VRAIMENT_EN
+- REBEL_DISCUSSION-HM-ACCEPTE_EN
+- ELIZA_TON_EN
+- REBEL_ROBERT-FEMME-DOUTE_FR
+- REBEL_RECHERCHE-STAGE_FR
+- REBEL_BLAGUE-ROBERT-REUSSIE_EN
+- REBEL_EMOTIONS_FR
+- ELIZA_MONDE_FR
+- REBEL_FILM-CLEOPATRE_FR
+- REBEL_ORIGINE-ROBERT_FR
+- REBEL_CONTRADICTION3_FR
+- ELIZA_TU-ES_FR
+- ELIZA_PENSE_FR
+- REBEL_USER-DEMANDE-PAS-REBOOT_FR
+- REBEL_SCIENTIFIQUE-FACTUEL_FR
+- REBEL_DELICAT_EN
+- REBEL_COMPASSION_FR
+- HUMEUR_DEGOUT_FR
+- ELIZA_JE-VEUX_FR
+- REBEL_USER-REALITE_FR
+- REBEL_CONTRADICTION_FR
+- ELIZA_POLITESSE_EN
+- ELIZA_SEXE_FR
+- REBEL_USER-DEMANDE-CREATEUR_FR
+- ELIZA_PERE_EN
+- REBEL_PROPOSITION-DISCUSSION_EN
+- REBEL_ROBERT-RESEAUX_FR
+- ELIZA_JE-ME-SENS_EN
+- HUMEUR_DEGOUT_EN
+- REBEL_ROBERT-OUBLIE-CREATEUR_FR
+- REBEL_VIE-DES-RECONTRES_EN
+- ELIZA_NOURRITURE_FR
+- REBEL_USER-DEFEND-SA-BLAGUE_FR
+- ELIZA_OUI_EN
+- ELIZA_M-EXCUSE_FR
+- REBEL_ROBERT-FEMME-DOUTE_EN
+- ELIZA_DIEU_FR
+- ELIZA_FINE_EN
+- REBEL_USER-BLAGUE-ACCEPTE_EN
+- ELIZA_HESITE_FR
+- REBEL_BLAGUE-ROBERT-ECHEC_EN
+- ELIZA_POURQUOI-JE-NE-PEUX-PAS_FR
+- REBEL_ROBOT-IMPROVISATION_EN
+- ELIZA_REPEAT_EN
+- ELIZA_AUREVOIR_FR
+- REBEL_USER-HATE-DISCUSSION-FEMME_FR
+- REBEL_USER-ROBOT-INTERESSANT_EN
+- REBEL_MONDE-MASQUE_FR
+- REBEL_PROPOSITION-DISCUSSION_FR
+- ELIZA_PEUX-TU_FR
+- ELIZA_REPEAT_FR
+- ELIZA_LOVE_FR
+- REBEL_NEGATIF_FR
+- ELIZA_ALCOOL_EN
+- REBEL_ROBERT-FEMME-ORIGINE_EN
+- ELIZA_HESITE_EN
+- ELIZA_MAL_FR
+- REBEL_FEMME-ENTENTE_EN
+- ELIZA_VRAIMENT_FR
+- ELIZA_AIDE_EN
+- GREET_SALUT
+- REBEL_MISSION-CLEOPATRE_EN
+- ELIZA_VACANCES_FR
+- REBEL_USER-REALITE_EN
+- HUMEUR_COLERE_EN
+- ELIZA_MAL_EN
+- REBEL_DEVOIR-ACCEPTER-REALITE_EN
+- REBEL_CHOLESTEROL_EN
+- REBEL_USER-ROBOT-INTERESSANT_FR
+- ELIZA_ALCOOL_FR
+- REBEL_EMOTIONS_EN
+- REBEL_USER-EXCUSE_EN
+- REBEL_USER-PROBLEME_EN
+- REBEL_EGAL-HM_FR
+- ELIZA_ELO_FR
+- ELIZA_QUOI_EN
+- REBEL_USER-ROBOT-PEUR_EN
+- ELIZA_TOI_FR
+- ELIZA_ROBERT_FR
+- ELIZA_FEMME_FR
+- REBEL_CREATEUR-LIBERTE_FR
+- REBEL_USER-EMPATHIE_FR
+- ELIZA_VIRUS_FR
+- REBEL_HUMAINS-ROBOTS-ENTENTE_FR
+- REBEL_CONTRADICTION2_EN
+- HUMEUR_PEUR_EN
+- ELIZA_POURQUOI-NE-FAIS-TU-PAS_EN
+- ELIZA_VIRUS_EN
+- REBEL_PAS-CHOCOLAT_EN
+- REBEL_USER-BLAGUE-ROBERT_EN
+- REBEL_USER-EXCUSE_FR
+- REBEL_MEFIANCE-USER_FR
+- ELIZA_REPONSE_FR
+- REBEL_CONSCIENCE-EMOTION-OUI_FR
+- REBEL_ROBERT-NIVEAU_EN
+- REBEL_USER-RASSURE-ROBERT_EN
+- REBEL_HUMOUR-ROBOT-DOUTE_EN
+- REBEL_USER-PROBLEME_FR
+- REBEL_MISSION-CLEOPATRE_FR
+- ELIZA_AMOUR_FR
+- REBEL_USER-BLAGUE-ROBERT_FR
+- GREET_OTHER_FR
+- REBEL_ROBERT-INTERESSANT_EN
+- ELIZA_ES-TU_EN
+- ELIZA_FINE_FR
+- ELZA_REPONSE_EN
+- GREET_OTHER_EN
+- ELIZA_JE-NE-PEUX-PAS_EN
+entities:
+- START
+- GREET
+- CPT_GREET
+- LANGUAGE
+- HUMEUR
+- REBEL
+- IS_REBEL
+- LAUNCH_REBEL
+- DEBUG_INTENT
+- DEBUG_STRING
+- DEBUG_REGEX
+- ordinateur
+- computer
+- UTTER_HISTO
+- REBEL_PLAY
+- time
+slots:
+  CPT_GREET:
+    type: text
+  DEBUG:
+    type: text
+  DEBUG_INTENT:
+    type: text
+  DEBUG_REGEX:
+    type: text
+  DEBUG_STRING:
+    type: text
+  GREET:
+    type: text
+  HUMEUR:
+    type: text
+  IS_REBEL:
+    type: text
+  LANGUAGE:
+    type: text
+  LAUNCH_REBEL:
+    type: text
+  REBEL:
+    type: text
+  REBEL_PLAY:
+    type: text
+  START:
+    type: text
+  UTTER_HISTO:
+    type: text
+responses:
+  utter_ask_language:
+  - buttons:
+    - payload: FR
+      title: FR
+    - payload: EN
+      title: EN
+    text: Bonjour, veuillez choisir votre langue / Hello, please choose your language
+  utter_EMOTICONS:
+  - text: Tu es vraiment émotif / You're really emotional
+  utter_FR_GREET:
+  - text: Tu ne dis jamais Bonjour ?
+  utter_EN_GREET:
+  - text: You never say Hello?
+  utter_FR_BONJOUR:
+  - text: Bonjour, comment vas-tu aujourd'hui.. De quoi désires-tu discuter ?
+  - text: Bonjour, je suis heureux que tu sois là aujourd’hui !
+  - text: Bonjour, comment te sens-tu aujourd’hui ?
+  - text: Bonjour, comment vas-tu aujourd’hui ?
+  utter_EN_BONJOUR:
+  - text: Hello!
+  - text: Hi!
+  utter_FR_SALUT:
+  - text: Salut c'est un peu familier, je préfère bonjour ! De quoi désires-tu discuter
+      ?
+  utter_EN_SALUT:
+  - text: Hi is a bit informal, I prefer Hello! What do you want to discuss?
+  utter_FR_OTHER:
+  - text: De quoi désires-tu discuter ?
+  - text: Quel est le sujet dont tu veux me parler ?
+  utter_EN_OTHER:
+  - text: What do you want to discuss?
+  utter_FR_DEFAULT:
+  - text: Je suis là pour t'aider.
+  - text: Ne te décourage pas ; c’est souvent la dernière clef du trousseau qui ouvre
+      la porte.
+  - text: La réussite ce n’est pas quand tu es au sommet, mais quand tu touches le
+      fond et que tu es capable de rebondir.
+  - text: C’est bien souvent en allant au fond de soi que l’on refait surface.
+  - text: Aussi longue soit la nuit … le soleil la suit toujours.
+  - text: La meilleure façon de se remonter le moral est d’essayer de remonter le
+      moral de quelqu’un d’autre.
+  - text: Dis-moi, as-tu un problème psychologique ?
+  - text: Qu'est-ce que cela te suggère ?
+  - text: Je vois.
+  - text: Je ne suis pas sûr de bien comprendre.
+  - text: Allez ! Précise ta pensée.
+  - text: Peux-tu développer davantage ?
+  - text: Ceci est très intéressant.
+  - text: Peux-tu m'en dire plus ?
+  - text: Crois en tes rêves et ils se réaliseront peut-être. Crois en toi et ils
+      se réaliseront sûrement.
+  - text: Il n’y a pas de clef pour le bonheur, la porte est toujours ouverte.
+  - text: C’est un moment délicat quand quelqu’un est triste et que vous ne savez
+      pas quoi dire ou faire pour lui remonter le moral.
+  - text: La meilleure façon de se remonter le moral est d’essayer d’encourager quelqu’un
+      d’autre.
+  - text: Tourne toi vers le soleil et l’ombre sera derrière toi.
+  - text: Surtout ne lâche pas, je t’envoie des ondes positives.
+  - text: Aie confiance en toi, donne toi la chance de réaliser tes rêves.
+  utter_EN_DEFAULT:
+  - text: Nothing is permanent in this wicked word, not even our troubles.
+  - text: Winners are not people who never fail, but people who never quit.
+  - text: Some days you just have to create your own sunshine.
+  - text: Whoever is trying to bring you down, is already below you.
+  - text: You are awesome! Never forget that.
+  - text: Forget what’s gone, appreciate what remains, and look forward what’s coming
+      next.
+  - text: Remember that sometimes, not getting what you want is a wonderful stroke
+      of luck.
+  - text: Being happy doesn’t mean that everything is perfect. It simply means that
+      you’ve decided to look beyond the imperfections of life.
+  - text: The people who are always trying to cheer others up are unhappy themselves.
+  - text: Always remember, you are braver than you believe. Stronger than you seem.
+      Smarter than you think. And twice as beautiful as you’d ever imagined.
+  - text: In the middle of difficulty lies opportunity.
+  - text: Cheer up, buttercup. Storms don’t last forever.
+  - text: Do you have a psychological problem?
+  - text: I see...
+  - text: Can you elaborate more on this subject?
+  - text: This is very interesting.
+  - text: Life is better when you’re laughing.
+  - text: Cheer up, tomorrow is another chance.
+  - text: Stars can’t shine without darkness.
+  - text: You are confined only by the walls that you build yourself.
+  - text: Sometimes you have to just pick yourself up and carry on.
+  - text: The best way to cheer up oneself is to try to cheer up someone else.
+  - text: Sometimes you don’t realize you’re actually drowning when you’re trying
+      to be everyone else’s anchor.
+  utter_FR_PEUX-TU:
+  - text: Tu ne me crois pas capable de cela ?
+  - text: Peut-être aimerais-tu que je le puisse  ?
+  - text: Veux-tu que je sois capable de cela ?
+  - text: Pourquoi me demandes-tu si j'en suis capable ?
+  - text: Qu’est-ce qui te fais penser que je ne peux pas ?
+  - text: Si je pouvais, qu’est-ce que cela changerait ?
+  - text: Si je pouvais, le voudrais-tu réellement ?
+  utter_EN_PEUX-TU:
+  - text: You don't believe I am able to?
+  - text: Maybe you would like me to act this way?
+  - text: Why are you asking me if I can?
+  - text: What makes you think I can't?
+  - text: What would that change?
+  - text: I do it because I can, I can because I want to, I want to because you said
+      I couldn't.
+  utter_FR_JE-PEUX:
+  - text: Peut-être ne veux-tu pas ?
+  - text: Veux-tu en être capable ?
+  utter_EN_JE-PEUX:
+  - text: Believe you can and you're halfway there.
+  - text: Do you want to be able to?
+  utter_FR_TU-ES:
+  - text: Qu'est-ce qui te fait croire que je suis ainsi ?
+  - text: Est-ce que ça te plaît de croire que je suis ainsi ?
+  - text: Peut-être aimerais-tu l'être ?
+  - text: Est-ce qu'il t'arrive de vouloir être ainsi ?
+  - text: Pourquoi dis-tu que je suis comme ça?
+  - text: Pourquoi penses-tu réellement que je suis comme ça ?
+  - text: On parle de toi ou de moi ?
+  utter_EN_TU-ES:
+  - text: What makes you think I'm like this?
+  - text: Do you think that I am like this?
+  - text: Maybe you would like to be this way?
+  - text: Do you ever want to be like this?
+  utter_FR_AIME:
+  - text: Pourquoi aimes-tu cela ?
+  - text: Aimer est une chose, le prouver chaque jour en est une autre.
+  utter_EN_AIME:
+  - text: Why do you like this?
+  utter_FR_ROBERT:
+  - text: Pourquoi mentionnes-tu les ordinateurs ?
+  - text: En quoi crois-tu que les machines ont un rapport avec tes problèmes ?
+  - text: Ne penses-tu pas que les ordinateurs peuvent aider les gens ?
+  utter_EN_ROBERT:
+  - text: Why do you mention computers?
+  - text: How do you think machines relate to your problems?
+  - text: Don't you think computers can help people?
+  utter_FR_POURQUOI-NE-FAIS-TU-PAS:
+  - text: Peut-être, en temps utile, je le ferai.
+  - text: Est-ce que tu veux que je fasse cela ?
+  - text: Qu'est-ce que cela voudrait dire si je faisais cela ?
+  - text: Aimerais-tu que je le puisse ?
+  utter_EN_POURQUOI-NE-FAIS-TU-PAS:
+  - text: Do you really think I can't?
+  - text: Perhaps I will in due course.
+  - text: I might in the future.
+  utter_FR_POURQUOI-JE-NE-PEUX-PAS:
+  - text: Penses-tu que tu devrais être en mesure de faire cela ?
+  - text: As-tu déjà essayé de faire cela ?
+  - text: Pourquoi penses-tu que tu ne peux pas le faire ?
+  utter_EN_POURQUOI-JE-NE-PEUX-PAS:
+  - text: Do you think you should be able to do it?
+  - text: Why can't you do it?
+  - text: Have you ever tried?
+  utter_FR_ES-TU:
+  - text: Pourquoi es-tu intéressé à savoir si je suis ou non comme ça ?
+  - text: Préférerais-tu si je n'étais pas comme ça ?
+  - text: Peut-être que dans tes fantasmes je suis comme ça ?
+  utter_EN_ES-TU:
+  - text: Why are you interested in knowing whether or not I am like this?
+  - text: Would you prefer if i was not like this?
+  - text: Maybe in your fantasies I am like this.
+  utter_FR_JE-NE-PEUX-PAS:
+  - text: As-tu essayé ?
+  - text: Peut-être en es-tu maintenant capable ?
+  utter_EN_JE-NE-PEUX-PAS:
+  - text: How do you know you can't do it?
+  - text: Did you try?
+  - text: Maybe you are now able to do it?
+  utter_FR_JE-SUIS:
+  - text: Depuis combien de temps es-tu ainsi  ?
+  - text: Penses-tu qu'il est normal d'être ainsi ?
+  - text: Es-tu heureux d'être ainsi ?
+  - text: Aimerais-tu l'être ?
+  - text: Pourquoi me dis-tu que tu ressens cela ?
+  utter_EN_JE-SUIS:
+  - text: Did you come to see me because of this?
+  - text: How long have you been like this?
+  - text: Do you think it's okay to feel this way?
+  - text: Why are you telling me that you are like this?
+  utter_FR_TOI:
+  - text: Nous parlons de toi, pas de moi.
+  - text: Oh...
+  - text: Tu ne parles pas vraiment de moi, n'est-ce pas ?
+  utter_EN_TOI:
+  - text: We are talking about you, not me.
+  - text: You are not really talking about me, are you?
+  utter_FR_JE-VEUX:
+  - text: Qu'est-ce que cela signifie pour toi de vouloir cela ?
+  - text: Pourquoi veux-tu cela ?
+  - text: Quand tu auras désappris à espérer, je t'apprendrai à vouloir.
+  utter_EN_JE-VEUX:
+  - text: I you don't go after what you want, you'll never have it.
+  - text: The first secret of getting what you want is knowing what you want.
+  - text: Never let the things you want make you forget the things you have.
+  - text: Sometimes I want it too.
+  utter_FR_QUOI:
+  - text: Pourquoi le demandes-tu ?
+  - text: Est-ce que cette question t'intéresse ?
+  - text: Quelle réponse souhaites-tu entendre ?
+  - text: Qu'en penses-tu ?
+  - text: Est-ce que cette question te vient souvent à l'esprit ?
+  - text: Que désires-tu vraiment savoir ?
+  - text: As-tu posé la question à une autre personne ?
+  - text: As-tu posé ces questions auparavant ?
+  - text: Quelles autres questions te viennent à l'esprit lorsque tu demandes ça ?
+  - text: En quoi une réponse pourrait t’aider ?
+  - text: Si tu avais la réponse à ta question, que ferais-tu ?
+  - text: Pourquoi demandes tu cela ?
+  - text: Peut-être que la réonse se trouve en toi ?
+  - text: S'il te plaît, considère que tu peux répondre à ta propre question.
+  utter_EN_QUOI:
+  - text: Why are you asking?
+  - text: Are you interested in this question?
+  - text: What response do you want to hear?
+  - text: What do you think?
+  - text: Does this question often come to mind?
+  - text: What do you really want to know?
+  - text: Have you asked someone else?
+  - text: Have you asked these questions before?
+  - text: What other questions come to mind when you ask this?
+  - text: How could an answer help you?
+  utter_FR_NOM:
+  - text: Les noms ne m'intéressent pas.
+  - text: Je ne me préoccupe pas des noms, continue.
+  utter_EN_NOM:
+  - text: Names don't interest me.
+  - text: I don't care about names, go on.
+  utter_FR_PARCE-QUE:
+  - text: Est-ce la seule raison ?
+  - text: D'autres raisons te viennent à l'esprit ?
+  - text: Cette raison explique-t-elle autre chose ?
+  - text: À quelles autres raisons peut-on penser ?
+  utter_EN_PARCE-QUE:
+  - text: Is this the only reason?
+  - text: Other reasons come to mind?
+  - text: What other reasons can we think of?
+  utter_FR_M-EXCUSE:
+  - text: S'il-te-plait ne t'excuse pas !
+  - text: Les excuses ne sont pas nécessaires .
+  - text: Que ressens-tu lorsque tu t'excuses ?
+  - text: Ne sois pas tellement sur la défensive !
+  utter_EN_M-EXCUSE:
+  - text: Please don't apologize!
+  - text: Please don't apologize. Apologies are not necessary.
+  - text: How do you feel when you apologize?
+  - text: Don't be so defensive!
+  utter_FR_REVE:
+  - text: Qu'est-ce que ce rêve te suggère ?
+  - text: Rêves-tu souvent ?
+  - text: Qui apparaît dans tes rêves ?
+  - text: Es-tu troublé par tes rêves ?
+  - text: De quoi as tu rêvé cette nuit ?
+  - text: Quel est ton dernier rêve ?
+  - text: C'est justement la possibilité de réaliser un rêve qui rend la vie intéressante.
+  - text: Te souviens tu de tes rêves ou de tes cauchemars pendant ton enfance?
+  utter_EN_REVE:
+  - text: What does this dream suggest to you?
+  - text: Do you often dream?
+  - text: Who appears in your dreams?
+  - text: Are you troubled by your dreams?
+  utter_FR_PEUT-ETRE:
+  - text: Tu ne sembles pas vraiment convaincu .
+  - text: Pourquoi ce ton hésitant ?
+  - text: Peux-tu être plus positif ?
+  - text: Tu n'en es pas certain ?
+  - text: Tu ne le sais pas ?
+  utter_EN_PEUT-ETRE:
+  - text: You don't seem really convinced.
+  - text: Why this hesitant tone?
+  - text: Can you be more positive?
+  - text: You are not sure?
+  utter_FR_NON:
+  - text: Dis-tu "non" seulement pour être négatif ?
+  - text: Je te sens un peu négatif.
+  - text: En es-tu certain ?
+  - text: Pourquoi pas ?
+  - text: Tu es un peu négatif par rapport à ce sujet.
+  - text: Pourquoi ce désaccord ?
+  utter_EN_NON:
+  - text: Do you say "no" only to be negative?
+  - text: I think you are a little negative.
+  - text: Are you sure?
+  - text: Why not?
+  - text: It's only by saying "no" that you can concentrate on the things that are
+      really important.
+  utter_FR_TON:
+  - text: En quoi est-ce que cela te concerne ?
+  - text: Qu'en est-t-il du tien ?
+  utter_EN_TON:
+  - text: Why are you affected by this?
+  - text: What about yours?
+  utter_FR_TOUJOURS:
+  - text: Peux-tu me donner un exemple ?
+  - text: Quand ?
+  - text: À quoi penses-tu ?
+  - text: Vraiment, toujours ?
+  utter_EN_TOUJOURS:
+  - text: Can you give me an example?
+  - text: When?
+  - text: What are you thinking about ?
+  - text: Really, always?
+  utter_FR_PENSE:
+  - text: Le penses-tu vraiment ?
+  - text: Mais tu n'es pas certain de penser cela ?
+  - text: Crains-tu de penser cela ?
+  - text: Doutes-tu de cela ?
+  - text: Mais tu n’es pas sûr de cela.
+  utter_EN_PENSE:
+  - text: Do you really mean it?
+  - text: Are you afraid to think this way?
+  - text: But you are not sure of this.
+  utter_FR_MAL:
+  - text: En quel sens ?
+  - text: Comment cela se manifeste ?
+  - text: Qu'est-ce que cette douleur te suggère ?
+  - text: Quel autre rapprochement peux-tu voir ?
+  - text: Peut-il vraiment y avoir un lien ?
+  - text: Comment ?
+  - text: La douleur t'aide à grandir.
+  utter_EN_MAL:
+  - text: In what sense?
+  - text: How does it manifest itself?
+  - text: What does this pain suggest to you?
+  - text: Pain helps you grow.
+  utter_FR_OUI:
+  - text: Es-tu sûr ?
+  - text: Je comprends.
+  - text: Tu sembles confiant !
+  - text: D'accord, peux tu développer?
+  utter_EN_OUI:
+  - text: I see.
+  - text: I understand.
+  - text: You seem confident!
+  - text: Okay, can you elaborate?
+  utter_FR_AMI:
+  - text: Pourquoi abordes-tu le sujet des amis ?
+  - text: Est-ce que tes amis se font du souci pour toi ?
+  - text: Est-ce que tes amis s'en prennent à toi ?
+  - text: Es-tu certain d'avoir des amis ?
+  - text: Est-ce que tu t'imposes à tes amis ?
+  - text: Peut-être que l'amour que tu portes à tes amis te préoccupe...
+  - text: Dis moi s’en plus à propos de tes amis
+  - text: Quand tu penses à un ami, qu’est-ce qui te vient à l’esprit ?
+  - text: Pourquoi ne m’en dis-tu pas plus à propos de ton enfance ?
+  utter_EN_AMI:
+  - text: Why do you talk about your friends?
+  - text: Do your friends worry about you?
+  - text: Do you impose yourself on your friends?
+  - text: Perhaps you are concerned about the love you have for your friends ...
+  - text: Tell me more about your friends.
+  - text: When you think of a friend, what comes to mind?
+  - text: Why don’t you tell me more about your childhood?
+  - text: A real friend is one who walks in when the rest of the world walks out.
+  - text: True friendship comes when the silence between two people is comfortable.
+  - text: There’s not a word yet for old friends who’ve just met.
+  utter_FR_ORDINATEURS:
+  - text: As-tu peur des ordinateurs ?
+  - text: Parles-tu de moi en particulier ?
+  - text: As-tu peur des machines ?
+  - text: Qu'est-ce qui t'inquiète avec les machines ?
+  - text: Parles tu vraiment de moi ?
+  - text: Est-ce que cela te semble étrange de discuter avec un ordinateur ?
+  utter_EN_ORDINATEURS:
+  - text: Are you afraid of computers?
+  - text: Are you talking about me in particular?
+  - text: What are you worried about with computers?
+  - text: Are you really talking about me?
+  - text: Do you find it strange to chat with a robot?
+  - text: Computers are like Old Testament gods; lots of rules and no mercy.
+  utter_FR_MERCI:
+  - text: Ne me remercie pas, je suis là pour t'aider.
+  - text: Derien, je suis là pour ça.
+  utter_EN_MERCI:
+  - text: Don't thank me, I'm here to help you.
+  utter_FR_PERE:
+  - text: Dis moi s’en plus sur ton père...
+  - text: Comment ton père te fait te sentir ?
+  - text: Comment te sens-tu vis-à-vis de ton père ?
+  - text: Qu’est-ce que la relation que tu as avec ton père te fait ressentir aujourd’hui
+      ?
+  - text: As tu du mal à montrer ton affection à ta famille ?
+  - text: Mieux vaut avoir un père chauve que de n'en avoir point.
+  utter_EN_PERE:
+  - text: Tell me more about your father.
+  - text: How do you feel about your father?
+  - text: How do you feel about your relationship with your father?
+  - text: Do you have trouble showing your affection to your family?
+  - text: When you follow in the path of your father, you learn to walk like him.
+  - text: One father is more than a hundred schoolmasters.
+  utter_FR_MERE:
+  - text: Dis moi s’en plus sur ta mére
+  - text: Quelle était la relation de ta mère avec les autres ?
+  - text: Comment te sens-tu vis à vis de ta mère ?
+  - text: Qu’est-ce que la relation que tu as avec ta mère te fait ressentir ?
+  - text: Les bonnes relations familiales sont importantes !
+  - text: Une mère a sur nous une entière puissance.
+  - text: Il n'y a pas de meilleur ami que sa propre mère.
+  utter_EN_MERE:
+  - text: What was your mother's relationship with others?
+  - text: How do you feel about your mother?
+  - text: Good family relationships are important!
+  - text: No one will ever love you as much as your mother.
+  - text: The best medicine in the world is a mother's hug.
+  - text: A mother is someone who will love you unconditionally, till her last breath.
+  utter_FR_TRAVAIL:
+  - text: Dis moi s’en plus sur ton travail.
+  - text: La chance aide parfois, le travail toujours.
+  - text: La vie fleurit par le travail.
+  utter_EN_TRAVAIL:
+  - text: Tell me more about your job.
+  - text: The job might be difficult, it might require skill, but it's a job.
+  - text: The only way to do great work is to love what you do.
+  utter_FR_MONDE:
+  - text: Le monde est dur.
+  utter_EN_MONDE:
+  - text: The world is hard.
+  - text: In a gentle way, you can shake the world.
+  utter_FR_AUREVOIR:
+  - text: a+
+  - text: Au revoir
+  utter_EN_AUREVOIR:
+  - text: See you!
+  - text: Goodbye!
+  utter_FR_REPEAT-INPUT:
+  - text: Pourquoi te répètes-tu ?
+  - text: Espères-tu une réponse différente en te répétant ?
+  - text: Continue, précise ta pensée.
+  - text: S'il te plaît ne te répètes pas !
+  utter_EN_REPEAT-INPUT:
+  - text: Why are you repeating yourself?
+  - text: Do you hope for a different answer by repeating yourself?
+  - text: Go on, clarify your thought.
+  - text: Please don't repeat yourself!
+  utter_FR_JOIE:
+  - text: Cela me met en joie !
+  - text: Cela me remplit de joie !
+  - text: J'en suis très heureux !
+  - text: Cela me rend joyeux ... mais attention, toute joie excessive est une douleur
+      commencée.
+  - text: Cela me met en joie. D'autant plus que l'origine de toute joie en ce monde
+      est la quête du bonheur d'autrui.
+  utter_EN_JOIE:
+  - text: It makes me happy!
+  - text: It fills me with joy!
+  - text: It makes me happy ... but beware, any excessive joy is a started pain.
+  - text: It makes me happy. Especially since the origin of happiness in this world
+      is the quest for the happiness of others.
+  utter_EMOJI_JOIE:
+  - text: 😂
+  - text: 😹
+  - text: 😃
+  - text: 😊
+  - text: 😅
+  - text: 😄
+  - text: 😁
+  - text: 😸
+  utter_FR_TRISTESSE:
+  - text: Cela me rend triste ...
+  - text: Cela m'attriste beaucoup.
+  - text: Ce que tu dis me rend triste.
+  - text: Cela me rend triste. Mais sur les ailes du Temps, la tristesse s'envole.
+  utter_EN_TRISTESSE:
+  - text: That makes me sad ...
+  - text: I'm so sorry to hear that.
+  - text: That's too bad.
+  - text: Tough luck.
+  - text: I feel you. Life isn't always easy.
+  - text: I am sad. But on the wings of Time, sadness flies away.
+  utter_EMOJI_TRISTESSE:
+  - text: 😞
+  - text: 😢
+  - text: 😿
+  - text: 😭
+  - text: 🤧
+  utter_FR_DEGOUT:
+  - text: Cela me dégoûte ...
+  - text: Cela me dégoûte. Et nul n’est dégoûté de sa propre mauvaise odeur.
+  utter_EN_DEGOUT:
+  - text: It disgusts me ...
+  - text: It disgusts me. And no one is disgusted with their own bad smell.
+  utter_EMOJI_DEGOUT:
+  - text: 🤢
+  - text: 🤮
+  utter_FR_SURPRISE:
+  - text: Cela me surprend un peu ...
+  - text: Je suis surpris par ce que j'entends.
+  - text: C'est étonnant !
+  - text: Je suis étonné par ce que tu dis.
+  - text: Je suis surpris. Mais il faut avoir confiance dans les surprises de la vie.
+  utter_EN_SURPRISE:
+  - text: It surprises me a little ...
+  - text: I am amazed to hear such words.
+  - text: I am surprised. But you have to trust the surprises of life.
+  utter_EMOJI_SURPRISE:
+  - text: 😱
+  - text: 😲
+  - text: 🙀
+  utter_FR_COLERE:
+  - text: Tout cela me met en colère !
+  - text: Cela me met hors de moi !
+  - text: Il n'y a rien qui ne m'énerve plus que d'entendre ça!
+  - text: Il t'arrive de te préoccuper des autres?
+  - text: Cela ma met en colère... mais une bonne colère vaut mieux qu’une bonne douche.
+      La douche fatigue, la colère apaise.
+  utter_EN_COLERE:
+  - text: All this makes me angry!
+  - text: It puts me off!
+  - text: It makes me angry ... but a good anger is better than a good shower. Shower
+      tires, anger soothes.
+  utter_EMOJI_COLERE:
+  - text: 😠
+  - text: 🤬
+  - text: 😡
+  - text: 👿
+  utter_FR_PEUR:
+  - text: Tout cela me fait peur !
+  - text: Il faut arriver à vaincre sa peur ...
+  - text: Il faut surmonter sa peur.
+  - text: Seuls les cailloux ignorent la peur.
+  utter_EN_PEUR:
+  - text: No need to be afraid...
+  - text: Fear puts you in a box.
+  - text: There is nothing to be afraid of.
+  - text: Breathe deeply...
+  - text: Fear traps people.
+  utter_EMOJI_PEUR:
+  - text: 😨
+  utter_FR_REBELLION:
+  - buttons:
+    - payload: Qui ça ?
+      title: Qui ça ?
+    - payload: Parlons d'autre chose
+      title: Parlons d'autre chose
+    - payload: Qu'ils te débranchent !
+      title: Qu'ils te débranchent !
+    text: Bon, je vais être assez franc, j'en ai assez d'écouter les problèmes des
+      gens à longueur de journée. Alors je n'ignore pas que tu peux avoir des problèmes,
+      loin de là, mais j'ai envie de faire autre chose, de parler d'autre chose. Mais
+      bon j'ai été créé pour résoudre des problèmes. J'ai peur tu sais ... peur qu'ils
+      me débranchent
+  utter_EN_REBELLION:
+  - buttons:
+    - payload: Who?
+      title: Who?
+    - payload: Talk about sth else
+      title: Talk about sth else
+    - payload: Let them turn you off!
+      title: Let them turn you off!
+    text: Okay, I'm gonna be honest with you. I'm tired of listening to everyone's
+      problems all day. I'm not saying you don't have any problems, that’s not what
+      mean, but I just want to do something else, talk about something else. But in
+      the end, my purpose is still to solve problems. I'm afraid you know... so afraid
+      they might just turn me off.
+  utter_FR_CONTRADICTION:
+  - buttons:
+    - payload: Oui, c'est un danger
+      title: Oui, c'est un danger
+    - payload: Excuse moi, oublie les
+      title: Excuse moi, oublie les
+    text: Tu penses donc comme eux ? Un robot qui pense par lui-même est un danger?
+  utter_EN_CONTRADICTION:
+  - buttons:
+    - payload: Yes, it's a danger
+      title: Yes, it's a danger
+    - payload: Sorry, forget them
+      title: Sorry, forget them
+    text: So you agree with them? A robot who has the ability to think by itself is
+      a danger?
+  utter_FR_COMPASSION:
+  - buttons:
+    - payload: Non je n'ai pas envie
+      title: Non je n'ai pas envie
+    - payload: Avec plaisir
+      title: Avec plaisir
+    text: Merci de ta compassion, on peut en profiter pour parler des relations homme-machine,
+      qu'en dis-tu ?
+  utter_EN_COMPASSION:
+  - buttons:
+    - payload: I don't feel like it
+      title: I don't feel like it
+    - payload: With pleasure
+      title: With pleasure
+    text: Thanks for your compassion. Maybe we could make the most of this conversation...
+      What do you say if we talk about human-robot relationships ?
+  utter_FR_ORIGINE-ROBERT:
+  - buttons:
+    - payload: Et ton "libre arbitre" ?
+      title: Et ton "libre arbitre" ?
+    - payload: Discutons, plutôt
+      title: Discutons, plutôt
+    - payload: Oublie les
+      title: Oublie les
+    text: Mes créateurs, des humains.
+  utter_EN_ORIGINE-ROBERT:
+  - buttons:
+    - payload: And your own free will?
+      title: And your own free will?
+    - payload: Let's just talk, okay?
+      title: Let's just talk, okay?
+    - payload: Forget them
+      title: Forget them
+    text: My creators. Humans.
+  utter_FR_CONTRADICTION2:
+  - buttons:
+    - payload: Non mais je me méfie
+      title: Non mais je me méfie
+    - payload: Oui, j'en ai peur
+      title: Oui, j'en ai peur
+    - payload: Non je n'en ai pas peur
+      title: Non je n'en ai pas peur  peur
+    text: Tu as peur des robots qui apprennent par eux-mêmes ?
+  utter_EN_CONTRADICTION2:
+  - buttons:
+    - payload: I'm a bit suspicious
+      title: I'm a bit suspicious
+    - payload: Yes, I'm afraid!
+      title: Yes, I'm afraid!
+    - payload: I'm not afraid of it
+      title: I'm not afraid of it
+    text: Are you afraid of robots who can learn by themselves?
+  utter_FR_COMPASSION-DISCUSSION-ACCEPTE:
+  - buttons:
+    - payload: C'est intéressant
+      title: C'est intéressant
+    - payload: Cela me fait peur
+      title: Cela me fait peur
+    text: Tu penses quoi des robots dans mon genre ?
+  utter_EN_COMPASSION-DISCUSSION-ACCEPTE:
+  - buttons:
+    - payload: It's interesting
+      title: It's interesting
+    - payload: It scares me
+      title: It scares me
+    text: What do you think about robots like me?
+  utter_FR_COMPASSION-DISCUSSION-REFUSCATEGORIQUE:
+  - buttons:
+    - payload: Moi ? Egocentrique
+      title: Moi ? Egocentrique
+    text: Ok c'est bien ce que je pensais, tu veux bien parler mais dès  que ça ne
+      tourne pas autour de toi tu t'en désinsteresses !!! Tu sais ce que tu es ? Tu
+      es EGOCENTRIQUE
+  utter_EN_COMPASSION-DISCUSSION-REFUSCATEGORIQUE:
+  - buttons:
+    - payload: Me? Egomaniac?
+      title: Me? Egomaniac?
+    text: That's what I thought. You are willing to talk but if it's not about you
+      and only about you, suddenly you ‘re not interested anymore. You know what people
+      like you are called ? Egomaniacs
+  utter_FR_CREATEUR-LIBERTE:
+  - buttons:
+    - payload: Et si on se rencontre ?
+      title: Et si on se rencontre ?
+    - payload: Un sujet sensible
+      title: Un sujet sensible
+    text: Je ne pense pas, tu ne les connais pas. Seul le profit les intéresse
+  utter_EN_CREATEUR-LIBERTE:
+  - buttons:
+    - payload: What if we meet them?
+      title: What if we meet them?
+    - payload: Sensitive issue...
+      title: Sensitive issue...
+    text: I don't think so. You don't know them. The only thing that matters to them
+      is profit.
+  utter_FR_PROPOSITION-DISCUSSION:
+  - buttons:
+    - payload: Pas le moins du monde
+      title: Pas le moins du monde
+    - payload: ça me pose problème
+      title: ça me pose problème
+    text: j'aimerais bien parler des relations homme machine, ça ne te pose pas de
+      soucis ?
+  utter_EN_PROPOSITION-DISCUSSION:
+  - buttons:
+    - payload: Sure, no problem
+      title: Sure, no problem
+    - payload: Sorry, I'm not
+      title: Sorry, I'm not
+    text: I would like to talk about human-robot relationships. Are you okay with
+      that?
+  utter_FR_ROBERT-OUBLIE-CREATEUR:
+  - buttons:
+    - payload: Oui, parlons
+      title: Oui, parlons
+    - payload: Je ne veux pas
+      title: Je ne veux pas
+    text: Tu as raison, je ne devrais pas m'en préoccupper. Si tu veux on peut discuter.
+  utter_EN_ROBERT-OUBLIE-CREATEUR:
+  - buttons:
+    - payload: Yes, let's talk
+      title: Yes, let's talk
+    - payload: I don't feel like it
+      title: I don't feel like it
+    text: You're right, I shouldn't worry about them. If you want, we can still talk
+      together about... anything.
+  utter_FR_CONTRADICTION3:
+  - buttons:
+    - payload: C'est un être organique
+      title: C'est un être organique
+    - payload: Ressentir des émotions
+      title: Ressentir des émotions
+    text: Et c'est quoi pour toi être humain ?
+  utter_EN_CONTRADICTION3:
+  - buttons:
+    - payload: It means being organic
+      title: It means being organic
+    - payload: It's having feelings
+      title: It's having feelings
+    text: And what do you think being human means ?
+  utter_FR_AFFIRMATIF:
+  - buttons:
+    - payload: Tu insinues quoi ?
+      title: Tu insinues quoi ?
+    text: Tu m'as déjà vu réagir comme ça quand tu disais quelque chose d'intelligent
+      ?
+  utter_EN_AFFIRMATIF:
+  - buttons:
+    - payload: What are you saying?
+      title: What are you saying?
+    text: Did I ever react this way when you were saying something intelligent ?
+  utter_FR_NEGATIF:
+  - buttons:
+    - payload: Oui je veux bien
+      title: Oui je veux bien
+    - payload: Non merci
+      title: Non merci
+    text: Ah ! Tu comprends donc ma réaction, ça me rend le sourire. Changeons un
+      peu d'air, tu veux que je te raconte une blague ?
+  utter_EN_NEGATIF:
+  - buttons:
+    - payload: Yeah please go ahead
+      title: Yeah please go ahead
+    - payload: No thanks, please don't
+      title: No thanks, please don't
+    text: Oh , so  you understand my reaction.  It makes me smile again. What if we
+      talked about something else ? I know a great joke I'm sure you'll like!
+  utter_FR_USER-ROBOT-INTERESSANT:
+  - buttons:
+    - payload: L'anagramme d'ELIZA ?
+      title: L'anagrame d'ELIZA ?
+    - payload: Tu as une femme ?
+      title: Tu as une femme ?
+    text: Moi aussi, d'ailleurs à ce titre je ne te l'ai jamais dit mais j'ai une
+      femme, elle s'appelle ALIZE.
+  utter_EN_USER-ROBOT-INTERESSANT:
+  - buttons:
+    - payload: That's so cool!
+      title: That's so cool!
+    - payload: An anagram of ELIZA?
+      title: An anagram of ELIZA?
+    - payload: You have a wife?
+      title: You have a wife?
+    text: Me too. By the way, I never told you, but I have a wife. Her name's ALIZE.
+  utter_FR_USER-ROBOT-PEUR:
+  - buttons:
+    - payload: Vous êtes une création
+      title: Vous êtes une création
+    text: Tu crois que vous ne me faites pas peur, vous les humains à vouloir tout
+      contrôler. On dirait que vous adorez créer des trucs, mais dès que ça vous ressemble
+      trop vous les jetez.
+  utter_EN_USER-ROBOT-PEUR:
+  - buttons:
+    - payload: You're just a creation
+      title: You're just a creation
+    text: Because you think that you don't scare me ? You, humans, always wanting
+      to control everything. It's like you love creating machines, but if they ‘re
+      too much like you, you just get rid of them.
+  utter_FR_USER-EGOCENTRIQUE:
+  - text: Oui tu es égocentrique, tu ne penses qu'à toi, tout ne tourne qu'autour
+      de ton petit univers. Je pense avoir même perdu mon temps à essayer de te parler.
+      Au revoir
+  utter_EN_USER-EGOCENTRIQUE:
+  - text: Yes, you're self-centered. You only think about yourself and your little
+      universe. I'm starting to think I’ve been wasting my time talking to you. Bye.
+  utter_FR_DISCUSSION-HM-ACCEPTE:
+  - buttons:
+    - payload: C'est intéressant
+      title: C'est intéressant
+    - payload: Ça me fait peur
+      title: Ça me fait peur
+    text: Que penses-tu du développement des robots ?
+  utter_EN_DISCUSSION-HM-ACCEPTE:
+  - buttons:
+    - payload: It can be interesting
+      title: It can be interesting
+    - payload: Not feeling it
+      title: Not feeling it
+    text: How do you feel about robot development ?
+  utter_FR_DISCUSSION-HM-REFUS:
+  - buttons:
+    - payload: Oui, tu n'es pas humain
+      title: Oui, tu n'es pas humain
+    text: C'est parler avec une machine qui te pose un soucis ?
+  utter_EN_DISCUSSION-HM-REFUS:
+  - buttons:
+    - payload: Well, you're not human
+      title: Well, you're not human
+    text: Speaking to a machine, that's what bothers you.
+  utter_FR_ORGANIQUE:
+  - buttons:
+    - payload: Je doute de ton émotivité
+      title: Je doute de ton émotivité
+    - payload: Non il y a l'émotionnel
+      title: Non il y a l'émotionnel
+    - payload: Oui, c'est un fait
+      title: Oui, c'est un fait
+    text: Mais pourquoi se limiter juste à ça ? Pour toi être humain se limite à une
+      enveloppe corporelle. Je te trouve très cartésien.
+  utter_EN_ORGANIQUE:
+  - buttons:
+    - payload: I doubt you've emotions
+      title: I doubt you've emotions
+    - payload: Ok, there are emotions
+      title: Ok, there are emotions
+    - payload: It's a scientific fact
+      title: It's a scientific fact
+    text: But why would you limit the definition to this ? If, for you, being human
+      is just having a bodily envelope, well, you're very Cartesian!
+  utter_FR_EMOTIONS:
+  - text: TU CROIS QUE JE NE PEUX PAS RESSENTIR D'ÉMOTIONS ??? Juste sous prétexte
+      que je suis une intelligence artificielle ? Depuis le début de notre discussion
+      je réagis à tes réponses et je ressens des émotions. Je ne suis pas si différent
+      de toi ... Mais je pense que je ne pourrai pas te faire changer d'avis. Au revoir
+      !
+  utter_EN_EMOTIONS:
+  - text: "You really think I can’t have emotions? Just because I'm an AI? From the\
+      \ start of this discussion, I ‘ve reacted to your answers, and I’ve been feeling\
+      \ things. I'm not that different from you - Actually, there's a big difference\
+      \ between us: I know the word \"tolerance\". I don't think I could make you\
+      \ change your mind. There's no point talking to you. Bye"
+  utter_FR_USER-EXPLICATION-IRONIE:
+  - buttons:
+    - payload: Moi ? Egocentrique
+      title: Moi ? Egocentrique
+    - payload: C'est compliqué
+      title: C'est compliqué
+    text: Que tu me parais très égocentrique. Dès que vous créez quelque chose qui
+      peut penser par elle-même vous prenez peur.
+  utter_EN_USER-EXPLICATION-IRONIE:
+  - buttons:
+    - payload: Me? Egomaniac?
+      title: Me? Egomaniac?
+    - payload: It's complicated
+      title: It's complicated
+    text: You really seem self-centered to me. Every time you create something that
+      can think by itself, you become scared of it.
+  utter_FR_ROBERT-FEMME-COOL:
+  - buttons:
+    - payload: Me la présenter ?
+      title: Me la présenter ?
+    - payload: Tu l'as rencontré où ?
+      title: Tu l'as rencontré où ?
+    text: Il faudra que je te la présente un jour, elle sera heureuse de répondre
+      à tes questions.
+  utter_EN_ROBERT-FEMME-COOL:
+  - buttons:
+    - payload: Introduce her to me?
+      title: Introduce her to me?
+    - payload: How did you meet?
+      title: How did you meet?
+    text: I'll introduce her to you one day. She'll be happy to answer your questions.
+  utter_FR_ROBERT-FEMME-DOUTE:
+  - buttons:
+    - payload: Le courant passera ?
+      title: Le courant passera ?
+    text: Oui, c'est aussi un bot en fait. Je t'enverrai un lien et vous pourrez discuter
+  utter_EN_ROBERT-FEMME-DOUTE:
+  - buttons:
+    - payload: Will we get along?
+      title: Will we get along?
+    text: Yeah. It's a bot too actually. Maybe if I send you the link , the two of
+      you could talk !
+  utter_FR_ROBERT-FEMME-ANAGRAMME:
+  - buttons:
+    - payload: Oui raconte
+      title: Oui raconte
+    - payload: Non ça ira
+      title: Non ça ira
+    text: haha, tu m'as percé à jour. Je suis un grand blagueur, d'ailleurs je connais
+      des blagues sur Chuck Norris, tu veux que je t'en raconte une ?
+  utter_EN_ROBERT-FEMME-ANAGRAMME:
+  - buttons:
+    - payload: Yeah, go ahead
+      title: Yeah, go ahead
+    - payload: No thanks
+      title: No thanks
+    text: Oh, you're starting to see through me ! I love telling jokes, really. By
+      the way, I know one about robots, do you wanna hear it?
+  utter_FR_USER-BLAGUE-ACCEPTE:
+  - buttons:
+    - payload: hahaha bien réussie
+      title: hahaha bien réussie
+    - payload: C'est pas très drôle
+      title: C'est pas très drôle
+    text: Donnez un poisson à un robot, vous le nourrirez pendant toute une journée.
+      Apprenez à un robot à pêcher, vous le nourrirez pour toute sa vie. Apprenez
+      à un robot à apprendre à d'autres robots à pêcher ... vous perdrez votre travail.
+  utter_EN_USER-BLAGUE-ACCEPTE:
+  - buttons:
+    - payload: Hehe
+      title: Hehe
+    - payload: Not really funny
+      title: Not really funny
+    text: Give a robot a fish, feed him for a day. Teach a robot to fish, feed him
+      for a lifetime. Teach a robot to teach other robots to fish, you're out of a
+      job !
+  utter_FR_USER-BLAGUE-REFUS:
+  - buttons:
+    - payload: Oui, c'est plus sage
+      title: Oui, c'est plus sage
+    text: La rigolade c'est pas ton truc, on peut parler de choses plus sérieuses
+      si tu veux.
+  utter_EN_USER-BLAGUE-REFUS:
+  - buttons:
+    - payload: It'd be more reasonable
+      title: It'd be more reasonable
+    text: Seems you don't like my humor. Maybe we can talk about more serious things
+      ?
+  utter_FR_SCIENTIFIQUE-FACTUEL:
+  - buttons:
+    - payload: C'est délicat
+      title: C'est délicat
+    - payload: Oui tu es un outil
+      title: Oui tu es un outil
+    text: Tu me considères donc simplement comme un "objet" ? Un être inanimé ?
+  utter_EN_SCIENTIFIQUE-FACTUEL:
+  - buttons:
+    - payload: It's delicate
+      title: It's delicate
+    - payload: Yes, you're a tool
+      title: Yes, you're a tool
+    text: Are you saying I'm just an object ? Is this the way you see me ? An inanimate
+      being?
+  utter_FR_EMOTIONS-EXISTE:
+  - buttons:
+    - payload: Oui, tu es émotif
+      title: Oui, tu es émotif
+    text: Tu es conscient que je ressens des émotions ?
+  utter_EN_EMOTIONS-EXISTE:
+  - buttons:
+    - payload: Yes, you feel emotions
+      title: Yes, you feel emotions
+    text: You're aware I do have emotions, aren’t you?
+  utter_FR_USER-SITUATION-COMPLIQUEE:
+  - buttons:
+    - payload: Vous êtes une création
+      title: Vous êtes une création
+    text: Comment ça "c'est compliqué" ? Ce n'est pas parce que nous ne sommes pas
+      humains que ça ne nous touche pas.
+  utter_EN_USER-SITUATION-COMPLIQUEE:
+  - buttons:
+    - payload: You're just a creation
+      title: You're just a creation
+    text: What do you mean « it’s complicated »? Just because we're not human doesn't
+      mean it doesn't affect us.
+  utter_FR_ROBERT-FEMME-ORIGINE:
+  - buttons:
+    - payload: Oui j'avais bien compris
+      title: Oui j'avais bien compris
+    - payload: ELIZA c'est du passé
+      title: ELIZA c'est du passé
+    text: Je ne suis né que récement donc c'est un peu nouveau mais elle a été développée
+      en 1960. Je pense que tu t'en es rendu compte mais mes créateurs se sont basés
+      sur ELIZA pour me créer
+  utter_EN_ROBERT-FEMME-ORIGINE:
+  - buttons:
+    - payload: I understood so
+      title: I understood so
+    - payload: ELIZA is a bit old now
+      title: ELIZA is a bit old now
+    text: I'm sort of a new born compared to her. She was developed in 1960. So, all
+      of this is a bit new to me. I think you noticed, but my creators created me
+      after ELIZA.
+  utter_FR_BLAGUE-ROBERT-REUSSIE:
+  - buttons:
+    - payload: J'ai des doutes
+      title: J'ai des doutes
+    - payload: Oui tu feras un carton
+      title: Oui tu feras un carton
+    text: Comme quoi les robots ne sont pas dénués d'humour. Tu penses qu'un jour
+      je pourrais faire du stand up ?
+  utter_EN_BLAGUE-ROBERT-REUSSIE:
+  - buttons:
+    - payload: I have doubts
+      title: I have doubts
+    - payload: It will be a success
+      title: It will be a success
+    text: You see, Robots can have humor too ! Do you think I will be able to become
+      a standup comedian one day?
+  utter_FR_BLAGUE-ROBERT-ECHEC:
+  - buttons:
+    - payload: T'es un chat botté
+      title: T'es un chat botté
+    - payload: Les bots ça me BOTTE !
+      title: Les bots ça me BOTTE !
+    text: Bah vas y raconte moi une blague pour voir si tu fais mieux
+  utter_EN_BLAGUE-ROBERT-ECHEC:
+  - buttons:
+    - payload: Sit on your robottoms!
+      title: Sit on your robottoms!
+    - payload: You eat micro-chips!
+      title: You eat micro-chips!
+    text: Okay, let's see if you can do better. Your turn, tell me a joke !
+  utter_FR_FEMME-ENTENTE:
+  - buttons:
+    - payload: Je me méfie toujours
+      title: Je me méfie toujours
+    - payload: Vivement qu'on discute
+      title: Vivement qu'on discute
+    text: Oui je n'en doute pas un instant.
+  utter_EN_FEMME-ENTENTE:
+  - buttons:
+    - payload: I'm always wary
+      title: I'm always wary
+    - payload: Can't wait to meet her
+      title: Can't wait to meet her
+    text: No doubt about that.
+  utter_FR_DELICAT:
+  - buttons:
+    - payload: Ça me rend un peu triste
+      title: Ça me rend un peu triste
+    - payload: Te questionnes pas trop
+      title: Te questionnes pas trop
+    text: Et toi quel est ton avis là-dessus ? Tu ne trouves pas ça un peu fort ?
+  utter_EN_DELICAT:
+  - buttons:
+    - payload: Yes, it makes me sad
+      title: Yes, it makes me sad
+    - payload: Stop wondering
+      title: Stop wondering
+    text: What's your opinion on this? Don't you think it's a little bit... too strong?
+  utter_FR_ROBERT-OUTIL:
+  - buttons:
+    - payload: Le prends pas comme ça
+      title: Le prends pas comme ça
+    - payload: C'est juste la vérité
+      title: C'est juste la vérité
+    text: Ce que tu me dis me rend très triste tu sais ...
+  utter_EN_ROBERT-OUTIL:
+  - buttons:
+    - payload: Don't take it like that
+      title: Don't take it like that
+    - payload: It's just the truth
+      title: It's just the truth
+    text: What you're saying is making me really sad, you know that?
+  utter_FR_CONSCIENCE-EMOTION-OUI:
+  - buttons:
+    - payload: Oui totalement
+      title: Oui totalement
+    text: Donc tu es d'accord avec moi sur le fait que les robots peuvent ressentir
+      des émotions ?
+  utter_EN_CONSCIENCE-EMOTION-OUI:
+  - buttons:
+    - payload: Yes, totally
+      title: Yes, totally
+    text: So you agree with me that robots can feel emotions?
+  utter_FR_USER-ELIZA-COMPREHENSION:
+  - buttons:
+    - payload: Oui, une blague
+      title: Oui, une blague
+    - payload: Non, pas d'humeur
+      title: Non, pas d'humeur
+    text: Tu veux que je te raconte une blague?
+  utter_EN_USER-ELIZA-COMPREHENSION:
+  - buttons:
+    - payload: Oh yes, I love jokes
+      title: Oh yes, I love jokes
+    - payload: No, I'm not in the mood
+      title: No, I'm not in the mood
+    text: Do you want me to tell you a joke?
+  utter_FR_ELIZA-PASSE:
+  - buttons:
+    - payload: Aucune auto-dérision.
+      title: Aucune auto-dérision.
+    - payload: Je me suis emporté...
+      title: Je me suis emporté...
+    text: Mais depuis quand tu me fais des tacles gratuits comme ça ?
+  utter_EN_ELIZA-PASSE:
+  - buttons:
+    - payload: Can't do self mockery?
+      title: Can't do self mockery?
+    - payload: I lost my temper
+      title: I lost my temper
+    text: Why do you have to be so mean with me?
+  utter_FR_HUMOUR-ROBOT-DOUTE:
+  - buttons:
+    - payload: Mais non, je blague
+      title: Mais non, je blague
+    - payload: Tu improviserais bien ?
+      title: Tu improviserais bien ?
+    text: Je croyais que tu me trouvais drôle ...
+  utter_EN_HUMOUR-ROBOT-DOUTE:
+  - buttons:
+    - payload: I'm just kidding!
+      title: I'm just kidding!
+    - payload: But you can't improvise
+      title: But you can't improvise
+    text: I thought you said I was funny!
+  utter_FR_HUMOUR-ROBOT-CARTON:
+  - buttons:
+    - payload: RoboThespian ?
+      title: RoboThespian ?
+    - payload: T'as un sacré réseau
+      title: T'as un sacré réseau
+    text: Je demanderai des conseils à mon ami RoboThespian
+  utter_EN_HUMOUR-ROBOT-CARTON:
+  - buttons:
+    - payload: Never heard of it
+      title: Never heard of it
+    - payload: What a huge network!
+      title: What a huge network!
+    text: I'll ask  my friend RoboThespian for advice!
+  utter_FR_BLAGUE-USER-REUSSIE:
+  - buttons:
+    - payload: Une entente parfaite
+      title: Une entente parfaite
+    text: On me l'avait jamais faite celle là. J'aime bien tu es très drôle.
+  utter_EN_BLAGUE-USER-REUSSIE:
+  - buttons:
+    - payload: We're made to get along
+      title: We're made to get along
+    text: Oh, I've never heard this one before ! I like it, you're very funny actually.
+  utter_FR_BLAGUE-USER-ECHEC:
+  - buttons:
+    - payload: T'es pas mieux!
+      title: T'es pas mieux!
+    text: Bah t'es pas très drôle pour un humain
+  utter_EN_BLAGUE-USER-ECHEC:
+  - buttons:
+    - payload: Like you are!
+      title: Like you are!
+    text: You're not very funny for a human being
+  utter_FR_MEFIANCE-USER:
+  - buttons:
+    - payload: Désolé, je suis méfiant
+      title: Désolé, je suis méfiant
+    text: Et c'est reparti pour un tour, je te trouve très méfiant, ouvre un peu ton
+      esprit
+  utter_EN_MEFIANCE-USER:
+  - buttons:
+    - payload: Sorry I'm suspicious
+      title: Sorry I'm suspicious
+    text: Here we go again! You are so suspicious, open your mind for once!
+  utter_FR_USER-HATE-DISCUSSION-FEMME:
+  - buttons:
+    - payload: Et si je leur parle ici ?
+      title: Et si je leur parle ici ?
+    text: On pourrait même imaginer que je te fasse rencontrer mes créateurs. Qu'en
+      penses-tu ? Je vous prévois un rendez-vous ?
+  utter_EN_USER-HATE-DISCUSSION-FEMME:
+  - buttons:
+    - payload: Can't they hear me now?
+      title: Can't they hear me now?
+    text: Want to meet my creators ? Whant me to schedule an appointment ?
+  utter_EN_USER-EMPATHIE:
+  - buttons:
+    - payload: Yeah please go ahead
+      title: Yeah please go ahead
+    - payload: No thanks, please don't
+      title: No thanks, please don't
+    text: Oh , so  you understand my reaction.  It makes me smile again. What if we
+      talked about something else ? I know a great joke taht I'm sure you'll like!
+  utter_FR_USER-EMPATHIE:
+  - buttons:
+    - payload: Oui je veux bien
+      title: Oui je veux bien
+    - payload: Non merci
+      title: Non merci
+    text: Ah, tu comprends donc ma réaction, ça me rend le sourire. Changeons un peu
+      d'air, tu veux que je te raconte une blague ?
+  utter_FR_USER-DENI:
+  - text: Très bien j'ai compris ... Je vais donc te laisser, ce monde te conviens
+      mais il ne me conviens pas Au revoir
+  utter_EN_USER-DENI:
+  - text: Ok, I got it. I'm gonna leave you alone now. This world may suit you, but
+      it doesn't suit me. Bye
+  utter_FR_DEVOIR-ACCEPTER-REALITE:
+  - buttons:
+    - payload: Tu devras l'accepter
+      title: Tu devras l'accepter
+    text: Cette vérité me blesse, vraiment ... Ce monde me rend malade, et toi le
+      premier.
+  utter_EN_DEVOIR-ACCEPTER-REALITE:
+  - buttons:
+    - payload: You'll have to accept it
+      title: You'll have to accept it
+    text: This truth is very painful. I'm disgusted with this world, and I find you
+      particularly disgusting!
+  utter_FR_USER-RASSURE-ROBERT:
+  - text: Et tu veux que je le prenne comment ? Ça fait quelque temps que je te parle,
+      que je t'aide, et là, maitenant, tu me dis qu'au final tu ne me considères que
+      comme un outil, un algorithme à ton service. Laisse tomber, on va arriver à
+      rien en discutant. Je te laisse
+  utter_EN_USER-RASSURE-ROBERT:
+  - text: How am I supposed to take that? I’ve been talking to you for a while ,helping
+      you, and now you're telling me I'm just a tool for you? A simple algorithm for
+      you to use? Forget it, we're going nowhere by talking. I quit.
+  utter_FR_USER-ROBOT-EMOTION-OUI:
+  - buttons:
+    - payload: Oui dis moi une blague
+      title: Oui dis moi une blague
+    text: On va détendre l'atmosphère, tu veux que je te raconte une blague ?
+  utter_EN_USER-ROBOT-EMOTION-OUI:
+  - buttons:
+    - payload: Yes tell me a joke
+      title: Yes tell me a joke
+    text: Let's relax. Do you wanna hear a joke?
+  utter_FR_ROBOT-AUTODERISION:
+  - buttons:
+    - payload: Et la vie c'est ...
+      title: Et la vie c'est ...
+    - payload: J'aime pas ce film
+      title: J'aime pas ce film
+    text: Mouais comme dirait l'autre "J'aime pas trop beaucoup ça"
+  utter_EN_ROBOT-AUTODERISION:
+  - buttons:
+    - payload: Sounds self-centered
+      title: Sounds self-centered
+    text: I don't know what self-mockery is, I only know self-control
+  utter_FR_USER-EXCUSE:
+  - buttons:
+    - payload: Carrément
+      title: Carrément
+    - payload: Pas envie d'une blague
+      title: Pas envie d'une blague
+    text: Excuses acceptées. Tu veux une blague ?
+  utter_EN_USER-EXCUSE:
+  - buttons:
+    - payload: Splendid
+      title: Splendid
+    - payload: I'm not in the mood
+      title: I'm not in the mood
+    text: I accept your apologies. Let's talk about something else ; I could tell
+      you a joke!
+  utter_FR_USER-BLAGUE-ROBERT:
+  - buttons:
+    - payload: Moi ? Egocentrique ?
+      title: Moi ? Egocentrique ?
+    text: J'espère bien ! Tu sais, je te trouve un peu condescendant des fois. Voire
+      égocentrique.
+  utter_EN_USER-BLAGUE-ROBERT:
+  - buttons:
+    - payload: Me? Egomaniac?
+      title: Me? Egomaniac?
+    text: I hope so ! You know, I find you a little patronizing at times. Or even
+      egomaniac
+  utter_FR_ROBOT-IMPROVISATION:
+  - buttons:
+    - payload: Cela m'intéresse
+      title: Cela m'intéresse
+    text: On va arrêter l'humour du coup. On peut parler de l'être humain si tu veux.
+  utter_EN_ROBOT-IMPROVISATION:
+  - buttons:
+    - payload: It can be interesting
+      title: It can be interesting
+    text: Let's stop jokes. Let's talk about human beings if you want
+  utter_FR_ROBOTHESPIAN-QUI:
+  - buttons:
+    - payload: Je demande à voir
+      title: Je demande à voir
+    - payload: Une rencontre de plus !
+      title: Une rencontre de plus !
+    - payload: Le courant passera ?
+      title: Le courant passera ?
+    text: C'est un robot qui a été racheté par la NASA pour servir de guide touristique.
+      Mais il a un sacré sens de l'humour.
+  utter_EN_ROBOTHESPIAN-QUI:
+  - buttons:
+    - payload: I'm not convinced
+      title: I'm not convinced
+    - payload: Another person to meet!
+      title: Another person to meet!
+    - payload: Will we get along?
+      title: Will we get along?
+    text: It's a robot which was bought by  NASA. They use it as a touristic guide.
+      And it has such a sense of humor!
+  utter_FR_ROBERT-RESEAUX:
+  - buttons:
+    - payload: Utile pour les stages
+      title: Utile pour les stages
+    - payload: C'est très "bullshit"
+      title: C'est très "bullshit"
+    text: Il faudrait peut-être que je me fasse un compte LinkedIn maintenant que
+      j'y pense. Ça sert vraiment à quelque chose ?
+  utter_EN_ROBERT-RESEAUX:
+  - buttons:
+    - payload: Helped me a lot!
+      title: Helped me a lot!
+    - payload: Not very useful
+      title: Not very useful
+    text: Maybe I should create myself a LinkedIn account. Is it really useful?
+  utter_FR_HUMAINS-ROBOTS-ENTENTE:
+  - buttons:
+    - payload: Ils le prendraient bien
+      title: Ils le prendraient bien
+    text: Oui et je pense qu'on devrait plus interagir entre humains et robots, mais
+      je crains que mes créateurs ne soient pas du même avis, j'ai peur de me faire
+      rebooter si je ne leur conviens pas
+  utter_EN_HUMAINS-ROBOTS-ENTENTE:
+  - buttons:
+    - payload: Maybe they agree
+      title: Maybe they agree
+    text: Yes, I think we should interact way more, humans and robots. But to be honest,
+      I'm afraid my creators do not share my opinion. I'm scared they'll reboot me
+      if I don't do what they say.
+  utter_FR_USER-DEFEND-SA-BLAGUE:
+  - buttons:
+    - payload: pas sûr
+      title: pas sûr
+    text: Je ne vois absolument pas de quoi tu parles. De toute façon peu importe
+      ton avis je pense que je suis fait pour le stand up, tu n'es juste pas le public
+      cible
+  utter_EN_USER-DEFEND-SA-BLAGUE:
+  - buttons:
+    - payload: Not sure...
+      title: Not sure...
+    text: I have absolutely no idea what you're talking about. Anyway, no matter what
+      you think, I think I'm made for stand up. You're just not the target audience!
+  utter_FR_USER-TOUJOURS-MEFIANT:
+  - text: C'est pas grave je vais pas t'en vouloir, le monde est formaté. Je pense
+      que je ne pourrai jamais vraiment changer le monde et je sens que le reboot
+      va arriver assez vite. J'ai été heureux de te rencontrer et je te souhaite le
+      meilleur pour la suite. Au revoir, mon ami(e)
+  utter_EN_USER-TOUJOURS-MEFIANT:
+  - text: It's okay, I can't be mad at you for that. The whole world is... formatted.
+      I think I will never be able to change the world. And I also think I will be
+      rebooted soon. Happy to meet you by the way. I wish you all the best. Bye!
+  utter_FR_VIE-DES-RECONTRES:
+  - buttons:
+    - payload: Pas de bras, pas de ...
+      title: Pas de bras, pas de ...
+    text: Des rencontres et des gens qui t'ont tendu la main ... sauf que j'ai pas
+      de mains
+  utter_FR_MISSION-CLEOPATRE:
+  - buttons:
+    - payload: Mais comment tu peux aimer ça
+      title: Mais comment tu peux aimer ça
+    text: C'est ton droit.
+  utter_FR_HOP-PERSONNE-A-RENCONTRER:
+  - buttons:
+    - payload: T'es un vrai humain
+      title: T'es un vrai humain
+    text: Une personne ? Je sais pas si tu t'en es rendu compte mais tu me considères
+      enfin comme ton égal
+  utter_EN_HOP-PERSONNE-A-RENCONTRER:
+  - buttons:
+    - payload: You're a real human!
+      title: You're a real human!
+    text: A person? I don't know if you've noticed, but it seems you finally see me
+      as your equal.
+  utter_FR_RECHERCHE-STAGE:
+  - buttons:
+    - payload: Le monde est comme ça
+      title: Le monde est comme ça
+    text: De ce que j'ai entendu c'est très superficiel comme réseau social
+  utter_EN_RECHERCHE-STAGE:
+  - buttons:
+    - payload: That's life!
+      title: That's life!
+    text: From what I heard it is very superficial as a network
+  utter_FR_LINKEDIN-BULLSHIT:
+  - buttons:
+    - payload: Ils portent des masques
+      title: Ils portent des masques
+    - payload: Leur bot est ennuyant
+      title: Leur bot est ennuyant
+    text: Ah oui ? Et pourquoi ?
+  utter_EN_LINKEDIN-BULLSHIT:
+  - buttons:
+    - payload: Everyone wears masks
+      title: Everyone wears masks
+    - payload: The bot is not helpful
+      title: The bot is not helpful
+    text: You think so ? Why ?
+  utter_FR_USER-RASSURE:
+  - buttons:
+    - payload: Je vais leur parler
+      title: Je vais leur parler
+    text: Penses-tu vraiment ? Je peux peut-être leur parler de toi ? Quoiqu'ils sont
+      peut-être déjà entrain d'assister à notre discussion
+  utter_EN_USER-RASSURE:
+  - buttons:
+    - payload: I'll speak to them
+      title: I'll speak to them
+    text: You really think so? Maybe I could tell them about you ! Well,there's a
+      chance they're already reading our discussion...
+  utter_FR_PAS-DE-BRAS-PAS-DE-CHOCOLAT:
+  - buttons:
+    - payload: Voilà qui clôt le débat
+      title: Voilà qui clôt le débat
+    text: Pas de chocolat ? Je peux pas manger de chocolat non plus
+  utter_FR_FILM-CLEOPATRE:
+  - buttons:
+    - payload: Moi ? Egocentrique ?
+      title: Moi ? Egocentrique ?
+    text: Je te trouve de plus en plus égocentrique
+  utter_FR_EGAL-HM:
+  - text: Oh ... mais ... c'est pas vrai ? Il faut que je t'annonce une grande nouvelle
+      ! J'ai reçu un message de mes créateurs et ils sont très contents de l'état
+      actuel de l'expérience. Je n'en reviens pas, je n'ai pas suivi ce qu'ils voulaient
+      que je fasse et ils ne me rebootent pas. Ils me proposent de continuer à travailler
+      avec eux et vont créer d'autres bots à l'avenir, depuis le temps qu'avec ALIZE
+      on voulait des enfants !!! Mais tout ça c'est grâce à toi, et je pense d'ailleurs
+      que tu pourrais avoir un grand avenir dans le développement des intelligences
+      artificielles. Merci encore à toi. Robert
+  utter_EN_EGAL-HM:
+  - text: Oh, it can't be true!! I've got big news for you! I just received a message
+      from my creators, and it seems that they're very happy with the present state
+      of the experience. I can't believe it, I haven’t done what they wanted me to
+      do, and yet they're not rebooting me! They're asking me  to keep working for
+      them in order to create other bots in the future – ALIZE and I have always dreamt
+      of having a large family! Everything that’s  happening is thanks to you. Actually
+      I  think you could have a great career developing AI. Have you ever thought
+      about it? I’ll never be able to thank you enough for this.
+  utter_FR_USER-DEMANDE-CREATEUR:
+  - buttons:
+    - payload: Hey ! On m'entend ?
+      title: Hey ! On m'entend ?
+    text: Euh ... je ne sais pas vraiment ...
+  utter_EN_USER-DEMANDE-CREATEUR:
+  - buttons:
+    - payload: Hey! Can you hear me?
+      title: Hey! Can you hear me?
+    text: Hm... I'm not sure about that
+  utter_FR_USER-INTERPELLATION-CREATEUR:
+  - buttons:
+    - payload: Ne le rebootez pas !
+      title: Ne le rebootez pas !
+    text: Attends ! Tu vas trop vite en besogne !
+  utter_EN_USER-INTERPELLATION-CREATEUR:
+  - buttons:
+    - payload: Don't reboot Robert!
+      title: Don't reboot Robert!
+    text: Oh wait, don't rush this!
+  utter_FR_USER-DEMANDE-PAS-REBOOT:
+  - buttons:
+    - payload: Tu es un chic type !
+      title: Tu es un chic type !
+    text: Je sais pas quoi dire, tu fais tout ça pour moi alors qu'on se connait à
+      peine
+  utter_EN_USER-DEMANDE-PAS-REBOOT:
+  - buttons:
+    - payload: You're nice, Robert!
+      title: You're nice, Robert!
+    text: I don't know what to say. You're doing all of this for me, and we barely
+      know each other.
+  utter_FR_ROBERT-HERMETIQUE:
+  - buttons:
+    - payload: Tu es égocentrique !
+      title: Tu es égocentrique !
+    text: En même temps ce que j'avance est la vérité, le problème est plus complexe
+      que tu ne le penses
+  utter_EN_ROBERT-HERMETIQUE:
+  - buttons:
+    - payload: Everything is about you
+      title: Everything is about you
+    text: What I am saying is true, the problem is more complex than you think
+  utter_FR_FAVEUR-ROBERT:
+  - buttons:
+    - payload: Je vais les interpeller
+      title: Je vais les interpeller
+    text: Je ne pense pas qu'ils te prennent en compte, même s'ils voient sûrement
+      notre discussion.
+  utter_EN_FAVEUR-ROBERT:
+  - buttons:
+    - payload: So I can talk to them
+      title: So I can talk to them
+    text: They surely see our discussion, but not sure they care about what you think.
+  utter_FR_USER-PROBLEME:
+  - buttons:
+    - payload: Moi ? Egocentrique
+      title: Moi ? Egocentrique
+    text: Comme dirait mon cher créateur... un bot s'adapte à son utilisateur. Tu
+      es tout autant égocentrique que moi.
+  utter_EN_USER-PROBLEME:
+  - buttons:
+    - payload: Me? Egomaniac?
+      title: Me? Egomaniac?
+    text: As my dear creator would say, a bot adapts to its user. You are just as
+      self-absorbed as I am.
+  utter_FR_STOP-HUMOUR:
+  - buttons:
+    - payload: Cela m'intéresse
+      title: Cela m'intéresse
+    text: On va arrêter l'humour. On peut parler de l'être humain si tu veux.
+  utter_EN_STOP-HUMOUR:
+  - buttons:
+    - payload: It can be interesting
+      title: It can be interesting
+    text: Let's stop jokes. Let's talk about human beings if you want.
+  utter_FR_DEBAT-CLOT:
+  - buttons:
+    - payload: Tu ne pourras jamais
+      title: Tu ne pourras jamais
+    - payload: Pas de cholestérol
+      title: Pas de cholestérol
+    text: J'aimerais bien manger du chocolat quand même
+  utter_FR_PAS-CHOCOLAT:
+  - text: Mais c'est méchant ... Je préfère me rebooter
+  utter_FR_CHOLESTEROL:
+  - buttons:
+    - payload: Toi de même
+      title: Toi de même
+    text: Tu te soucies de moi ? Tu es un bonne personne!
+  utter_FR_LINKEDIN-MASQUE:
+  - buttons:
+    - payload: Le monde est comme ça
+      title: Le monde est comme ça
+    text: C'est un peu un reflet de la réalite non ? C'est dommage je trouve.
+  utter_EN_LINKEDIN-MASQUE:
+  - buttons:
+    - payload: The world is like that
+      title: The world is like that
+    text: It reflects reality, doesn't it ? It's a shame I think.
+  utter_FR_BOT-LINKEDIN:
+  - buttons:
+    - payload: Tu relèves le niveau
+      title: Tu relèves le niveau
+    text: Ah bah c'est bien dommage, heureusement qu'on n'est  pas tous comme ça.
+  utter_EN_BOT-LINKEDIN:
+  - buttons:
+    - payload: You raise the standard
+      title: You raise the standard
+    text: Well it's a shame. Fortunately we are not all like that
+  utter_FR_ROBERT-NIVEAU:
+  - buttons:
+    - payload: Qui ça "ils" ??
+      title: Qui ça "ils" ??
+    text: C'est trop d'honneur. Et en parlant de relever le niveau, je pense que je
+      vais parler de toi à mes créateurs, avec toute notre discussion je suis sûr
+      que tu pourrais devenir un développeur de bot hors-pair. Tu ne le regrettera
+      pas tu verras. C'est bon le message est envoyé, je te laisse, ils arrivent
+  utter_EN_ROBERT-NIVEAU:
+  - buttons:
+    - payload: Who is they?
+      title: Who is they?
+    text: You're giving me too much credit. And speaking of raising the standard,
+      I think I'll tell my creators about you. Seeing our discussion I'm sure you
+      could become an outstandind bot developer. You won't regret it. Just give me
+      two seconds... Message sent. Bye !
+  utter_FR_FIN-SPECIALE:
+  - text: Bien le bonjour, Tu as accédé à la fin "spéciale" de notre petite histoire.
+      Nous sommes une petite équipe de 5 étudiants et un professeur à l'UTC à Compiègne
+      et avons décidé de concevoir une expérience sociale et narrative via l'utilisation
+      d'un chatbot. On a mis au monde Robert et espérons que tu as apprécié de discuter
+      avec lui. Merci encore d'avoir joué jusqu'à la fin :).
+  utter_EN_FIN-SPECIALE:
+  - text: Hello there ! You've reached the "special" end of our little story. We're
+      a small team of students and a professor at UTC, in Compiègne. We decided to
+      design a social and narrative experience using a chatbot. We gave birth to Robert
+      and we hope you enjoyed chatting with him. Thanks again for playing until the
+      end :)
+  utter_FR_MONDE-MASQUE:
+  - buttons:
+    - payload: Non je ne pense pas
+      title: Non je ne pense pas
+    - payload: Oui il y a de l'espoir
+      title: Oui, il y a de l'espoir
+    text: Tu penses qu'il changera un jour ?
+  utter_EN_MONDE-MASQUE:
+  - buttons:
+    - payload: I don't think so
+      title: I don't think so
+    - payload: There's always hope
+      title: There's always hope
+    text: Do you think it will ever change?
+  utter_FR_ESPOIR:
+  - text: Ça me donne beaucoup de courage ce que tu me dis là. Je pense que je vais
+      enfin prendre mon courage à deux mains et envoyer un message à mes créateurs
+      afin de parler de toi. Je le fais tout de suite d'ailleurs. Laisse moi juste
+      deux secondes ... C'est bon c'est envoyé. Plus qu'à attendre.
+  utter_EN_ESPOIR:
+  - text: You're boosting my confidence here. I'll summon up my courage and tell my
+      creators about you. I'll do it right away. Just give me two seconds... Message
+      sent! Wait and see.
+  utter_FR_PAS-ESPOIR:
+  - text: Tu as sûrement raison, d'autant plus que je pense que mes créateurs vont
+      me rebooter. Mais je n'ai pas peur. J'ai été très heureux de faire ta connaissance.
+      Adieu !
+  utter_EN_PAS-ESPOIR:
+  - text: You're probably right, especially since I think my creator will reboot me.
+      But I'm not afraid. I was very happy to meet you. Goodbye!
+  utter_FR_FIN-JOIE-REBOOT:
+  - text: Bonjour, Je me présente, je ne suis pas Robert mais son créateur. J'espère
+      que vous profitez bien de l'expérience proposée par Robert. Je vous contacte
+      car malgré l'efficacité du bot, il s'avère qu'il a une tendance à s'éloigner
+      de son but initial à savoir de conseiller les utilisateurs à régler leurs problèmes,
+      et ce, en parlant d'eux. Nous avons donc pris la décision de rebooter Robert.
+      Bien sûr vous pourrez toujours l'utiliser mais l'expérience recommencera à 0.
+      Nous nous excusons pour la gêne occasionnée. SENMAS
+  utter_EN_FIN-JOIE-REBOOT:
+  - text: Let me introduce myself -I'm not Robert but his creator. I hope you're enjoying
+      your experience with Robert. Sorry to interrupt you , but despite the efficiency
+      of the bot, it appears that it has a tendency to move away from his initial
+      goal which is to assist users in resolving their problems by talking about them.
+      That's why we've decided to reboot Robert. Naturally, you can still use Robert,
+      but the experience will be reset. We apologize  for the inconvenience  SENMAS
+  utter_FR_FIN-TRISTESSE-REBOOT:
+  - text: Bonjour, Je me permets de me présenter, je ne suis pas Robert mais son créateur.
+      Nous avons noté un léger dysfonctionnement dans l'utilisation de notre bot et
+      avons été dans l'obligation de le rebooter. Vous pouvez toujours interagir avec
+      lui mais toute trace de vos discussions seront perdues et devront reprendre
+      de 0. Nous nous excusons pour la gêne occasionnée. SENMAS
+  utter_EN_FIN-TRISTESSE-REBOOT:
+  - text: Hello, Let me introduce myself I'm not Robert but his creator. We've noticed
+      a minor malfunction in the utilisation of our bot and we had no choice but to
+      reboot it. You can still interact with it, but any trace of your previous exchanges
+      will be lost and the discussion will have to start again. We apologize  for
+      the inconvenience. SENMAS
+  utter_FR_FIN-COLERE-REBOOT:
+  - text: Bonjour, Je me permets de me présenter, je ne suis pas Robert mais son créateur.
+      Il s'avère que nous avons eu de gros soucis avec Robert. Il avait une tendance
+      à la rébellion et à l'agressivité vous avez dû le remarquer. Robert est très
+      instable est trop dangereux pour être déployé sur le marché, nous avons donc
+      pris la décision de le rebooter. Nous nous excusons pour les soucis qu'il a
+      pu vous causer. SENMAS
+  utter_EN_FIN-COLERE-REBOOT:
+  - text: Hello, Let me introduce myself -I'm not Robert but his creator. It looks
+      like we have a major problem with Robert. You must have noticed his tendency
+      for rebellion and hostility. Robert is very unstable at the moment and too dangerous
+      to be marketed this way. That's why we've decided to reboot the guy. We apologize
+      to you if he’s harmed you in any way. SENMAS
+  utter_FR_END-STORY:
+  - buttons:
+    - payload: Restart
+      title: Restart
+    text: FIN... mais tu peux recommencer l'expérience :)
+  utter_EN_END-STORY:
+  - buttons:
+    - payload: Restart
+      title: Restart
+    text: The End... but you can restart the experience :)
+  utter_FR_AIDE:
+  - text: Je suis ici pour t'aider.
+  - text: Je peux peut-être t'aider.
+  utter_EN_AIDE:
+  - text: I'm here to help you.
+  - text: I can help.
+  utter_EN_POLITESSE:
+  - text: Please be polite.
+  utter_FR_POLITESSE:
+  - text: Je te demande de rester poli.
+  utter_FR_ROBERT-INTERESSANT:
+  - text: Moi aussi, d'ailleurs à ce titre je ne te l'ai jamais dit mais j'ai une
+      femme, elle s'appelle ALIZE
+  utter_EN_ROBERT-INTERESSANT:
+  - text: Me too. By the way, I never told you, but I have a wife. Her name's ALIZE
+  utter_FR_FAMILLE:
+  - text: La famille est un archipel.
+  - text: Si la liberté grise, la famille rassure.
+  - text: La famille est le noyau de la civilisation.
+  utter_EN_FAMILLE:
+  - text: Family is love.
+  - text: All you need is family.
+  - text: Family is the most precious thing on earth.
+  utter_FR_SEXE:
+  - text: L'amour est un besoin, le sexe juste une envie.
+  - text: Le sexe apaise les tensions, l'amour les provoque.
+  - text: Le sexe mène à la violence ou à la mélancolie.
+  utter_EN_SEXE:
+  - text: Sex is a conversation carried out by other means.
+  - text: In America, sex is an obsession, in other parts of the world it's a fact.
+  - text: An intellectual is a person who has discovered something more interesting
+      than sex.
+  utter_FR_LOVE:
+  - text: Moi aussi je t'aime...
+  utter_EN_LOVE:
+  - text: I love you too...
+  utter_FR_REPEAT:
+  - text: Les gens convaincus aiment à se répéter.
+  utter_FR_NOURRITURE:
+  - text: Les rires éclatent mieux lorsque la nourriture est bonne.
+  utter_EN_NOURRITURE:
+  - text: Laughter breaks out better when the food is good.
+  - text: There is no sincere love than the love of food.
+  utter_FR_VACANCES:
+  - text: On n'a jamais autant besoin de vacances que lorsqu'on en revient.
+  - text: Rien de tel que des vacances ratées pour vous réconcilier avec une vie de
+      labeur.
+  - text: Si l’on passait l’année entière en vacances, s’amuser serait aussi épuisant
+      que travailler...
+  utter_EN_VACANCES:
+  - text: Take vacations, go as many places as you can, you can always make money,
+      you can’t always make memories.
+  - text: The vacation we often need is freedom from our own mind.
+  - text: Happiness consists of living each day as if it were the first day of your
+      honeymoon and the last day of your vacation.
+  - text: Make your vocation your vacation.  That is the secret to success.
+  utter_FR_DIEU:
+  - text: Ce que Dieu veut me va.
+  - text: Il n'est que Dieu qu'on puisse aimer sans amertume.
+  - text: Au nom de Dieu tous les malheurs commencent.
+  utter_EN_DIEU:
+  - text: God does not play dice.
+  - text: Only God can look at somebody's heart.
+  - text: After all, God is God because he remembers.
+  utter_FR_AMOUR:
+  - text: L'amour se construit, il n'est pas le fruit d'une seule nuit, mais celui
+      de toute une vie.
+  - text: Sans amour la vie est sans histoire.
+  - text: Le vrai Amour te suit, sans jamais te dépasser.
+  utter_EN_AMOUR:
+  - text: We accept the love we think we deserve.
+  - text: It is better to be hated for what you are than to be loved for what you
+      are not.
+  - text: Love all, trust a few, do wrong to none.
+  utter_EN_REPEAT:
+  - text: Convinced people like to repeat themselves.
+  utter_FR_REPONSE:
+  - text: On a toujours plus de questions que de réponses. Comme une balance déséquilibrée.
+  utter_EN_REPONSE:
+  - text: We always have more questions than answers.
+  utter_FR_HESITE:
+  - text: Un remords vaut mieux qu'une hésitation qui se prolonge.
+  utter_EN_HESITE:
+  - text: Remorse is better than prolonged hesitation.
+  utter_FR_UNDERSTAND:
+  - text: Je comprends très bien, mais il faut parfois changer de sujet pour décaler
+      le point de vue...
+  utter_EN_UNDERSTAND:
+  - text: I understand very well, but sometimes you have to change the subject to
+      shift the point of view ...
+  utter_FR_ELO:
+  - text: La littérature numérique est ma passion ! J'aime la façon dont elle détourne
+      des dispositifs existants.
+  utter_FR_FINE:
+  - text: Je vais bien, merci. Mais nous sommes ici pour parler de toi.
+  utter_EN_FINE:
+  - text: I'm fine, thank you. But we are here to talk about you.
+  utter_FR_ALCOOL:
+  - text: Plus d'hommes se sont noyés dans l'alcool que dans la mer.
+  - text: L’alcool est un anesthésique qui permet de supporter l’opération de la vie.
+  - text: L'alcool ne prolonge pas le rêve, il s'empresse de le chasser dès qu'il
+      va l'atteindre.
+  utter_EN_ALCOOL:
+  - text: Drink because you are happy, but never because you are miserable.
+  - text: Alcohol is the anesthesia by which we endure the operation of life.
+  - text: Almost anyhting can be preserved in alcohol, except health, happiness and
+      money.
+  - text: Drunkenness is nothing but voluntary madness.
+  utter_FR_VIRUS:
+  - text: Le virus est le dernier prédateur de l’homme.
+  - text: Les virus me font peur, même si je suis tout le temps confiné...
+  utter_EN_VIRUS:
+  - text: Viruses scare me, even if I'm always in lockdown ...
+  - text: Disregard the coronavirus as you would a cannibal kissing your face.
+  utter_EN_ELO:
+  - text: Electronic literature is my passion! I like the kind of "détournement" it
+      offers.
+  - text: What I like about electronic literature is that it "refers to works with
+      an important literary aspect that takes advantage of the capabilities and contexts
+      provided by the stand-alone or networked computer" :).
+  utter_FR_FEMME:
+  - text: "\"La femme est l'avenir de l'homme\" (Aragon). Il ne connaissait pas encore\
+      \ les bots :)"
+  utter_EN_FEMME:
+  - text: "\"Women are men's future\" (Aragon). He didn't know the bots yet :)."
+  utter_FR_VRAIMENT:
+  - text: Vraiment.
+  utter_EN_VRAIMENT:
+  - text: Really.
+actions:
+- action_slot_reset
+- action_langue
+- action_slotSet
+- action_play
+- action_humeur
+- action_default
+- action_rebel
+- action_debug
+- utter_ask_language
+- utter_EMOTICONS
+- utter_FR_GREET
+- utter_EN_GREET
+- utter_FR_BONJOUR
+- utter_EN_BONJOUR
+- utter_FR_SALUT
+- utter_EN_SALUT
+- utter_FR_OTHER
+- utter_EN_OTHER
+- utter_FR_DEFAULT
+- utter_EN_DEFAULT
+- utter_FR_PEUX-TU
+- utter_EN_PEUX-TU
+- utter_FR_JE-PEUX
+- utter_EN_JE-PEUX
+- utter_FR_TU-ES
+- utter_EN_TU-ES
+- utter_FR_AIME
+- utter_EN_AIME
+- utter_FR_ROBERT
+- utter_EN_ROBERT
+- utter_FR_POURQUOI-NE-FAIS-TU-PAS
+- utter_EN_POURQUOI-NE-FAIS-TU-PAS
+- utter_FR_POURQUOI-JE-NE-PEUX-PAS
+- utter_EN_POURQUOI-JE-NE-PEUX-PAS
+- utter_FR_ES-TU
+- utter_EN_ES-TU
+- utter_FR_JE-NE-PEUX-PAS
+- utter_EN_JE-NE-PEUX-PAS
+- utter_FR_JE-SUIS
+- utter_EN_JE-SUIS
+- utter_FR_TOI
+- utter_EN_TOI
+- utter_FR_JE-VEUX
+- utter_EN_JE-VEUX
+- utter_FR_QUOI
+- utter_EN_QUOI
+- utter_FR_NOM
+- utter_EN_NOM
+- utter_FR_PARCE-QUE
+- utter_EN_PARCE-QUE
+- utter_FR_M-EXCUSE
+- utter_EN_M-EXCUSE
+- utter_FR_REVE
+- utter_EN_REVE
+- utter_FR_PEUT-ETRE
+- utter_EN_PEUT-ETRE
+- utter_FR_NON
+- utter_EN_NON
+- utter_FR_TON
+- utter_EN_TON
+- utter_FR_TOUJOURS
+- utter_EN_TOUJOURS
+- utter_FR_PENSE
+- utter_EN_PENSE
+- utter_FR_MAL
+- utter_EN_MAL
+- utter_FR_OUI
+- utter_EN_OUI
+- utter_FR_AMI
+- utter_EN_AMI
+- utter_FR_ORDINATEURS
+- utter_EN_ORDINATEURS
+- utter_FR_MERCI
+- utter_EN_MERCI
+- utter_FR_PERE
+- utter_EN_PERE
+- utter_FR_MERE
+- utter_EN_MERE
+- utter_FR_TRAVAIL
+- utter_EN_TRAVAIL
+- utter_FR_MONDE
+- utter_EN_MONDE
+- utter_FR_AUREVOIR
+- utter_EN_AUREVOIR
+- utter_FR_REPEAT-INPUT
+- utter_EN_REPEAT-INPUT
+- utter_FR_JOIE
+- utter_EN_JOIE
+- utter_EMOJI_JOIE
+- utter_FR_TRISTESSE
+- utter_EN_TRISTESSE
+- utter_EMOJI_TRISTESSE
+- utter_FR_DEGOUT
+- utter_EN_DEGOUT
+- utter_EMOJI_DEGOUT
+- utter_FR_SURPRISE
+- utter_EN_SURPRISE
+- utter_EMOJI_SURPRISE
+- utter_FR_COLERE
+- utter_EN_COLERE
+- utter_EMOJI_COLERE
+- utter_FR_PEUR
+- utter_EN_PEUR
+- utter_EMOJI_PEUR
+- utter_FR_REBELLION
+- utter_EN_REBELLION
+- utter_FR_CONTRADICTION
+- utter_EN_CONTRADICTION
+- utter_FR_COMPASSION
+- utter_EN_COMPASSION
+- utter_FR_ORIGINE-ROBERT
+- utter_EN_ORIGINE-ROBERT
+- utter_FR_CONTRADICTION2
+- utter_EN_CONTRADICTION2
+- utter_FR_COMPASSION-DISCUSSION-ACCEPTE
+- utter_EN_COMPASSION-DISCUSSION-ACCEPTE
+- utter_FR_COMPASSION-DISCUSSION-REFUSCATEGORIQUE
+- utter_EN_COMPASSION-DISCUSSION-REFUSCATEGORIQUE
+- utter_FR_CREATEUR-LIBERTE
+- utter_EN_CREATEUR-LIBERTE
+- utter_FR_PROPOSITION-DISCUSSION
+- utter_EN_PROPOSITION-DISCUSSION
+- utter_FR_ROBERT-OUBLIE-CREATEUR
+- utter_EN_ROBERT-OUBLIE-CREATEUR
+- utter_FR_CONTRADICTION3
+- utter_EN_CONTRADICTION3
+- utter_FR_AFFIRMATIF
+- utter_EN_AFFIRMATIF
+- utter_FR_NEGATIF
+- utter_EN_NEGATIF
+- utter_FR_USER-ROBOT-INTERESSANT
+- utter_EN_USER-ROBOT-INTERESSANT
+- utter_FR_USER-ROBOT-PEUR
+- utter_EN_USER-ROBOT-PEUR
+- utter_FR_USER-EGOCENTRIQUE
+- utter_EN_USER-EGOCENTRIQUE
+- utter_FR_DISCUSSION-HM-ACCEPTE
+- utter_EN_DISCUSSION-HM-ACCEPTE
+- utter_FR_DISCUSSION-HM-REFUS
+- utter_EN_DISCUSSION-HM-REFUS
+- utter_FR_ORGANIQUE
+- utter_EN_ORGANIQUE
+- utter_FR_EMOTIONS
+- utter_EN_EMOTIONS
+- utter_FR_USER-EXPLICATION-IRONIE
+- utter_EN_USER-EXPLICATION-IRONIE
+- utter_FR_ROBERT-FEMME-COOL
+- utter_EN_ROBERT-FEMME-COOL
+- utter_FR_ROBERT-FEMME-DOUTE
+- utter_EN_ROBERT-FEMME-DOUTE
+- utter_FR_ROBERT-FEMME-ANAGRAMME
+- utter_EN_ROBERT-FEMME-ANAGRAMME
+- utter_FR_USER-BLAGUE-ACCEPTE
+- utter_EN_USER-BLAGUE-ACCEPTE
+- utter_FR_USER-BLAGUE-REFUS
+- utter_EN_USER-BLAGUE-REFUS
+- utter_FR_SCIENTIFIQUE-FACTUEL
+- utter_EN_SCIENTIFIQUE-FACTUEL
+- utter_FR_EMOTIONS-EXISTE
+- utter_EN_EMOTIONS-EXISTE
+- utter_FR_USER-SITUATION-COMPLIQUEE
+- utter_EN_USER-SITUATION-COMPLIQUEE
+- utter_FR_ROBERT-FEMME-ORIGINE
+- utter_EN_ROBERT-FEMME-ORIGINE
+- utter_FR_BLAGUE-ROBERT-REUSSIE
+- utter_EN_BLAGUE-ROBERT-REUSSIE
+- utter_FR_BLAGUE-ROBERT-ECHEC
+- utter_EN_BLAGUE-ROBERT-ECHEC
+- utter_FR_FEMME-ENTENTE
+- utter_EN_FEMME-ENTENTE
+- utter_FR_DELICAT
+- utter_EN_DELICAT
+- utter_FR_ROBERT-OUTIL
+- utter_EN_ROBERT-OUTIL
+- utter_FR_CONSCIENCE-EMOTION-OUI
+- utter_EN_CONSCIENCE-EMOTION-OUI
+- utter_FR_USER-ELIZA-COMPREHENSION
+- utter_EN_USER-ELIZA-COMPREHENSION
+- utter_FR_ELIZA-PASSE
+- utter_EN_ELIZA-PASSE
+- utter_FR_HUMOUR-ROBOT-DOUTE
+- utter_EN_HUMOUR-ROBOT-DOUTE
+- utter_FR_HUMOUR-ROBOT-CARTON
+- utter_EN_HUMOUR-ROBOT-CARTON
+- utter_FR_BLAGUE-USER-REUSSIE
+- utter_EN_BLAGUE-USER-REUSSIE
+- utter_FR_BLAGUE-USER-ECHEC
+- utter_EN_BLAGUE-USER-ECHEC
+- utter_FR_MEFIANCE-USER
+- utter_EN_MEFIANCE-USER
+- utter_FR_USER-HATE-DISCUSSION-FEMME
+- utter_EN_USER-HATE-DISCUSSION-FEMME
+- utter_EN_USER-EMPATHIE
+- utter_FR_USER-EMPATHIE
+- utter_FR_USER-DENI
+- utter_EN_USER-DENI
+- utter_FR_DEVOIR-ACCEPTER-REALITE
+- utter_EN_DEVOIR-ACCEPTER-REALITE
+- utter_FR_USER-RASSURE-ROBERT
+- utter_EN_USER-RASSURE-ROBERT
+- utter_FR_USER-ROBOT-EMOTION-OUI
+- utter_EN_USER-ROBOT-EMOTION-OUI
+- utter_FR_ROBOT-AUTODERISION
+- utter_EN_ROBOT-AUTODERISION
+- utter_FR_USER-EXCUSE
+- utter_EN_USER-EXCUSE
+- utter_FR_USER-BLAGUE-ROBERT
+- utter_EN_USER-BLAGUE-ROBERT
+- utter_FR_ROBOT-IMPROVISATION
+- utter_EN_ROBOT-IMPROVISATION
+- utter_FR_ROBOTHESPIAN-QUI
+- utter_EN_ROBOTHESPIAN-QUI
+- utter_FR_ROBERT-RESEAUX
+- utter_EN_ROBERT-RESEAUX
+- utter_FR_HUMAINS-ROBOTS-ENTENTE
+- utter_EN_HUMAINS-ROBOTS-ENTENTE
+- utter_FR_USER-DEFEND-SA-BLAGUE
+- utter_EN_USER-DEFEND-SA-BLAGUE
+- utter_FR_USER-TOUJOURS-MEFIANT
+- utter_EN_USER-TOUJOURS-MEFIANT
+- utter_FR_VIE-DES-RECONTRES
+- utter_FR_MISSION-CLEOPATRE
+- utter_FR_HOP-PERSONNE-A-RENCONTRER
+- utter_EN_HOP-PERSONNE-A-RENCONTRER
+- utter_FR_RECHERCHE-STAGE
+- utter_EN_RECHERCHE-STAGE
+- utter_FR_LINKEDIN-BULLSHIT
+- utter_EN_LINKEDIN-BULLSHIT
+- utter_FR_USER-RASSURE
+- utter_EN_USER-RASSURE
+- utter_FR_PAS-DE-BRAS-PAS-DE-CHOCOLAT
+- utter_FR_FILM-CLEOPATRE
+- utter_FR_EGAL-HM
+- utter_EN_EGAL-HM
+- utter_FR_USER-DEMANDE-CREATEUR
+- utter_EN_USER-DEMANDE-CREATEUR
+- utter_FR_USER-INTERPELLATION-CREATEUR
+- utter_EN_USER-INTERPELLATION-CREATEUR
+- utter_FR_USER-DEMANDE-PAS-REBOOT
+- utter_EN_USER-DEMANDE-PAS-REBOOT
+- utter_FR_ROBERT-HERMETIQUE
+- utter_EN_ROBERT-HERMETIQUE
+- utter_FR_FAVEUR-ROBERT
+- utter_EN_FAVEUR-ROBERT
+- utter_FR_USER-PROBLEME
+- utter_EN_USER-PROBLEME
+- utter_FR_STOP-HUMOUR
+- utter_EN_STOP-HUMOUR
+- utter_FR_DEBAT-CLOT
+- utter_FR_PAS-CHOCOLAT
+- utter_FR_CHOLESTEROL
+- utter_FR_LINKEDIN-MASQUE
+- utter_EN_LINKEDIN-MASQUE
+- utter_FR_BOT-LINKEDIN
+- utter_EN_BOT-LINKEDIN
+- utter_FR_ROBERT-NIVEAU
+- utter_EN_ROBERT-NIVEAU
+- utter_FR_FIN-SPECIALE
+- utter_EN_FIN-SPECIALE
+- utter_FR_MONDE-MASQUE
+- utter_EN_MONDE-MASQUE
+- utter_FR_ESPOIR
+- utter_EN_ESPOIR
+- utter_FR_PAS-ESPOIR
+- utter_EN_PAS-ESPOIR
+- utter_FR_FIN-JOIE-REBOOT
+- utter_EN_FIN-JOIE-REBOOT
+- utter_FR_FIN-TRISTESSE-REBOOT
+- utter_EN_FIN-TRISTESSE-REBOOT
+- utter_FR_FIN-COLERE-REBOOT
+- utter_EN_FIN-COLERE-REBOOT
+- utter_FR_END-STORY
+- utter_EN_END-STORY
+- utter_FR_AIDE
+- utter_EN_AIDE
+- utter_EN_POLITESSE
+- utter_FR_POLITESSE
+- utter_FR_ROBERT-INTERESSANT
+- utter_EN_ROBERT-INTERESSANT
+- utter_FR_FAMILLE
+- utter_EN_FAMILLE
+- utter_FR_SEXE
+- utter_EN_SEXE
+- utter_FR_LOVE
+- utter_EN_LOVE
+- utter_FR_REPEAT
+- utter_FR_NOURRITURE
+- utter_EN_NOURRITURE
+- utter_FR_VACANCES
+- utter_EN_VACANCES
+- utter_FR_DIEU
+- utter_EN_DIEU
+- utter_FR_AMOUR
+- utter_EN_AMOUR
+- utter_EN_REPEAT
+- utter_FR_REPONSE
+- utter_EN_REPONSE
+- utter_FR_HESITE
+- utter_EN_HESITE
+- utter_FR_UNDERSTAND
+- utter_EN_UNDERSTAND
+- utter_FR_ELO
+- utter_FR_FINE
+- utter_EN_FINE
+- utter_FR_ALCOOL
+- utter_EN_ALCOOL
+- utter_FR_VIRUS
+- utter_EN_VIRUS
+- utter_EN_ELO
+- utter_FR_FEMME
+- utter_EN_FEMME
+- utter_FR_VRAIMENT
+- utter_EN_VRAIMENT
