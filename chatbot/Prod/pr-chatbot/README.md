@@ -23,9 +23,9 @@ Docker :
 Linux ou Mac:
 
 ```sh
-DownLoad on https://gitlab.utc.fr/agneladr/pr-chatbot.git
+DownLoad on https://gitlab.utc.fr/adrienadrien/pr-chatbot.git
 	        OR
-git clone https://gitlab.utc.fr/agneladr/pr-chatbot.git
+git clone https://gitlab.utc.fr/adrienadrien/pr-chatbot.git
 
 
 (In project dir) : git checkout feature/docker 
