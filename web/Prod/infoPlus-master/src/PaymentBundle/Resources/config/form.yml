@@ -1,0 +1,53 @@
+services:
+
+    payment.abstract_product.form.handler.strategy:
+            abstract: true
+            class: PaymentBundle\Form\Handler\Product\AbstractProductFormHandlerStrategy
+            calls:
+               - [setProductManager, ['@payment.product_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    payment.product.form.handler:
+            class: PaymentBundle\Form\Handler\Product\ProductFormHandler
+            calls:
+                - [setNewProductFormHandlerStrategy, ['@payment.new_product.form.handler.strategy']]
+                - [setUpdateProductFormHandlerStrategy, ['@payment.update_product.form.handler.strategy']]
+
+    payment.new_product.form.handler.strategy:
+            class: PaymentBundle\Form\Handler\Product\NewProductFormHandlerStrategy
+            parent: payment.abstract_product.form.handler.strategy
+            arguments:
+                - "@security.token_storage"
+
+    payment.update_product.form.handler.strategy:
+            class: PaymentBundle\Form\Handler\Product\UpdateProductFormHandlerStrategy
+            parent: payment.abstract_product.form.handler.strategy
+            arguments:
+                - "@security.authorization_checker"
+
+    payment.product_search.form:
+            class: PaymentBundle\Form\Type\Product\ProductFilterType
+            tags:
+                - { name: form.type }
+
+    payment.product.form:
+            class: PaymentBundle\Form\Type\Product\ProductType
+            tags:
+                - { name: form.type }
+
+
+    payment.abstract_invoice.form.handler.strategy:
+          abstract: true
+          class: PaymentBundle\Form\Handler\Invoice\AbstractInvoiceFormHandlerStrategy
+          calls:
+               - [setProductManager, ['@payment.payment_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    payment.invoice_search.form:
+                class: PaymentBundle\Form\Type\Invoice\InvoiceFilterType
+                tags:
+                    - { name: form.type }

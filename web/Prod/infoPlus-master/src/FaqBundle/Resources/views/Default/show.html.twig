@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            <legend>
+                <a href="{{ path('faq_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                {{ faq.ask }}
+                {{ faq.askEn }}
+
+            </legend>
+
+            <ul class="list-inline">
+                <li><i class="glyphicon glyphicon-th"></i> {{ faq.category }}</li>
+            </ul>
+            <p> {{ faq.answer }}</p>
+            <p> {{ faq.answerEn }}</p>
+
+        </div>
+    </div>
+{% endblock %}

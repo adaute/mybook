@@ -1,0 +1,177 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #AAAAAA;
+  clear: both;
+
+}
+
+#header .company {
+  float: right;
+  margin-left: 430px;
+
+}
+
+#details {
+  margin-bottom: 50px;
+}
+
+#client {
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;
+}
+
+#client .to {
+  color: #777777;
+}
+
+h2.name {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#invoice {
+  position: relative; 
+  top: -80px;
+  text-align: right;
+}
+
+#invoice h1 {
+  color: #0087C3;
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: normal;
+  margin: 0  0 10px 0;
+}
+
+#invoice .date {
+  font-size: 1.1em;
+  color: #777777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  padding: 20px;
+  background: #EEEEEE;
+  text-align: center;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+table th {
+  white-space: nowrap;        
+  font-weight: normal;
+}
+
+table td {
+  text-align: right;
+}
+
+table td h3{
+  color: #0087C3;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0 0 0.2em 0;
+}
+
+table .no {
+  color: #FFFFFF;
+  font-size: 1.6em;
+  background: #0087C3;
+  width:7px;
+  text-align: center;
+
+}
+
+table .desc {
+  width:500px;
+  text-align: center;
+}
+
+table .qt {
+  width:5px;
+  text-align: center;
+}
+
+table .total {
+  width:7px;
+  background: #0087C3;
+  color: #FFFFFF;
+  text-align: center;
+
+}
+
+
+table td.desc,
+table td.qt,
+table td.ht,
+table td.total {
+  font-size: 1.2em;
+}
+
+
+table tfoot td {
+  border-collapse:collapse;
+  background: #FFFFFF;
+  border-bottom: medium none;
+  font-size: 1.2em;
+  white-space: nowrap; 
+  line-height:2px;
+}
+
+
+table tfoot td.first{
+  border-top: none; 
+  border-bottom:1px solid #AAAAAA;
+}
+
+table tfoot td.second{
+  border-top: none; 
+  border-bottom: 1px solid #0087C3;
+}
+
+table tfoot td.last{
+  color: #0087C3;
+  font-size: 1.4em;
+}
+
+
+#thanks{
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+#notices{
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;  
+}
+
+#notices .notice {
+  font-size: 1.2em;
+}
+
+#footer {
+  color: #777777;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #AAAAAA;
+  padding: 8px 0;
+  text-align: center;
+}
+
+
+

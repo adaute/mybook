@@ -1,0 +1,9 @@
+product:
+      list: Liste des produits
+      fiche: productShow
+      list_back: Retourner sur la liste des produits
+
+invoice:
+      list: Liste des factures
+      fiche: invoiceShow
+      list_back: Mes factures

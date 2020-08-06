@@ -1,0 +1,13 @@
+services:
+
+    user.user_repository:
+        class: UserBundle\Repository\UserRepository
+        lazy: true
+        arguments: [UserBundle\Entity\User]
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+
+    user.rank_repository:
+        class: UserBundle\Repository\RankRepository
+        lazy: true
+        arguments: [UserBundle\Entity\Rank]
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]

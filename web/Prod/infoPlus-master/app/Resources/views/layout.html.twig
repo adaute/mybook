@@ -1,0 +1,116 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">{{ website }}</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="{% block active_home %}{% endblock %}">
+                        <a href="{{ path('homepage') }}">{{ 'header.home'|trans }} </a>
+                    </li>
+                    <li class="{% block active_diary %}{% endblock %}">
+                        <a href="{{ path('diary') }}">{{ 'header.diary'|trans }}</a>
+                    </li>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li class="dropdown {% block active_internship %}{% endblock %}">
+                            <a class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               href="{{ path('internship') }}">
+                                {{ 'header.internship'|trans }}<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="{% block active_internshipSend %}{% endblock %}">
+                                    <a href="{{ path('internship') }}">{{ 'header.internshipSend'|trans }}</a>
+                                </li>
+                                <li class="{% block active_internshipHome %}{% endblock %}" ><a href="{{ path('internshipOffers') }}">{{ 'header.internshipOffers'|trans }}</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="{{ block('active_internship') }}">
+                            <a href="{{ path('internship') }}">{{ 'header.internship'|trans }}</a>
+                        </li>
+                    {% endif %}
+
+                    <li class="{% block active_partnership %}{% endblock %}">
+                        <a href="{{ path('partnership') }}">{{ 'header.partner'|trans }}</a>
+                    </li>
+                    <li class="{% block active_contact_us %}{% endblock %}">
+                        <a href="{{ path('contact') }}">{{ 'header.contact_us'|trans }}</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    {% if is_granted('ROLE_EDITOR') %}
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                                        class="glyphicon glyphicon-console"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ path('topic_list') }}"><i class="glyphicon glyphicon-list-alt"></i> {{ 'admin.topic'|trans }}</a></li>
+                                <li><a href="{{ path('rank_list') }}"><i class="glyphicon glyphicon-education"></i> {{ 'admin.rank'|trans }}</a></li>
+                                <li><a href="{{ path('diary_list') }}"><i class="glyphicon glyphicon-sunglasses"></i> {{ 'admin.diary'|trans }}</a></li>
+                                <li><a href="{{ path('category_list') }}"><i class="glyphicon glyphicon-th"></i> {{ 'admin.category'|trans }}</a></li>
+                                <li><a href="{{ path('faq_list') }}"><i class="glyphicon glyphicon-question-sign"></i> {{ 'admin.faq'|trans }}</a></li>
+                                <li><a href="{{ path('product_list') }}"><i class="glyphicon glyphicon-shopping-cart"></i> {{ 'admin.product'|trans }}</a></li>
+                                <li><a href="{{ path('invoice_list') }}"><i class="glyphicon glyphicon-barcode"></i> {{ 'admin.invoice'|trans }}</a></li>
+                                <li><a href="{{ path('ticket_list') }}"><i class="glyphicon glyphicon-comment"></i> {{ 'admin.ticket'|trans }}</a></li>
+                                <li><a href="{{ path('user_list') }}"><i class="glyphicon glyphicon-user"></i> {{ 'admin.user'|trans }}</a></li>
+                                <li><a href="{{ path('partnership_list') }}"><i class="glyphicon glyphicon-gift"></i> {{ 'admin.partnership'|trans }}</a></li>
+                                <li><a href="{{ path('internship_list') }}"><i class="glyphicon glyphicon-briefcase"></i> {{ 'admin.internship'|trans }}</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                                            href="#">{{ 'header.language'|trans }}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('change_langue', {'language' : 'fr'}) }}">FR</a></li>
+                            <li><a href="{{ path('change_langue', {'language' : 'en'}) }}">EN</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="{% block active_help %}{% endblock %}">
+                        <a href="{{ path('faq') }}"><span
+                                    class="glyphicon glyphicon-question-sign"></span> {{ 'header.help'|trans }} </a>
+                    </li>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li><a href="{{ path('user_dashboard') }}"><span class="glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li><a href="{{ path('security_logout') }}"> <span
+                                        class="glyphicon glyphicon-log-out"></span></a></li>
+                    {% else %}
+                        <li class="{% block active_login_register %}{% endblock %}">
+                            <a href="{{ path('security_login_register_form') }}"><span
+                                        class="glyphicon glyphicon-user"></span> {{ 'header.login_subscription'|trans }}
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top:55px">
+
+        {% include 'partials/errorSuccess.html.twig' %}
+
+        {% block content %}{% endblock %}
+
+    </div><!-- /.container -->
+    <br>
+    <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="" data-original-title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+
+        <p>{{ "now" |date('Y') }} &copy; {{ website }}. ALL Rights Reserved. · <a href="#">Privacy</a> · <a href="#">Terms</a>
+        </p>
+        <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title=""
+                                      data-original-title="Visit w3schools">www.w3schools.com</a></p>
+    </footer>
+
+{% endblock %}

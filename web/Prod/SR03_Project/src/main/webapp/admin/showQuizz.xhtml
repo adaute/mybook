@@ -1,0 +1,32 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+>
+
+    <ui:define name="title">SR03-Resultat-stagiaire </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Voir le quizz : #{surveyBean.survey.title}</h1><br/>
+
+        <b:container fluid="true">
+            <h3>Théme: #{surveyBean.subjectToString(surveyBean.survey.subject)}</h3>
+
+            <p>Les questions : <br/></p>
+
+            <ui:repeat value="#{surveyBean.list_questions}" var="question">
+                <b:panel look="info" title="#{question.title}" collapsed="true">
+                    <b:dataTable value="#{surveyBean.getAnswer(question.id)}"
+                                 var="answer">
+                        <b:dataTableColumn value="#{answer.label}"/>
+                        <b:dataTableColumn value="#{(answer.id == question.answerId)? '1' : '0' }">
+                            <f:facet name="header"> Est la réponse </f:facet>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+                </b:panel>
+            </ui:repeat>
+        </b:container>
+    </ui:define>
+</ui:composition>

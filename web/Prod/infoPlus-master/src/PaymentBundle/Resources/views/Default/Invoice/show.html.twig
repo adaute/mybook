@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'user.invoice'|trans }}{% endblock %}
+
+{% block active_ranks %}active{% endblock %}
+
+{% block content %}
+  {% include 'PaymentBundle:Default:Invoice/templateInvoice.html.twig' %}
+    {% if is_granted('ROLE_EDITOR') %}
+      <a class="btn btn-primary"  href="{{ path('invoice_list') }}">{{ 'invoice.list'|trans }}</a>
+    {% endif %}
+  <a class="btn btn-primary"  href="{{ path('user_invoice') }}">{{ 'invoice.list_back'|trans }}</a>
+  <a class="btn btn-primary"  href="{{ path('invoice_pdf', {'id': invoice.id} ) }}" target="_blank" ><i class="glyphicon glyphicon-download"></i></a>
+{% endblock %}

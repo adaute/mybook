@@ -1,0 +1,63 @@
+{% extends 'layout.html.twig' %}
+
+{% form_theme form 'TopicBundle:Default:form_theme.html.twig' %}
+
+{% block title %}
+    {% if topic.id %}
+        {{ 'topic.modifier'|trans({'%title%': topic.title}) }}
+    {% else %}
+        {{ 'topic.ajouter'|trans }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+
+            <fieldset>
+
+                {% if topic.id %}
+                    <legend><a href="{{ path('topic_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i> {{ 'edit' | trans({}, 'divers') }}
+                    </legend>
+                {% else %}
+                    <legend><a href="{{ path('topic_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i>{{ 'create' | trans({}, 'divers') }}
+                    </legend>
+                {% endif %}
+
+                <div class="form-group">
+                    <label for="title">{{ 'title' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.title) }}
+                    {{ form_widget(form.title, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="description">{{ 'description' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.description) }}
+                    {{ form_widget(form.description, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+                {% if  app.request.attributes.get('_route') != "topic_new" and topic.enabled != 0 %}
+                    <div class="form-group">
+                        <label for="position">{{ 'position' | trans({}, 'divers') }} :</label>
+                        {{ form_widget(form.position, { 'attr': {'class': 'form-control' }}) }}
+                    </div>
+                {% endif %}
+
+                <div class="form-group">
+                    <label for="picture">{{ 'image' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.image) }}
+                    {{ form_row(form.image) }}
+                </div>
+
+                <br>
+
+            </fieldset>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

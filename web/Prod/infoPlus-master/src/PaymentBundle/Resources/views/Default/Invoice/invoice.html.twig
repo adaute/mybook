@@ -1,0 +1,15 @@
+{% extends '::base_member.html.twig' %}
+
+ {# block permettant de rendre l'onglet sur le menu actif #}
+{% block active_invoice %}active{% endblock %}
+
+ {# block menu du tab #}
+{% block nav_tab %}
+    <li class="{% block active_invoice_tab %}{% endblock %}">
+        <a href="#">{{ 'myInvoice' | trans({}, 'divers') }}</a>
+    </li>
+{% endblock %}
+
+ {# block contenu du tab #}
+{% block nav_content %}{% endblock %}
+

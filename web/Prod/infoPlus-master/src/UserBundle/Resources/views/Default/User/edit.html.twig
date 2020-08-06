@@ -1,0 +1,51 @@
+{% extends 'layout.html.twig' %}
+
+{% form_theme form 'UserBundle:Default:User/form_theme.html.twig' %}
+
+{% block title %}
+    {% if user.id %}
+        {{ 'user.modifier'|trans }}
+    {% else %}
+        {{ 'user.ajouter'|trans }}
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+            <fieldset>
+                {% if user.id %}
+                    <legend><a href="{{ path('user_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i> {{ 'edit' | trans({}, 'divers') }}
+                    </legend>
+                {% else %}
+                    <legend><a href="{{ path('user_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i>{{ 'create' | trans({}, 'divers') }}
+                    </legend>
+                {% endif %}
+            </fieldset>
+
+            <div class="form-group">
+                <label for="rank">{{ 'rank' | trans({}, 'divers') }} :</label>
+                {{ form_errors(form.rank) }}
+                {{ form_widget(form.rank, { 'attr': {'class': 'form-control' }}) }}
+            </div>
+            <div class="form-group">
+                <label for="roles">{{ 'roles' | trans({}, 'divers') }} :</label>
+                {{ form_errors(form.roles) }}
+                {{ form_widget(form.roles) }}
+            </div>
+
+            <div class="form-group">
+                <label for="picture">{{ 'image' | trans({}, 'divers') }} :</label>
+                {{ form_errors(form.image) }}
+                {{ form_row(form.image) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

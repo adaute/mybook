@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="security_authentication_success_handler" class="UserBundle\Security\AuthenticationSuccessHandler">
+            <tag name="monolog.logger" channel="mywebsite_user"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="security.http_utils"/>
+            <argument type="collection"/>
+        </service>
+        <service id="security_authentication_failure_handler" class="UserBundle\Security\AuthenticationFailureHandler">
+            <tag name="monolog.logger" channel="security"/>
+            <argument type="service" id="http_kernel"/>
+            <argument type="service" id="security.http_utils"/>
+            <argument type="collection"/>
+            <argument type="service" id="logger"/>
+        </service>
+        <service id="security_logout_success_handler" class="UserBundle\Security\LogoutSuccessHandler">
+            <tag name="monolog.logger" channel="mywebsite_user"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="user.user_manager"/>
+        </service>
+    </services>
+</container>

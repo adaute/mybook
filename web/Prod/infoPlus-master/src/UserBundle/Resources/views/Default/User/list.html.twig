@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    {{ render(controller('UserBundle:UserCrud:formFilter')) }}
+
+    <div style="text-align: center">
+        <h2>{{ 'user.list'|trans() }}</h2>
+    </div>
+
+    {% include 'UserBundle:Partials:User/user.html.twig' with {'user' : user}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html.twig' %}
+
+{% block active_topics %}active{% endblock %}
+
+{% block content %}
+    <div class="col-md-7">
+        {% if topic.image %}
+            <img
+                    src="{{ asset(topic.image.getWebPath | imagine_filter('topicShow')) }}"
+                    alt="{{ topic.image.alt }}"
+            />
+        {% else %}
+            <img src="http://placehold.it/650x400&text={{ topic.title }}">
+        {% endif %}
+    </div>
+
+    <div class="col-md-5">
+        <h2>
+            {% if is_granted('ROLE_EDITOR') %}
+                <a href="{{ path('topic_list') }}"><i
+                            class="glyphicon glyphicon-arrow-left"></i></a>
+                {{ topic.title }}
+            {% endif %}
+        </h2>
+        <ul class="list-inline">
+            <li><i class="glyphicon glyphicon-calendar"></i> {{ topic.createdAt |date('d-m-Y') }}</li>
+            <li><i class="glyphicon glyphicon-user"></i> {{ topic.author }}</li>
+        </ul>
+        {% if is_granted('ROLE_ADMIN') %}
+        <p>{{ 'enabled' | trans({}, 'divers') }} :
+            {% if topic.enabled == true %}
+                <a href="{{ path('topic_state', { 'id': topic.id }) }}"><i class="glyphicon glyphicon-remove"></i></a>
+            {% else %}
+                <a href="{{ path('topic_state', { 'id': topic.id }) }}"><i class="glyphicon glyphicon-ok"></i></a>
+            {% endif %}
+        </p>
+        {% endif %}
+        <p>{{ topic.description }}</p>
+
+        <p><a class="btn btn-primary" href="{{ path('homepage') }}">{{ 'topic.back'|trans }}</a></p>
+    </div>
+
+{% endblock %}

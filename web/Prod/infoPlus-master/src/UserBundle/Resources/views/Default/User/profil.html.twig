@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% form_theme form 'UserBundle:Default:User/form_theme.html.twig' %}
+
+{% block title %}{{ 'userProfil.modifier'|trans }}{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+            <fieldset>
+                    <legend>
+                        <a href="{{ path('user_dashboard') }}"><i class="glyphicon glyphicon-arrow-left"></i></a> {{ 'edit' | trans({}, 'divers') }}
+                    </legend>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="citation">{{ 'citation' | trans({}, 'divers') }} :</label>
+                {{ form_errors(form.citation) }}
+                {{ form_widget(form.citation, { 'attr': {'class': 'form-control' }}) }}
+            </div>
+
+            <div class="form-group">
+                <label for="picture">{{ 'image' | trans({}, 'divers') }} :</label>
+                {{ form_errors(form.image) }}
+                {{ form_row(form.image) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

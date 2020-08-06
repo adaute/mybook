@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+    <!-- Déclaration des metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Projet SR03 de Romain Creuzenet et Adrien Agnel"/>
+    <meta name="author" content="Adrien Agnel"/>
+    <meta name="author" content="Romain Creuzenet"/>
+
+    <!-- permet de déclarer une ressource qui se trouve dans le dossier css du dossier parent resources-->
+    <script src="#{appUrlStore.baseUrl}/assets/js/script.js" type="text/javascript"></script>
+
+    <!-- Titre de la page -->
+    <title><ui:insert name="title">SR03</ui:insert></title>
+
+</h:head>
+<h:body>
+    <c:choose>
+        <c:when test="#{!empty sessionScope.sessionUser}">
+            <b:navBar brand="Bonjour #{sessionScope.sessionUser.email}" brandHref="#" fluid="true">
+                <b:navbarLinks>
+
+                    <c:choose>
+                        <c:when test="#{sessionScope.sessionUser.statutUser == 1}">
+                            <b:navLink value="Accueil" href="#{appUrlStore.adminHomeUrl}"></b:navLink>
+                            <b:navLink value="Crud User" href="#{appUrlStore.crudUserUrl}"></b:navLink>
+                            <b:navLink value="Crud Quizz" href="#{appUrlStore.crudQuizzUrl}"></b:navLink>
+                            <b:navLink value="" iconAwesome="fa-user-plus"
+                                       href="#{appUrlStore.crudUserAddUrl}"></b:navLink>
+                            <b:navLink value="" iconAwesome="fa-plus" href="#{appUrlStore.crudQuizzAddUrl}"></b:navLink>
+
+                        </c:when>
+                        <c:otherwise>
+                            <b:navLink value="Accueil" href="#{appUrlStore.traineeHomeUrl}"></b:navLink>
+                        </c:otherwise>
+                    </c:choose>
+                </b:navbarLinks>
+                <b:navbarLinks pull="right">
+                    <b:form>
+                        <b:navCommandLink style="color:white; margin-top:10px" icon-size="2x" iconAwesome="fa-sign-out"
+                                          value="" action="#{connexionBean.deconnexion}"
+                                          look="info"/>
+                    </b:form>
+                </b:navbarLinks>
+            </b:navBar>
+        </c:when>
+        <c:otherwise>
+            <b:navBar brand="Projet_SR03" brandHref="#" fluid="true">
+            </b:navBar>
+        </c:otherwise>
+    </c:choose>
+
+    <!-- La div avec le id= content, Represente le contenu spécifique à chaque vue  -->
+    <ui:insert name="content">Default Content</ui:insert>
+</h:body>
+</html>

@@ -1,0 +1,51 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="title">SR03-QCM </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">QCM</h1><br/>
+        <b:container fluid="true">
+            <h:form>
+                <b:progressBar value="0#{(100/trackRecordBean.list_questions.size())*(trackRecordBean.current_index+1)}"
+                               animated="true"/>
+                <div id="chrono" class="h2">00:00:00</div>
+
+                <b:panel>
+                    <f:facet name="heading">
+                        <i class="fa fa-battery-three-quarters" style="padding-right:20px"/>
+                        <h:outputText
+                                value="Question : #{trackRecordBean.list_questions.get(trackRecordBean.current_index).title}"/>
+                    </f:facet>
+
+                    <c:forEach
+                            items="#{surveyBean.getAnswer(trackRecordBean.list_questions.get(trackRecordBean.current_index).id)}"
+                            var="answ">
+                        <div class="radiobox">
+                            <label><input type="radio" name="idReponse" value="#{answ.id}"/> #{answ.label}</label>
+                        </div>
+                    </c:forEach>
+
+                    <input type="hidden" id="input_chrono" name="input_chrono" value="0"/>
+                    <b:commandButton value="#{trackRecordBean.afficher_boutton()}"
+                                     actionListener="#{trackRecordBean.PlayQuizz}"
+                                     look="success" update="@form">
+                        <f:param name="idQuestion"
+                                 value="#{trackRecordBean.list_questions.get(trackRecordBean.current_index).id}"/>
+                    </b:commandButton>
+                </b:panel>
+
+            </h:form>
+        </b:container>
+
+
+        <script src="../assets/js/timer.js" type="text/javascript"></script>
+
+    </ui:define>
+</ui:composition>

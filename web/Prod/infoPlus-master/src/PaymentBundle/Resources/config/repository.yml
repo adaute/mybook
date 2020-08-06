@@ -1,0 +1,13 @@
+services:
+
+    payment.payment_repository:
+        class: PaymentBundle\Repository\PaymentRepository
+        lazy: true
+        arguments: [PaymentBundle\Entity\Invoice]
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+
+    payment.product_repository:
+                class: PaymentBundle\Repository\ProductRepository
+                factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                arguments: ['PaymentBundle\Entity\Product']
+                lazy: true

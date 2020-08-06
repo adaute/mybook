@@ -1,0 +1,13 @@
+services:
+    corebundle.unique_attribute_validator:
+        class: CoreBundle\Validator\Constraints\UniqueAttributeValidator
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: validator.constraint_validator, alias: unique_attribute_validator }
+
+    corebundle.email_blackList_validator:
+          class: CoreBundle\Validator\Constraints\EmailBlackListValidator
+          calls:
+               - [ setBlackList, ['%mail_blacklist%'] ]
+          tags:
+               - { name: validator.constraint_validator, alias: email_black_list }

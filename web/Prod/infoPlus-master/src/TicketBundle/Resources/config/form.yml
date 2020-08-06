@@ -1,0 +1,49 @@
+services:
+
+    ticket.abstract_ticket.form.handler.strategy:
+            abstract: true
+            class: TicketBundle\Form\Handler\Ticket\AbstractTicketFormHandlerStrategy
+            calls:
+               - [setTicketManager, ['@ticket.ticket_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    ticket.ticket.form.handler:
+            class: TicketBundle\Form\Handler\Ticket\TicketFormHandler
+            calls:
+                - [setHomeTicketFormHandlerStrategy, ['@ticket.home_ticket.form.handler.strategy']]
+                - [setAnswerFormHandlerStrategy, ['@ticket.answer.form.handler.strategy']]
+
+    ticket.ticket_search.form:
+            class: TicketBundle\Form\Type\Ticket\TicketFilterType
+            tags:
+                - { name: form.type }
+
+    ticket.ticket.form:
+            class: TicketBundle\Form\Type\Ticket\TicketType
+            arguments:
+                - "@ticket.ticket_manager"
+            tags:
+                - { name: form.type }
+
+
+    ticket.home_ticket.form.handler.strategy:
+              class: TicketBundle\Form\Handler\Ticket\HomeTicketFormHandlerStrategy
+              parent: ticket.abstract_ticket.form.handler.strategy
+              arguments:
+                     - "@security.token_storage"
+
+
+    ticket.answer.form:
+            class: TicketBundle\Form\Type\Ticket\AnswerType
+            arguments:
+                - "@ticket.ticket_manager"
+            tags:
+                - { name: form.type }
+
+    ticket.answer.form.handler.strategy:
+              class: TicketBundle\Form\Handler\Ticket\AnswerFormHandlerStrategy
+              parent: ticket.abstract_ticket.form.handler.strategy
+              arguments:
+                         - "@security.token_storage"

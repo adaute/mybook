@@ -1,0 +1,223 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+>
+
+    <ui:define name="css"> </ui:define>
+
+    <ui:define name="title">SR03-CrudUser </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Gestion des utilisateurs</h1><br/>
+
+        <b:container fluid="true">
+
+            <b:button value="" iconAwesome="fa-user-plus" look="info" href="#{appUrlStore.crudUserAddUrl}"/><br/><br/>
+
+            <b:form>
+                <b:panel>
+                    <f:facet name="heading">
+                        <b:badge style="background-color:#5cb85c" value="Actif"/>
+                    </f:facet>
+                    <b:dataTable value="#{userBean.list_userEnabled}"
+                                 var="user"
+                                 fixedHeader="true"
+                                 scroll-size="400px"
+                                 scroll-x="false"
+                                 responsive="true"
+                                 lang="fr"
+                                 searching="true">
+
+                        <b:dataTableColumn value="#{user.id}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="user"/>
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.firstName}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="user"/> firstName
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.lastName}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="user"/> lastName
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.email}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="envelope"/> email
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.compagny}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="building"/> compagny
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.phone}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="building"/> phone
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.dateFormat()}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="calendar"/> Subscription
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn width="7%">
+                            <f:facet name="header"> <b:iconAwesome value="fa-shirtsinbulk"/> Grade</f:facet>
+                            <b:iconAwesome value="#{user.statutUser == 1 ? 'fa-user-secret' : 'user'}"/>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="7%">
+                            <f:facet name="header">Status</f:facet>
+                            <b:commandButton value="Désactiver"
+                                             look="danger"
+                                             update="@form"
+                                             action="#{userBean.statusUser}">
+                                <f:param name="id" value="#{user.id}"/>
+                            </b:commandButton>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="10%">
+                            <f:facet name="header">Actions</f:facet>
+                            <div class="display: flex;justify-content:space-around">
+
+                                <b:commandButton iconAwesome="eye"
+                                                 style="margin-right:10px"
+                                                 look="info"
+                                                 update="@form"
+                                                 action="#{resultBean.showStagiaireResultat(user.id)}"/>
+
+                                <b:commandButton iconAwesome="edit"
+                                                 style="margin-right:10px"
+                                                 look="warning"
+                                                 update="@form"
+                                                 action="#{userBean.editUser(user)}">
+                                </b:commandButton>
+                                <div style="display: inline">
+                                    <i class="btn btn-danger fa fa-trash icon_alert_submit"
+                                       data-alert="Voulez-vous supprimer l'utilisateur ?"
+                                       onclick="alert_submit(this);"/>
+                                    <b:commandButton update="@form"
+                                                     action="#{userBean.deleteUser}"
+                                                     style="display:none">
+                                        <f:param name="id" value="#{user.id}"/>
+                                    </b:commandButton>
+                                </div>
+
+                            </div>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+                </b:panel>
+                <b:panel>
+                    <f:facet name="heading">
+                        <b:badge style="background-color:red" value="Disabled"/>
+                    </f:facet>
+                    <b:dataTable value="#{userBean.list_userDisabled}"
+                                 var="user"
+                                 fixedHeader="true"
+                                 scroll-size="400px"
+                                 scroll-x="false"
+                                 responsive="true"
+                                 lang="fr"
+                                 searching="true">
+                        <b:dataTableColumn value="#{user.id}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="user"/>
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.firstName}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="user"/> firstName
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.lastName}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="user"/> lastName
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.email}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="envelope"/> email
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.compagny}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="building"/> compagny
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.phone}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="building"/> phone
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{user.dateFormat()}">
+                            <f:facet name="header">
+                                <b:iconAwesome value="calendar"/> Subscription
+                            </f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn width="7%">
+                            <f:facet name="header"> <b:iconAwesome value="fa-shirtsinbulk"/> Grade</f:facet>
+                            <b:iconAwesome value="#{user.statutUser == 1 ? 'fa-user-secret' : 'user'}"/>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="7%">
+                            <f:facet name="header">Status</f:facet>
+                            <b:commandButton value="Activer"
+                                             look="success"
+                                             update="@form"
+                                             action="#{userBean.statusUser}">
+                                <f:param name="id" value="#{user.id}"/>
+                            </b:commandButton>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn width="10%">
+                            <f:facet name="header">Actions</f:facet>
+                            <div class="display: flex;justify-content:space-around">
+                                <b:commandButton iconAwesome="eye"
+                                                 look="info"
+                                                 update="@form"
+                                                 style="margin-right:10px"
+                                                 action="#{resultBean.showStagiaireResultat(user.id)}"/>
+
+                                <b:commandButton iconAwesome="edit"
+                                                 look="warning"
+                                                 update="@form"
+                                                 style="margin-right:10px"
+                                                 action="#{userBean.editUser(user)}">
+                                </b:commandButton>
+                                <div style="display: inline">
+                                    <i class="btn btn-danger fa fa-trash icon_alert_submit"
+                                       data-alert="Voulez-vous supprimer l'utilisateur ?"
+                                       onclick="alert_submit(this);"/>
+                                    <b:commandButton update="@form"
+                                                     action="#{userBean.deleteUser}"
+                                                     style="display:none;">
+                                        <f:param name="id" value="#{user.id}"/>
+                                    </b:commandButton>
+                                </div>
+                            </div>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+
+                </b:panel>
+            </b:form>
+        </b:container>
+
+    </ui:define>
+</ui:composition>
+

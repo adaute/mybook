@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {% if category.id %}
+        {{ 'category.modifier'|trans({'%titre%': category.title}) }}
+    {% else %}
+        {{ 'category.ajouter'|trans }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+            <fieldset>
+                {% if category.id %}
+                    <legend><a href="{{ path('category_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i> {{ 'edit' | trans({}, 'divers') }}
+                    </legend>
+                {% else %}
+                    <legend><a href="{{ path('category_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i>{{ 'create' | trans({}, 'divers') }}
+                    </legend>
+                {% endif %}
+
+                <div class="form-group">
+                    <label for="title">{{ 'title' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.title) }}
+                    {{ form_widget(form.title, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+            </fieldset>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock %}

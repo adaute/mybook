@@ -1,0 +1,103 @@
+{% if topic is  not empty %}
+    <div class="row">
+        <div class="col-sm-2 hidden-xs" id="slider-thumbs">
+            <!-- Bottom switcher of slider -->
+            <ul class="hide-bullets">
+                {% for topic in topic %}
+                {% if loop.index <= 3 and loop.index %}
+                            <li>
+                                <a class="thumbnail" id="carousel-selector-{{ loop.index - 1 }}">
+                                    {% if topic.image %}
+                                        <img
+                                                src="{{ asset(topic.image.getWebPath | imagine_filter('topicThumb')) }}"
+                                                alt="{{ topic.image.alt }}"
+                                        />
+                                    {% else %}
+                                        <img src="http://placehold.it/170x100&text={{ topic.title }}">
+                                    {% endif %}
+                                </a>
+                            </li>
+                        {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-sm-8" id="carousel-bounding-box">
+            <div class="carousel slide" id="myCarousel">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+
+                    {% for topic in topic %}
+                            {% if loop.first %}
+                                <div class="active item" data-slide-number="0">
+                                    {% if topic.image %}
+                                        <img
+                                                src="{{ asset(topic.image.getWebPath | imagine_filter('topicFull')) }}"
+                                                alt="{{ topic.image.alt }}"
+                                        />
+                                    {% else %}
+                                        <img src="http://placehold.it/750x343&text=&nbsp;">
+                                    {% endif %}
+                                    <div class="carousel-caption">
+                                        <h3>{{ topic.title }}</h3>
+                                        <p>{{ topic.description| truncate(50, true, ' ...') }} <br><br>
+                                            <a href="{{ path('topic_show', { 'id': topic.id }) }}"
+                                               class="label label-primary">{{ 'topic.read_more'|trans }}</a></p>
+                                    </div>
+                                </div>
+                            {% else %}
+
+                                <div class="item" data-slide-number="{{ loop.index - 1 }}">
+                                    {% if topic.image %}
+                                        <img
+                                                src="{{ asset(topic.image.getWebPath | imagine_filter('topicFull')) }}"
+                                                alt="{{ topic.image.alt }}"
+                                        />
+                                    {% else %}
+                                        <img src="http://placehold.it/750x343&text=&nbsp;">
+                                    {% endif %}
+                                    <div class="carousel-caption">
+                                        <h3>{{ topic.title }}</h3>
+                                        <p>{{ topic.description| truncate(50, true, ' ...') }} <br><br>
+                                            <a href="{{ path('topic_show', { 'id': topic.id }) }}"
+                                               class="label label-primary">{{ 'topic.read_more'|trans }}</a></p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                    {% endfor %}
+
+                </div><!-- Carousel nav -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-2 hidden-xs" id="slider-thumbs">
+            <!-- Bottom switcher of slider -->
+            <ul class="hide-bullets">
+                {% for topic in topic %}
+                    {% if loop.index > 3 %}
+
+                        <li>
+                            <a class="thumbnail" id="carousel-selector-{{ loop.index - 1 }}">
+                                {% if topic.image %}
+                                    <img
+                                            src="{{ asset(topic.image.getWebPath | imagine_filter('topicThumb')) }}"
+                                            alt="{{ topic.image.alt }}"
+                                    />
+                                {% else %}
+                                    <img src="http://placehold.it/170x100&text={{ topic.title }}">
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+{% endif %}

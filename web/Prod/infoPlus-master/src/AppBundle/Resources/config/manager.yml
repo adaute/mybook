@@ -1,0 +1,10 @@
+services:
+
+    app.category_manager:
+        class: AppBundle\Entity\Manager\CategoryManager
+        lazy: true
+        arguments: ["@app.category.repository"]
+        calls:
+            - [setFormFactory, ['@form.factory']]
+            - [setRouter, ['@router']]
+            - [setSearchFormType, [AppBundle\Form\Type\Category\CategorySearchFormType]]

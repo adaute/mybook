@@ -1,0 +1,48 @@
+partnership:
+    resource: "@PartnershipBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ticket:
+    resource: "@TicketBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+faq:
+    resource: "@FaqBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+internship:
+    resource: "@InternshipBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+diary:
+    resource: "@DiaryBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+payment:
+    resource: "@PaymentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+topic:
+    resource: "@TopicBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+

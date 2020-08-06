@@ -1,0 +1,138 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+>
+
+    <ui:define name="css"></ui:define>
+
+    <ui:define name="title">SR03-CrudQuizz </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Gestion des questionnaires</h1><br/>
+
+        <b:container fluid="true">
+
+            <b:form>
+                <b:commandButton iconAwesome="fa-plus-circle"
+                                 look="info"
+                                 action="#{surveyBean.addOrUpdate(-1)}"/>
+            </b:form><br/>
+            <b:form>
+                <b:panel>
+                    <f:facet name="heading">
+                        <b:badge style="background-color:#5cb85c" value="Actif"/>
+                    </f:facet>
+
+                    <b:dataTable value="#{surveyBean.list_surveyEnabled}"
+                                 var="quiz"
+                                 fixedHeader="true"
+                                 scroll-size="400px"
+                                 scroll-x="false"
+                                 responsive="true"
+                                 lang="fr"
+                                 searching="true">
+                        <b:dataTableColumn value="#{quiz.id}"/>
+                        <b:dataTableColumn value="#{surveyBean.subjectToString(quiz.subject)}">
+                            <f:facet name="header">Thémes</f:facet>
+
+                        </b:dataTableColumn>
+                        <b:dataTableColumn value="#{quiz.title}"/>
+                        <b:dataTableColumn width="20%" value="#{trackRecordBean.GetparcoursNbr(quiz.id)}">
+                            <f:facet name="header">Nombres de parcours</f:facet>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="5%">
+                            <f:facet name="header">Status</f:facet>
+                            <b:commandButton value="Désactiver"
+                                             look="danger"
+                                             update="@form"
+                                             disabled="#{trackRecordBean.calculMax(quiz.id) != -1}"
+                                             action="#{surveyBean.changeStatusSurvey}">
+                                <f:param name="id" value="#{quiz.id}"/>
+                            </b:commandButton>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="10%">
+                            <f:facet name="header">
+                                Action <b:iconAwesome value="edit"/>
+                            </f:facet>
+
+                            <b:commandButton look="info"
+                                             style="margin-right:10px"
+                                             update="@form"
+                                             iconAwesome="eye"
+                                             action="#{surveyBean.show(quiz.id)}"/>
+
+                            <b:commandButton look="warning"
+                                             style="margin-right:10px"
+                                             update="@form"
+                                             iconAwesome="edit"
+                                             action="#{surveyBean.addOrUpdate(quiz.id)}"/>
+
+                            <b:commandButton look="danger"
+                                             update="@form"
+                                             iconAwesome="trash"
+                                             action="#{surveyBean.deleteSurvey(quiz.id)}"/>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+                </b:panel>
+                <b:panel>
+                    <f:facet name="heading">
+                        <b:badge style="background-color:red" value="Inactif"/>
+                    </f:facet>
+
+                    <b:dataTable value="#{surveyBean.list_surveyDisabled}"
+                                 var="quiz"
+                                 fixedHeader="true"
+                                 scroll-size="400px"
+                                 scroll-x="false"
+                                 responsive="true"
+                                 lang="fr"
+                                 searching="true">
+                        <b:dataTableColumn value="#{quiz.id}"/>
+                        <b:dataTableColumn value="#{surveyBean.subjectToString(quiz.subject)}">
+                            <f:facet name="header">Thémes</f:facet>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn value="#{quiz.title}"/>
+                        <b:dataTableColumn value="#{trackRecordBean.GetparcoursNbr(quiz.id)}">
+                            <f:facet name="header">Nombres de parcours</f:facet>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="5%">
+                            <f:facet name="header">Status</f:facet>
+                            <b:commandButton value="Activer"
+                                             look="success"
+                                             update="@form"
+                                             disabled="#{trackRecordBean.calculMax(quiz.id) != -1}"
+                                             action="#{surveyBean.changeStatusSurvey}">
+                                <f:param name="id" value="#{quiz.id}"/>
+                            </b:commandButton>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn width="10%">
+                            <f:facet name="header">
+                                Action <b:iconAwesome value="edit"/>
+                            </f:facet>
+                            <b:commandButton look="info"
+                                             style="margin-right:10px"
+                                             update="@form"
+                                             iconAwesome="eye"
+                                             action="#{surveyBean.show(quiz.id)}"/>
+
+                            <b:commandButton look="warning"
+                                             style="margin-right:10px"
+                                             update="@form"
+                                             iconAwesome="edit"
+                                             action="#{surveyBean.addOrUpdate(quiz.id)}"/>
+
+                            <b:commandButton look="danger"
+                                             update="@form"
+                                             iconAwesome="trash"
+                                             action="#{surveyBean.deleteSurvey(quiz.id)}"/>
+
+                        </b:dataTableColumn>
+                    </b:dataTable>
+                </b:panel>
+            </b:form>
+        </b:container>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,4 @@
+internship:
+      list: Liste des stages
+      fiche: InternshipShow
+      list_back: Retourner sur la liste des stages

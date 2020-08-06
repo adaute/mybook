@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:b="http://bootsfaces.net/ui"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:fragment rendered="#{userBean.user.id != null}">
+
+    <b:form id="formEditUser">
+
+        <center>
+            <h3>Modifier l'utilisateur : #{userBean.user.id}</h3>
+        </center>
+
+        <b:fetchBeanInfos/>
+        <b:messages/>
+
+        <b:growl for="send" id="growlSpecific" placementFrom="top" show-detail="true"
+                 global-only="false"
+                 show-summary="true" allow-dismiss="true"
+                 animation-enter="animated bounceInDown"
+                 animation-exit="animated flipOutX"
+                 escape="true"/>
+
+        <ui:include src="../forms/form_user.xhtml"/>
+
+        <b:row>
+            <b:commandButton
+                    id="send"
+                    style="margin-right:10px"
+                    value="Modifier" look="success"
+                    action="#{userBean.updateUser}"
+                    update="@form"/>
+            <b:commandButton
+                    value="Annuler"
+                    action="#{userBean.editUser(null)}"
+                    update="@form"/>
+        </b:row>
+    </b:form>
+
+</ui:fragment>
+<ui:fragment rendered="#{userBean.user.id == null}">
+    <b:form>
+
+        <center>
+            <h3>Ajouter un utilisateur</h3>
+        </center>
+
+        <b:fetchBeanInfos/>
+        <b:messages/>
+
+        <b:growl for="sendUpdate" id="growlSpecific" placementFrom="top" show-detail="true"
+                 global-only="false"
+                 show-summary="true" allow-dismiss="true"
+                 animation-enter="animated bounceInDown"
+                 animation-exit="animated flipOutX"
+                 escape="true"/>
+
+
+        <ui:include src="../forms/form_user.xhtml"/>
+        <b:row>
+
+            <b:commandButton
+                    id="sendUpdate"
+                    value="Créer le compte" look="success"
+                    action="#{userBean.ajouterUnUser}"
+                    update="@form"/>
+        </b:row>
+    </b:form>
+</ui:fragment>
+</html>

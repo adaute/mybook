@@ -1,0 +1,7 @@
+change_password.old_password.minlength: Le mot de passe doit avoir au moins {{ limit }} caractères
+
+registration.password.minlength: Le mot de passe doit avoir au moins {{ limit }} caractères
+registration.firstName.minlength: Le nom doit avoir au moins {{ limit }} caractères
+registration.lastName.minlength: Le prénom doit avoir au moins {{ limit }} caractères
+registration.email.notblank: L'email est obligatoire
+registration.cguRead: Vous devez accepter les CGU pour vous inscrire

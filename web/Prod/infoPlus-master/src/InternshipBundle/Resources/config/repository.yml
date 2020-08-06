@@ -1,0 +1,7 @@
+services:
+
+    internship.internship_repository:
+                class: InternshipBundle\Repository\InternshipRepository
+                factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                arguments: ['InternshipBundle\Entity\Internship']
+                lazy: true

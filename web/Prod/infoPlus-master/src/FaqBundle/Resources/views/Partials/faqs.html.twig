@@ -1,0 +1,33 @@
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'ask' | trans({}, 'divers') }}</th>
+            <th>{{ 'answer' | trans({}, 'divers') }}</th>
+            <th>{{ 'category' | trans({}, 'divers') }}</th>
+            <th>{{ 'show' | trans({}, 'divers') }}</th>
+            <th>{{ 'edit' | trans({}, 'divers') }}</th>
+            <th>{{ 'delete' | trans({}, 'divers') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for faqs in faq %}
+            <tr>
+                <td>{{ faqs.ask }}</td>
+                <td>{{ faqs.answer| truncate(50, true, ' ...') }}</td>
+                <td>{{ faqs.category.slug }}</td>
+                <td><a href="{{ path('faq_show', { 'id': faqs.id }) }}"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+                {% if is_granted('ROLE_EDITOR') %}
+                    <td><a href="{{ path('faq_edit', { 'id': faqs.id }) }}"><i class="glyphicon glyphicon-pencil"></i></a></td>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <td><a href="{{ path('faq_delete', { 'id': faqs.id }) }}"><i class="glyphicon glyphicon-trash"></i></a></td>
+                {% endif %}
+            </tr>
+        {% else %}
+            <tr>
+                <td>{{ 'none' | trans({}, 'divers') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

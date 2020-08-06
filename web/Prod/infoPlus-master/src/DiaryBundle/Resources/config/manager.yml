@@ -1,0 +1,10 @@
+services:
+
+    diary.diary_manager:
+              class: DiaryBundle\Entity\Manager\DiaryManager
+              arguments:  ["@diary.diary_repository",'@event_dispatcher']
+              calls:
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setSearchFormType, ['DiaryBundle\Form\Type\DiaryFilterType']]
+              lazy: true

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice #{{ invoice.id }}:{{ invoice.dateInvoice |date('d-m-Y H:i:s') }}</title>
+
+    <style>
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        a {
+            color: #0087C3;
+            text-decoration: none;
+        }
+
+        body {
+            position: relative;
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0 auto;
+            color: #555555;
+            background: #FFFFFF;
+            font-size: 14px;
+        }
+
+        #header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #AAAAAA;
+            float: right;
+            clear: both;
+
+        }
+
+        #header .company {
+            float: right;
+            margin-left: 430px;
+
+        }
+
+        #details {
+            margin-bottom: 50px;
+        }
+
+        #client {
+            padding-left: 6px;
+            border-left: 6px solid #0087C3;
+        }
+
+        #client .to {
+            color: #777777;
+        }
+
+        h2.name {
+            font-size: 1.4em;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        #invoice {
+            position: relative;
+            top: -80px;
+            text-align: right;
+            width:377px;
+        }
+
+        #invoice h1 {
+            color: #0087C3;
+            font-size: 2.4em;
+            line-height: 1em;
+            font-weight: normal;
+            margin: 0  0 42px 0;
+        }
+
+        #invoice .date {
+            font-size: 1.1em;
+            color: #777777;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 20px;
+            background: #EEEEEE;
+            text-align: center;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        table th {
+            white-space: nowrap;
+            font-weight: normal;
+        }
+
+        table td {
+            text-align: right;
+        }
+
+        table td h3{
+            color: #0087C3;
+            font-size: 1.2em;
+            font-weight: normal;
+            margin: 0 0 0.2em 0;
+        }
+
+        table .no {
+            width:10px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 1.6em;
+            background: #0087C3;
+        }
+
+        table .desc {
+            width:380px;
+            text-align: left;
+        }
+
+        table .qt {
+            text-align: center;
+
+        }
+
+
+        table .total {
+            text-align: center;
+            background: #0087C3;
+            color: #FFFFFF;
+        }
+
+
+        table td.desc,
+        table td.total {
+            font-size: 1.2em;
+        }
+
+
+        table tfoot td {
+            border-collapse:collapse;
+            background: #FFFFFF;
+            border-bottom: medium none;
+            font-size: 1.2em;
+            white-space: nowrap;
+            line-height:2px;
+        }
+
+        table tfoot td.first{
+            border-top: none;
+            border-bottom:1px solid #AAAAAA;
+        }
+
+        table tfoot td.last{
+            color: #0087C3;
+            font-size: 1.4em;
+        }
+
+
+        #thanks{
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        #notices{
+            padding-left: 6px;
+            border-left: 6px solid #0087C3;
+        }
+
+        #notices .notice {
+            font-size: 1.2em;
+        }
+
+        #footer {
+            color: #777777;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid #AAAAAA;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+<div id="header" class="clearfix">
+       <h2>{{ website }}</h2>
+    <div class="company">
+        merchant_id : {{ invoice.MerchantId }} <br>
+        merchant_email : <a href="mailto:{{ invoice.MerchantEmail }}">  {{ invoice.MerchantEmail }} </a>
+    </div>
+</div>
+
+<div id="details" class="clearfix">
+
+    <div id="client">
+        <div class="to"> {{ invoice.recipientName }}</div>
+        <h2 class="name">{{ invoice.recipientName }}</h2>
+
+        <div class="address">
+            {{ invoice.line1 }} <br>
+            {{ invoice.postalCode }} {{ invoice.city }}
+            - {{ invoice.CountryCode }}
+        </div>
+    </div>
+
+    <div id="invoice">
+        <div class="date">
+            <h1>Invoice #{{ invoice.id }}</h1>
+            Date : {{ invoice.dateInvoice |date('d-m-Y H:i:s') }}<br/>
+            Nombres de pages : [[page_nb]]
+        </div>
+    </div>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0">
+
+    <thead>
+    <tr>
+        <th class="no">#</th>
+        <th class="desc" style="text-align: center">Description</th>
+        <th class="qt">Quantité</th>
+        <th class="total">Sub Total</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td class="no">{{ invoice.product.id }}</td>
+            <td class="desc">{{ invoice.product.title }} : {{ invoice.product.description }}</td>
+            <td class="qt">1</td>
+            <td class="total">{{ invoice.product.price }} &euro;</td>
+        </tr>
+
+        {% if invoice.product.price != invoice.amountPrice %}
+            {% set reduction = invoice.product.price*(10/100) %}
+            <tr>
+                <td class="no"> </td>
+                <td class="desc"> Reduction de 10%</td>
+                <td class="qt">1</td>
+                <td class="total"> - {{ reduction }} &euro;</td>
+            </tr>
+        {% endif %}
+
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td colspan="2"></td>
+        <td class="first">Sub Total :</td>
+        <td class="first">{{ invoice.amountPrice }} &euro;</td>
+    </tr>
+
+    <tr>
+        <td colspan="2"></td>
+        <td class="first" colspan="1">TAX :</td>
+        <td class="first"> N/A</td>
+    </tr>
+
+    <tr>
+        <td colspan=2"></td>
+        <td class="last" colspan="1">Total :</td>
+        <td class="last">{{ invoice.amountPrice }} &euro;</td>
+    </tr>
+    </tfoot>
+</table>
+<div id="thanks">Merci de votre commande.</div>
+<div id="notices">
+    <div>NOTICE:</div>
+    <div class="notice">Aucun produit ne sera échangé !</div>
+</div>
+<div id="footer">
+    La facture est crée sur ordinateur ...
+</div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+services:
+
+    partnership.partnership_repository:
+                class: PartnershipBundle\Repository\PartnershipRepository
+                factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                arguments: ['PartnershipBundle\Entity\Partnership']
+                lazy: true

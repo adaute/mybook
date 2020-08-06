@@ -1,0 +1,12 @@
+services:
+
+    topic.topic_manager:
+              class: TopicBundle\Entity\Manager\TopicManager
+              arguments:  ["@topic.topic_repository"]
+              calls:
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setSearchFormType, ['TopicBundle\Form\Type\TopicFilterType']]
+              lazy: true
+
+

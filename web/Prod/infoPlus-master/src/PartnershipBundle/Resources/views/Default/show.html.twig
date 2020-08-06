@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'partnership.fiche'|trans({ '%name%': partnership.name}) }}{% endblock %}
+
+{% block active_partnerships %}active{% endblock %}
+
+{% block content %}
+    <div class="col-md-7">
+        {% if partnership.image %}
+
+            <img
+                    src="{{ asset(partnership.image.getWebPath | imagine_filter('topicShow')) }}"
+                    alt="{{ partnership.image.alt }}"
+            />
+        {% else %}
+            <img src="http://placehold.it/650x400&text={{ partnership.name }}">
+        {% endif %}
+    </div>
+
+    <div class="col-md-5">
+        <h2>
+            {% if is_granted('ROLE_EDITOR') %} <a href="{{ path('partnership_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>{% endif %}
+            {{ partnership.name }}
+        </h2>
+        <ul class="list-inline">
+            <li><i class="glyphicon glyphicon-heart-empty"></i> {{ partnership.badge }}</li>
+            <li><i class="glyphicon glyphicon-home"></i> {{ partnership.adress }}</li>
+        </ul>
+        <p>{{ partnership.description }}</p>
+    </div>
+
+{% endblock %}

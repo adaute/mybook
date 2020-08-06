@@ -1,0 +1,75 @@
+{% extends 'layout.html.twig' %}
+
+{% block active_tickets %}active{% endblock %}
+
+{% block content %}
+    <br>
+
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('ticket_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+            {% if ticket.enabled == true %}
+                <a class="btn btn-primary" href="{{ path('ticket_state', { 'id': ticket.id }) }}"><i class="glyphicon glyphicon-floppy-remove"></i></a>
+            {% else %}
+                <a class="btn btn-primary" href="{{ path('ticket_state', { 'id': ticket.id }) }}"><i class="glyphicon glyphicon-floppy-saved"></i></a>
+            {% endif %}
+        </p>
+    {% endif %}
+
+
+    <div class="well">
+        <h4>{{ ticket.category }} : {{ ticket.subject }} <span
+                    class="pull-right">{{ ticket.CreatedAt |date('d-m-Y H:i') }}</span></h4>
+
+        <p>{{ ticket.additionnalInformation }} </p>
+
+        <ul class="list-inline">
+            <li><i class="glyphicon glyphicon-user"></i>&nbsp;{{ ticket.firstName }} {{ ticket.lastName }}&nbsp;&nbsp;
+                <i class="glyphicon glyphicon-envelope"></i> &nbsp;{{ ticket.email }}</li>
+            {% if ticket.cellphone %}
+                <li><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;{{ ticket.cellphone }}</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% if answers is  not empty %}
+        {% for answers in answers %}
+            {% if answers.author == null %}
+                <div class="well" style="background-color: transparent">
+                    <h4> Answer : <span class="pull-right">{{ answers.CreatedAt |date('d-m-Y H:i') }}</span></h4><br>
+                    <p>{{ answers.answer }} </p>
+                </div>
+            {% else %}
+                <div class="well" style="background-color: #4579b2 ; color: white">
+                    <h4> Answer : <span class="pull-right">{{ answers.CreatedAt |date('d-m-Y H:i') }}</span></h4>
+                        <p>{{ answers.answer }} </p><br>
+                    <p><i class="glyphicon glyphicon-user"></i> {{ answers.author.firstName }} {{ answers.author.lastName }}</p>&nbsp;
+
+                </div>
+            {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if ticket.enabled == 1 %}
+
+    <div class="well">
+
+        {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+
+        <fieldset>
+
+            <div class="form-group">
+                <label for="answer">{{ 'answer' | trans({}, 'divers') }} :</label>
+                {{ form_errors(form.answer) }}
+                {{ form_widget(form.answer, { 'attr': {'class': 'form-control' }}) }}
+            </div>
+
+        </fieldset>
+
+        {{ form_end(form) }}
+    </div>
+
+    {% endif %}
+
+{% endblock %}

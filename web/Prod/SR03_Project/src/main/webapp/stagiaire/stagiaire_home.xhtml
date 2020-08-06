@@ -1,0 +1,115 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="title">SR03-Stagiaire </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Welcome Stagiaire : #{sessionScope.sessionUser.email}</h1><br/>
+
+        <b:container fluid="true">
+            <b:panelGrid columns="2">
+                <b:panel>
+
+                    Aide à la recherche (différents thémes disponibles) :<br/>
+                    <b:panelGrid columns="4">
+                        <c:forEach items="#{surveyBean.list_subject}" var="sub">
+                            <b:label text="#{sub.subject}" severity="primary"/>
+                        </c:forEach>
+                    </b:panelGrid>
+                    <br/>
+
+                    <f:facet name="heading">
+                        <i class="fa fa-weixin" style="padding-right:20px"/>
+                        <h:outputText value="Faire un questionnaire"/>
+                    </f:facet>
+                    <b:dataTable value="#{surveyBean.list_surveyEnabled}"
+                                 var="quiz"
+                                 fixedHeader="true"
+                                 scroll-size="400px"
+                                 scroll-x="false"
+                                 responsive="true"
+                                 lang="fr"
+                                 searching="true">
+                        <b:dataTableColumn value="#{surveyBean.subjectToString(quiz.subject)}">
+                            <f:facet name="header">Thémes</f:facet>
+
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{quiz.title}"/>
+
+                        <b:dataTableColumn width="5%">
+                            <f:facet name="header">Action</f:facet>
+                            <b:form>
+                                <b:commandButton value="Lancer"
+                                                 look="primary"
+                                                 disabled="#{trackRecordBean.isDone(quiz.id)}"
+                                                 action="#{trackRecordBean.launchQuizz}">
+                                    <f:param name="id" value="#{quiz.id}"/>
+                                </b:commandButton>
+
+                            </b:form>
+                        </b:dataTableColumn>
+
+                    </b:dataTable>
+                </b:panel>
+                <b:panel>
+                    <f:facet name="heading">
+                        <i class="fa fa-save" style="padding-right:20px"/>
+                        <h:outputText value="Mes parcours"/>
+                    </f:facet>
+                    <b:dataTable value="#{trackRecordBean.getList_parcoursView()}"
+                                 var="record"
+                                 fixedHeader="true"
+                                 scroll-size="400px"
+                                 scroll-x="false"
+                                 responsive="true"
+                                 lang="fr"
+                                 searching="true">
+
+                        <b:dataTableColumn value="#{surveyBean.surveyToString(record.surveyID)}">
+                            <f:facet name="header">Nom du quiz</f:facet>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn value="#{surveyBean.surveyToThemeString(record.surveyID)}">
+                            <f:facet name="header">Thémes</f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn>
+                            <f:facet name="header">Score</f:facet>
+                            <ul style="margin-bottom:0;list-style-type:none;padding-left:0">
+                                <li>#{record.score/(surveyBean.nbrQuestion(record.surveyID))*100} %</li>
+                                <li>en #{record.duration} seconde(s)</li>
+                            </ul>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn value="#{trackRecordBean.calculMaxTemp(record.surveyID)}">
+                            <f:facet name="header">Meilleur score</f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn
+                                value="#{trackRecordBean.Classement(record.surveyID,record.score,record.duration)}">
+                            <f:facet name="header">Classement</f:facet>
+                        </b:dataTableColumn>
+
+                        <b:dataTableColumn width="5%">
+                            <f:facet name="header">Action</f:facet>
+                            <b:form>
+                                <b:commandButton look="info"
+                                                 style="margin-right:10px"
+                                                 update="@form"
+                                                 iconAwesome="eye"
+                                                 action="#{trackRecordBean.show(record.id)}"/>
+                            </b:form>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+                </b:panel>
+            </b:panelGrid>
+
+
+        </b:container>
+    </ui:define>
+</ui:composition>

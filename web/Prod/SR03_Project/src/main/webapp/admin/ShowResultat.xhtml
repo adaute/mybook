@@ -1,0 +1,49 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="css"></ui:define>
+
+    <ui:define name="title">SR03-RESULTAT-STAGIAIRE </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Résultat du stagiaire : #{userBean.userToString(resultBean.idUser)} </h1><br/>
+
+        <b:container fluid="true">
+            <h:form>
+                <b:dataTable value="#{resultBean.liste_parcours}"
+                             var="rec"
+                             page-length="5"
+                             page-length-menu="5,10,20">
+
+                    <b:dataTableColumn value="#{surveyBean.surveyToString(rec.surveyID)}">
+                        <f:facet name="header">Questionnaire</f:facet>
+                    </b:dataTableColumn>
+
+                    <b:dataTableColumn value="#{surveyBean.surveyToThemeString(rec.surveyID)}">
+                        <f:facet name="header">Théme</f:facet>
+                    </b:dataTableColumn>
+
+                    <b:dataTableColumn
+                            value="#{rec.score/(surveyBean.nbrQuestion(rec.surveyID))*100} % en #{rec.duration} seconde(s)">
+                        <f:facet name="header">Score</f:facet>
+                    </b:dataTableColumn>
+
+                    <b:dataTableColumn value="#{trackRecordBean.calculMaxTemp(rec.surveyID)}">
+                        <f:facet name="header">Meilleur score</f:facet>
+                    </b:dataTableColumn>
+
+                    <b:dataTableColumn value="#{trackRecordBean.Classement(rec.surveyID,rec.score,rec.duration)}">
+                        <f:facet name="header">Classement</f:facet>
+                    </b:dataTableColumn>
+
+                </b:dataTable>
+            </h:form>
+        </b:container>
+
+    </ui:define>
+</ui:composition>

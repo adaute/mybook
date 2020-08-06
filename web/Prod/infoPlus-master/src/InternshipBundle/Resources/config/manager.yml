@@ -1,0 +1,10 @@
+services:
+
+    internship.internship_manager:
+              class: InternshipBundle\Entity\Manager\InternshipManager
+              arguments:  ["@internship.internship_repository",'@event_dispatcher']
+              calls:
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setSearchFormType, ['InternshipBundle\Form\Type\InternshipFilterType']]
+              lazy: true

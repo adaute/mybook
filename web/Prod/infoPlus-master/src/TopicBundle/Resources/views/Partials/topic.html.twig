@@ -1,0 +1,46 @@
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'picture' | trans({}, 'divers') }}</th>
+            <th>{{ 'date' | trans({}, 'divers') }}</th>
+            <th>{{ 'title' | trans({}, 'divers') }}</th>
+            <th>{{ 'author' | trans({}, 'divers') }}</th>
+            <th>{{ 'position' | trans({}, 'divers') }}</th>
+            <th>{{ 'enabled' | trans({}, 'divers') }}</th>
+            <th>{{ 'show' | trans({}, 'divers') }}</th>
+            <th>{{ 'edit' | trans({}, 'divers') }}</th>
+            <th>{{ 'delete' | trans({}, 'divers') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for topic in topic %}
+            <tr>
+                <td> {% if topic.image %}
+                        <img
+                                src="{{ asset(topic.image.getWebPath | imagine_filter('CrudThumb')) }}"
+                                alt="{{ topic.image.alt }}"
+                        />
+                    {% else %}
+                        <img src="http://placehold.it/75x34&text={{ topic.title }}">
+                    {% endif %}
+                </td>
+                <td>{{ topic.createdAt |date('Y-m-d H:i') }}</td>
+                <td>{{ topic.title }}</td>
+                <td>{{ topic.author.firstname }} {{ topic.author.lastName }}</td>
+                <td>{% if topic.position == 0  %} 0 {% else %}  {{ topic.position }} {% endif %}</td>
+                <td>{% if topic.enabled == 0  %} <i class="glyphicon glyphicon-remove"> </i>  {% else %}  <i class="glyphicon glyphicon-ok"> {% endif %}</td>
+                <td><a href="{{ path('topic_show', { 'id': topic.id }) }}"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+                {% if is_granted('ROLE_EDITOR') %}
+                    <td><a href="{{ path('topic_edit', { 'id': topic.id }) }}"><i class="glyphicon glyphicon-pencil"></i></a></td>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <td><a href="{{ path('topic_delete', { 'id': topic.id }) }}"><i class="glyphicon glyphicon-trash"></i></a></td>
+                {% endif %}
+            </tr>
+        {% else %}
+            <tr>
+                <td>{{ 'none' | trans({}, 'divers') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

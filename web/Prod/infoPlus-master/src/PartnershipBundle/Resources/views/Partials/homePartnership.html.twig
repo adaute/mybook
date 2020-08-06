@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'header.partner'|trans }}{% endblock %}
+
+{% block active_partnership %}active{% endblock %}
+
+{% block content %}
+    {% if partnership is not empty %}
+        <div class="row">
+            {% for partnership in partnership %}
+                {% if partnership.enabled == 1 %}
+                    <div class="col-xs-2 hidden-xs">
+                        {% if partnership.image %}
+                            <img
+                                    src="{{ asset(partnership.image.getWebPath | imagine_filter('diaryThumb')) }}"
+                                    alt="{{ partnership.image.alt }}"
+                            />
+                        {% else %}
+                            <img src="http://placehold.it/180X150&text=No image">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-10">
+                        <h3><span class="badge"> {{ partnership.badge }}</span> {{ partnership.name }}</h3>
+                        <ul class="list-inline">
+                            <li><i class="glyphicon glyphicon-map-marker"></i> {{ partnership.adress }}</li>
+                        </ul>
+                        <p>{{ partnership.description }}</p>
+                        <br>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div style="text-align: center">
+                {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

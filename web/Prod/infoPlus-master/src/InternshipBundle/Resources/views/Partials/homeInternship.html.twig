@@ -1,0 +1,34 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'header.internship'|trans }}{% endblock %}
+
+{% block active_internship %}active{% endblock %}
+{% block active_internshipHome %}active{% endblock %}
+
+{% block content %}
+    {% if internship is  not empty %}
+        <div class="row">
+            {% for internship in internship %}
+                {% if internship.enabled == 1 %}
+                    <div class="col-md-12">
+                    <h3>{{ internship.title }}</h3>
+                    <p><i class="glyphicon glyphicon-calendar"></i> {{ internship.createdAt |date('d-m-Y') }} </p>
+                    <ul class="list-inline">
+                        <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> {{ internship.society }} </li>
+                        {% if  internship.phone %}<li><i class="glyphicon glyphicon-phone"></i> {{ internship.phone }}</li>{% endif %}
+                        <li><i class="glyphicon glyphicon-envelope"></i> {{ internship.email }}</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><i class="glyphicon glyphicon-modal-window"></i> {{ internship.field }} </li>
+                        <li><i class="glyphicon glyphicon-education"></i> {{ internship.diploma }}</li>
+                    </ul>
+                    <p>{{ internship.description }}</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+            <div style="text-align: center">
+                {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

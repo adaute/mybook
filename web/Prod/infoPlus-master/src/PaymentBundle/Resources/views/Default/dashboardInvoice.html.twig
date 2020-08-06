@@ -1,0 +1,40 @@
+{# appel du squelette propre au menu setting #}
+{% extends 'PaymentBundle:Default/Invoice:invoice.html.twig' %}
+
+ {# block permettant de rendre l'onglet sur le menu tab actif #}
+{% block active_invoice_tab %}active{% endblock %}
+
+ {# block contenu du tab #}
+{% block nav_content %}
+    <h3>{{ 'myInvoice' | trans({}, 'divers') }}</h3>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'id' | trans({}, 'divers') }}</th>
+            <th>{{ 'date' | trans({}, 'divers') }}</th>
+            <th>{{ 'price' | trans({}, 'divers') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for invoice in invoice %}
+            <tr>
+                <td>#{{ invoice.id }}</td>
+                <td>{{ invoice.dateInvoice |date('Y-m-d H:i:s') }}</td>
+                <td>{{ invoice.amountPrice }} € </td>
+                <td><a href="{{ path('invoice_show', { 'id': invoice.id }) }}">{{ 'voir' | trans({}, 'divers') }}</a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>{{ 'none' | trans({}, 'divers') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+
+{% endblock %}
+

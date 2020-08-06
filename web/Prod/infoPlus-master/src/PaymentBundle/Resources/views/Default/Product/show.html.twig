@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block active_products %}active{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            <legend>
+                <a href="{{ path('product_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                {{ product.title }}
+            </legend>
+
+            <ul class="list-inline">
+                <li><i class="glyphicon glyphicon-euro"></i> {{ product.price }}&euro;</li>
+                <li><i class="glyphicon glyphicon-user"></i> {{ product.author.firstName }}-{{ product.author.lastName }}</li>
+            </ul>
+            {% if is_granted('ROLE_ADMIN') %}
+                <p>{{ 'enabled' | trans({}, 'divers') }} :
+                    {% if product.enabled == true %}
+                        <a href="{{ path('product_state', { 'id': product.id }) }}"><i class="glyphicon glyphicon-remove"></i></a>
+                    {% else %}
+                        <a href="{{ path('product_state', { 'id': product.id }) }}"><i class="glyphicon glyphicon-ok"></i></a>
+                    {% endif %}
+                </p>
+            {% endif %}
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+
+{% endblock %}

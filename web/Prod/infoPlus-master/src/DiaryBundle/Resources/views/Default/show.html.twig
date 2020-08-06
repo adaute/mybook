@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'show' | trans({}, 'divers') }}{% endblock %}
+
+{% block active_diarys %}active{% endblock %}
+
+{% block content %}
+    <div class="col-md-7">
+        {% if diary.image %}
+
+            <img
+                    src="{{ asset(diary.image.getWebPath | imagine_filter('topicShow')) }}"
+                    alt="{{ diary.image.alt }}"
+            />
+        {% else %}
+            <img src="http://placehold.it/650x400&text={{ diary.product.title }}">
+        {% endif %}
+    </div>
+
+    <div class="col-md-5">
+        <h2>
+            {% if is_granted('ROLE_EDITOR') %}
+                <a href="{{ path('diary_list') }}"><i
+                            class="glyphicon glyphicon-arrow-left"></i></a>
+            {% endif %}
+            {% if diary.vip == true %}<i class="glyphicon glyphicon-star"></i>{% endif %}{{ diary.product.title }}
+        </h2>
+        <ul class="list-inline">
+            <li><i class="glyphicon glyphicon-calendar"></i> {{ diary.dateDiary |date('d-m-Y H:i') }}</li>
+            <li><i class="glyphicon glyphicon-map-marker"></i> {{ diary.lieu }}</li>
+            <li><i class="glyphicon glyphicon-barcode"></i> {{ diary.product.price }}&euro;</li>
+        </ul>
+        <p><i class="glyphicon glyphicon-warning-sign"></i> Place(s) restante(s) : {{ diary.remainingSpace }}</p>
+        {% if is_granted('ROLE_ADMIN') %}
+            <p>{{ 'enabled' | trans({}, 'divers') }} :
+                {% if diary.enabled == true %}
+                    <a href="{{ path('diary_state', { 'id': diary.id }) }}"><i class="glyphicon glyphicon-remove"></i></a>
+                {% else %}
+                    <a href="{{ path('diary_state', { 'id': diary.id }) }}"><i class="glyphicon glyphicon-ok"></i></a>
+                {% endif %}
+            </p>
+        {% endif %}
+        <p>{{ diary.product.description }}</p>
+
+    </div>
+
+{% endblock %}

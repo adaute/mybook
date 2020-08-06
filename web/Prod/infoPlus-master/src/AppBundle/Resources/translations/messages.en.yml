@@ -1,0 +1,13 @@
+# Menu
+header :
+    home : Home
+    diary : Diary
+    internship : internship
+    internshipSend: internshipSend
+    internshipOffers: internshipOffers
+    partner : Partner
+    contact_us : Contact-us
+    language : Language
+    help : Help
+    login_subscription : Login/Subscription
+

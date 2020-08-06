@@ -1,0 +1,28 @@
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'date' | trans({}, 'divers') }}</th>
+            <th>{{ 'email' | trans({}, 'divers') }}</th>
+            <th>{{ 'subject' | trans({}, 'divers') }}</th>
+            <th>{{ 'category' | trans({}, 'divers') }}</th>
+            <th>{{ 'archived' | trans({}, 'divers') }}</th>
+            <th>{{ 'show' | trans({}, 'divers') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ticket in ticket %}
+            <tr>
+                <td>{{ ticket.UpdatedAt |date('d-m-Y H:i') }}</td>
+                <td>{{ ticket.email }}</td>
+                <td>{{ ticket.subject }}</td>
+                <td>{{ ticket.category }}</td>
+                <td>{% if ticket.enabled == 0  %} <i class="glyphicon glyphicon-floppy-saved"> </i>  {% else %}  <i class="glyphicon glyphicon-floppy-remove"> {% endif %}</td>
+                <td><a href="{{ path('ticket_show', { 'token': ticket.token }) }}"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>{{ 'none' | trans({}, 'divers') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

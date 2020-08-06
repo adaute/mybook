@@ -1,0 +1,6 @@
+payment:
+    payment_organisms:
+               client_id: Af_kFpXKXmBLRUNEdZfkuzR3KgpQMlgDNCL7G_y5laT5VE_VzGlDWm32bC_eQX5WJDZzguMyrqreEijf
+               client_password: EFESGb1Gmb6UFGhYGJXQ3goesWJBKlPxbu9YXeoqlOLtCvBK953qOw7faMX3N0x93YcUOsBDz9FEyoR5
+               return_url: http://localhost:8000/app_dev.php/success
+               cancel_url: http://localhost:8000/app_dev.php/error

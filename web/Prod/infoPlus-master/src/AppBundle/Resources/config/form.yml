@@ -1,0 +1,39 @@
+services:
+
+    app.abstract_category.form.handler.strategy:
+        abstract:  true
+        class: AppBundle\Form\Handler\Category\AbstractCategoryFormHandlerStrategy
+        calls:
+            - [setCategoryManager, ['@app.category_manager']]
+            - [setFormFactory, ['@form.factory']]
+            - [setRouter, ['@router']]
+            - [setTranslator, ['@translator']]
+
+    app.category.form.handler:
+        class: AppBundle\Form\Handler\Category\CategoryFormHandler
+        calls:
+            - [setNewCategoryFormHandlerStrategy, ['@app.new_category.form.handler.strategy']]
+            - [setUpdateCategoryFormHandlerStrategy, ['@app.update_category.form.handler.strategy']]
+
+    app.new_category.form.handler.strategy:
+        class: AppBundle\Form\Handler\Category\NewCategoryFormHandlerStrategy
+        parent: app.abstract_category.form.handler.strategy
+        arguments:
+                  - "@security.token_storage"
+
+    app.update_category.form.handler.strategy:
+        class: AppBundle\Form\Handler\Category\UpdateCategoryFormHandlerStrategy
+        parent: app.abstract_category.form.handler.strategy
+        arguments:
+                  - "@security.authorization_checker"
+
+    app.category_search.form:
+        class: AppBundle\Form\Type\Category\CategorySearchFormType
+        tags:
+            - { name: form.type }
+
+    app.category.form:
+        class: AppBundle\Form\Type\Category\CategoryType
+        tags:
+            - { name: form.type }
+        arguments: ['@app.category_manager']

@@ -1,0 +1,15 @@
+{% block _diary_image_row %}
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+    {% if form.vars.value.alt is defined and form.vars.value.alt is not null %}
+        <br>
+        <div class="form-group">
+            <label for="title">{{  'image_link' | trans({}, 'divers') }} :</label><br>
+            <img
+                    src="{{ asset(form.vars.value.getWebPath | imagine_filter('diaryThumb')) }}"
+                    alt="{{ form.vars.value.alt }}"
+            />
+        </div>
+    {% endif %}
+{% endblock %}
+{% block _diary_enabled_row %}{% endblock %}

@@ -1,0 +1,7 @@
+services:
+
+    app.category.repository:
+           class: AppBundle\Repository\CategoryRepository
+           factory: ["@doctrine.orm.default_entity_manager", getRepository]
+           arguments: ['AppBundle\Entity\Category']
+           lazy: true

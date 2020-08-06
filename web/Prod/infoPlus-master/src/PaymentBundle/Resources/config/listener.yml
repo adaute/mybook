@@ -1,0 +1,7 @@
+services:
+   payment.payment_send_invoice_listener:
+        class: PaymentBundle\EventListener\SendInvoiceMailListener
+        tags:
+            - { name: kernel.event_listener, event: diary.payment_sucess, method: onNewInvoiceCreated }
+        arguments: ['@corebundle.mailer_service', '@twig', '@payment.payment_manager',mail/invoice_mail.html.twig, '%email_from%']
+

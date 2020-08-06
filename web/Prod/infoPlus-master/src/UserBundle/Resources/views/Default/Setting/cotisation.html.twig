@@ -1,0 +1,15 @@
+{% extends 'UserBundle:Default/Setting:setting.html.twig' %}
+
+{% block active_subscription_tab %}active{% endblock %}
+
+{% block nav_content %}
+    <h3>Cotisation</h3>
+    {% if check == false %}
+        {{ 'dashboard.cotisationOn' | trans() }} :
+    <a href="{{ path('payment_cotisation') }}" class="btn btn-primary"
+       role="button">Cotiser</a>
+    {% else %}
+      <p>{{ 'dashboard.cotisation' | trans() }}</p>
+    {% endif %}
+
+{% endblock %}

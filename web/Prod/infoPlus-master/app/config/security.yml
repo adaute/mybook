@@ -1,0 +1,64 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    encoders:
+        UserBundle\Entity\User: bcrypt
+
+    role_hierarchy:
+        ROLE_VISITOR:     ROLE_USER
+        ROLE_EDITOR:      ROLE_VISITOR
+        ROLE_ADMIN:       ROLE_EDITOR
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        database_users:
+            entity: { class: UserBundle:User, property: username }
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            # this firewall applies to all URLs
+            pattern: ^/
+
+            # but the firewall does not require login on every page
+            # denying access is done in access_control or in your controllers
+            anonymous: true
+
+            # allows a role to be able to switch
+            # http://symfony.com/doc/2.8/cookbook/security/impersonating_user.html
+            switch_user: { role: ROLE_SUPER_ADMIN, parameter: _switch_user }
+
+            # This allows the user to login by submitting a username and password
+            # Reference: http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+            form_login:
+                provider: database_users
+                # La route ou les informations login seront enregistré
+                check_path: security_login_check
+                # Quand l'utilisateur essaye d'aller sur une page protégé il est redirectionné
+                login_path: security_login_register_form
+                # Secure the login form against CSRF
+                # Reference: http://symfony.com/doc/current/cookbook/security/csrf_in_login_form.html
+                csrf_token_generator: security.csrf.token_manager
+                failure_path: security_login_register_form
+                success_handler: security_authentication_success_handler
+                failure_handler: security_authentication_failure_handler
+                default_target_path: user_dashboard
+                always_use_default_target_path: false
+            logout:
+                # La route pour la deconnection
+                path: security_logout
+                # The name of the route to redirect to after logging out
+                target: homepage
+                handlers: [security_logout_success_handler]
+                invalidate_session: false
+
+    access_control:
+        - { path: ^/account/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/account, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_EDITOR]}
+        - { path: ^/payment, roles: IS_AUTHENTICATED_FULLY}
+        - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="user.user_send_confirmation_mail_listener"
+            class="UserBundle\EventListener\SendConfirmationMailListener">
+            <argument type="service" id="coreBundle.mailer_service"/>
+            <argument type="service" id="twig" />
+            <argument type="service" id="router" />
+            <argument type="service" id="security.csrf.token_generator" />
+            <argument type="service" id="user.user_manager" />
+            <argument>mail/confirmation_mail.html.twig</argument>
+            <argument>%email_from%</argument>
+            <tag name="kernel.event_listener" event="user.new_account_created" method="onNewAccountCreated" />
+        </service>
+
+        <service id="user.user_send_request_password_mail_listener"
+                 class="UserBundle\EventListener\SendRequestPasswordMailListener">
+            <argument type="service" id="coreBundle.mailer_service"/>
+            <argument type="service" id="twig" />
+            <argument type="service" id="router" />
+            <argument type="service" id="security.csrf.token_generator" />
+            <argument type="service" id="user.user_manager" />
+            <argument>mail/request_password_mail.html.twig</argument>
+            <argument>%email_from%</argument>
+            <tag name="kernel.event_listener" event="user.new_password_requested" method="onRequestedPassword" />
+        </service>
+
+
+    </services>
+</container>

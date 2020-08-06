@@ -1,0 +1,65 @@
+# Divers
+show: Voir
+edit: Modifier
+delete: Supprimer
+valider: Valider
+motcle: "Mot-clé :"
+search: Rechercher
+filter: Filtrer
+reset: Reinitialiser
+create: Ajouter un nouveau element
+none: Aucun
+back: Retour
+send: Envoyer
+formular: Formulaire de contact
+validate: Valider
+archived: Archiver
+
+add: Ajouter
+modify: Modifier
+
+succes: Element ajouté avec succè
+success_modify: Element modifié avec succè
+succes_send: Element envoyé avec succé
+
+id: Id
+title: Titre
+description: Description
+image: Ajouter une image
+image_link: Image lié
+citation: Citation
+date: Date
+price : Price
+place : Place
+remainingSpace: RemainingSpace
+vip: VIP
+ask: Question
+answer: Reponse
+category: Category
+recipientname: Recipient Name
+first_name: Nom de famille
+last_name: Prénom
+phone: Téléphone
+email: Email
+subject: Sujet
+additional_information: Informations complémentaires
+token: Token
+username: Username
+role: Role
+rank : Rank
+name: Name
+adress: Adresse
+badge: Badge
+enabled: Enabled
+myInvoice: Mes Factures
+society: Societé
+field: Domaine
+diploma: Diplome
+position: Position
+picture: Image
+author: Auteur
+english: En anglais
+askEn: Question(EN)
+answerEn: Reponse(EN)
+firstName: Prenom
+lastName: Nom

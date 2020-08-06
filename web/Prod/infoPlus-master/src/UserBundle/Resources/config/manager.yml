@@ -1,0 +1,20 @@
+services:
+
+    user.user_manager:
+        class: UserBundle\Entity\Manager\UserManager
+        lazy: true
+        arguments: ['@security.encoder_factory', '@event_dispatcher', '@security.password_encoder', '@user.user_repository']
+        calls:
+             - [setFormFactory, ['@form.factory']]
+             - [setRouter, ['@router']]
+             - [setSearchFormType, ['UserBundle\Form\Type\User\UserFilterType']]
+
+    user.rank_manager:
+        class: UserBundle\Entity\Manager\RankManager
+        lazy: true
+        arguments: ['@user.rank_repository']
+        calls:
+            - [setFormFactory, ['@form.factory']]
+            - [setRouter, ['@router']]
+            - [setSearchFormType, [UserBundle\Form\Type\Rank\RankFilterType]]
+

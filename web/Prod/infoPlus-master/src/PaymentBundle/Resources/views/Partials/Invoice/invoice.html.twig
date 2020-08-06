@@ -1,0 +1,26 @@
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'id' | trans({}, 'divers') }}</th>
+            <th>{{ 'recipientname' | trans({}, 'divers') }}</th>
+            <th>{{ 'price' | trans({}, 'divers') }}</th>
+            <th>{{ 'date' | trans({}, 'divers') }}</th>
+            <th>{{ 'show' | trans({}, 'divers') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for invoice in invoice %}
+            <tr>
+                <td>#{{ invoice.id }}</td>
+                <td>{{ invoice.RecipientName }} </td>
+                <td>{{ invoice.amountPrice }} &euro;</td>
+                <td>{{ invoice.dateInvoice |date('d-m-Y H:i') }}</td>
+                <td><a href="{{ path('invoice_show', { 'id': invoice.id }) }}"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>{{ 'none' | trans({}, 'divers') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

@@ -1,0 +1,69 @@
+{% extends 'layout.html.twig' %}
+
+{% block active_contact_us%}active{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+
+            <fieldset>
+                <legend><i class="fa fa-lock"></i> {{ 'formular' | trans({}, 'divers') }} </legend>
+
+                <div class="form-group">
+                    <label for="firstName">{{ 'first_name' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.firstName) }}
+                    {{ form_widget(form.firstName, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">{{ 'last_name'| trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.lastName) }}
+                    {{ form_widget(form.lastName, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="cellphone">{{ 'phone' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.cellphone) }}
+                    {{ form_widget(form.cellphone, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="email">{{ 'email' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="category">{{ 'category' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.category) }}
+                    {{ form_widget(form.category, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">{{ 'subject' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.subject) }}
+                    {{ form_widget(form.subject, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="additionnalInformation">{{ 'additional_information' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.additionnalInformation) }}
+                    {{ form_widget(form.additionnalInformation, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                {{ form_widget(form.recaptcha, { 'attr': {
+                    'options' : {
+                        'theme': 'light',
+                        'type': 'image',
+                        'size': 'normal'
+                    },
+                } }) }}
+                <br>
+            </fieldset>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock %}

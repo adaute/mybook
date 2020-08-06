@@ -1,0 +1,47 @@
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'image' | trans({}, 'divers') }}</th>
+            <th>{{ 'recipientname' | trans({}, 'divers') }}</th>
+            <th>{{ 'username' | trans({}, 'divers') }}</th>
+            <th>{{ 'email' | trans({}, 'divers') }}</th>
+            <th>{{ 'role' | trans({}, 'divers') }}</th>
+            <th>{{ 'rank' | trans({}, 'divers') }}</th>
+            <th>{{ 'show' | trans({}, 'divers') }}</th>
+            <th>{{ 'edit' | trans({}, 'divers') }}</th>
+            <th>{{ 'delete' | trans({}, 'divers') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in user %}
+            <tr>
+                <td> {% if user.image %}
+                        <img
+                                src="{{ asset(user.image.getWebPath | imagine_filter('UserCrudThumb')) }}"
+                                alt="{{ user.image.alt }}"
+                        />
+                    {% else %}
+                        <img src="http://placehold.it/40x40&text={{ user.username}}">
+                    {% endif %}
+                </td>
+                <td>{{ user.firstname }} {{ user.lastname }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles[0] }}</td>
+                <td>{% if user.rank is null %}{{ 'none' | trans({}, 'divers') }}{% else %}{{ user.rank }}{% endif %}</td>
+                <td><a href="{{ path('user_show', { 'id': user.id }) }}"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+                {% if is_granted('ROLE_ADMIN') %}
+                <td><a href="{{ path('user_edit', { 'id': user.id }) }}"><i class="glyphicon glyphicon-pencil"></i></a></td>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <td><a href="{{ path('user_delete', { 'id': user.id }) }}"><i class="glyphicon glyphicon-trash"></i></a></td>
+                {% endif %}
+                <td></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>{{ 'none' | trans({}, 'divers') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

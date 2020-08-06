@@ -1,0 +1,72 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {% if faq.id %}
+        {{ 'faq.modifier'|trans({'%titre%': faq.ask}) }}
+    {% else %}
+        {{ 'faq.ajouter'|trans }}
+    {% endif %}
+{% endblock %}
+
+{% form_theme form 'TopicBundle:Default:form_theme.html.twig' %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+
+            <fieldset>
+
+                {% if faq.id %}
+                    <legend><a href="{{ path('faq_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i> {{ 'edit' | trans({}, 'divers') }}
+                    </legend>
+                {% else %}
+                    <legend><a href="{{ path('faq_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i>{{ 'create' | trans({}, 'divers') }}
+                    </legend>
+                {% endif %}
+
+
+                <div class="form-group">
+                    <label for="ask">{{ 'ask' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.ask) }}
+                    {{ form_widget(form.ask, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="answer">{{ 'answer' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.answer) }}
+                    {{ form_widget(form.answer, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <hr>
+                <label> {{ 'english' | trans({}, 'divers') }} : </label>
+
+                <div class="form-group">
+                    <label for="askEn">{{ 'ask' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.askEn) }}
+                    {{ form_widget(form.askEn, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="answerEn">{{ 'answer' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.answerEn) }}
+                    {{ form_widget(form.answerEn, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="category">{{ 'category' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.category) }}
+                    {{ form_widget(form.category, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+            </fieldset>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

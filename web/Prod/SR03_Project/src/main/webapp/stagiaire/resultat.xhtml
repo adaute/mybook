@@ -1,0 +1,94 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    *
+    <ui:define name="title">SR03-QCM-RESULTAT </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Résultat du parcours : n°#{trackRecordBean.trackRecord.id}</h1><br/>
+
+        <b:container fluid="true">
+            <h:form>
+
+                <b:panel>
+                    <f:facet name="heading">
+                        <i class="fa fa-save" style="padding-right:20px"/>
+                        <h:outputText value="resultat :"/>
+                    </f:facet>
+
+                    <b:row>
+                        <b:column medium-screen="1">
+                            <h:outputText value="Théme:"/>
+                        </b:column>
+                        <b:column medium-screen="4">
+                            <b:inputText disabled="true"
+                                         placeholder="#{surveyBean.surveyToThemeString(trackRecordBean.trackRecord.surveyID)}"/>
+                        </b:column>
+                    </b:row>
+
+                    <b:row>
+                        <b:column medium-screen="1">
+                            <h:outputText value="Questionnaire:"/>
+                        </b:column>
+                        <b:column medium-screen="4">
+                            <b:inputText disabled="true"
+                                         placeholder="#{surveyBean.surveyToString(trackRecordBean.trackRecord.surveyID)}"/>
+                        </b:column>
+                    </b:row>
+
+
+                    <b:row>
+                        <b:column medium-screen="1">
+                            <h:outputText value="Auteur:"/>
+                        </b:column>
+                        <b:column medium-screen="4">
+                            <b:inputText disabled="true"
+                                         placeholder="#{userBean.userToString(trackRecordBean.trackRecord.userID)}"/>
+                        </b:column>
+                    </b:row>
+
+                    <b:row>
+                        <b:column medium-screen="1">
+                            <h:outputText value="Score:"/>
+                        </b:column>
+                        <b:column medium-screen="4">
+                            <b:inputText disabled="true" placeholder="#{trackRecordBean.trackRecord.score}"/>
+                        </b:column>
+                    </b:row>
+
+                    <b:row>
+                        <b:column medium-screen="1">
+                            <h:outputText value="Délais:"/>
+                        </b:column>
+                        <b:column medium-screen="4">
+                            <b:inputText disabled="true" placeholder="#{trackRecordBean.trackRecord.duration}"/>
+                        </b:column>
+                    </b:row>
+
+
+                    <h:outputText value="Réponses correctes :"/> <br/>
+
+                    <b:dataTable value="#{trackRecordBean.list_question_reverse()}" var="question" width="5em">
+                        <b:dataTableColumn value="#{question.title}" width="100">
+                            <f:facet name="header">Intitulé de la question</f:facet>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn value="#{trackRecordBean.userReponse(question.id)}" width="10vw">
+                            <f:facet name="header">Votre réponse</f:facet>
+                        </b:dataTableColumn>
+                        <b:dataTableColumn value="#{surveyBean.answerToString(question.answerId)}" width="10vw">
+                            <f:facet name="header">Réponse de la question</f:facet>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+
+                </b:panel>
+
+            </h:form>
+        </b:container>
+
+    </ui:define>
+</ui:composition>

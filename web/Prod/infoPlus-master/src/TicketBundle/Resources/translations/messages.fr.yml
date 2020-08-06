@@ -1,0 +1,4 @@
+ticket:
+      list: Liste des tickets
+      fiche: ticketShow
+      list_back: Retourner sur la liste des tickets

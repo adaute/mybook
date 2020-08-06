@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {{ render(controller('FaqBundle:Faq:formFilter', app.request.get('faq_faq_filter', []))) }}
+
+    <div style="text-align: center">
+        <h2>{{ 'faq.list'|trans() }}</h2>
+    </div>
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('faq_new') }}"><i class="glyphicon glyphicon-plus"></i></a>
+    {% endif %}
+
+    {% include 'FaqBundle:Partials:faqs.html.twig' with {'faq' : faq}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+   
+    {{ render(controller('PaymentBundle:Product:formFilter')) }}
+    <div style="text-align: center">
+        <h2>{{ 'product.list'|trans() }}</h2>
+    </div>
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('product_new') }}"><i class="glyphicon glyphicon-plus"></i></a>
+    {% endif %}
+
+    {% include 'PaymentBundle:Partials:Product/product.html.twig' with {'product' : product}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

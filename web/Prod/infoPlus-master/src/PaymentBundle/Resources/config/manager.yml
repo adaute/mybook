@@ -1,0 +1,19 @@
+services:
+
+    payment.payment_manager:
+        class: PaymentBundle\Entity\Manager\InvoiceManager
+        arguments:  ["@diary.diary_repository",'@event_dispatcher',"@payment.payment_repository","@diary.diary_repository","@payment.product_repository","@user.rank_repository"]
+        calls:
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setSearchFormType, ['PaymentBundle\Form\Type\Invoice\InvoiceFilterType']]
+        lazy: true
+
+    payment.product_manager:
+              class: PaymentBundle\Entity\Manager\ProductManager
+              arguments:  ["@payment.product_repository"]
+              calls:
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setSearchFormType, ['PaymentBundle\Form\Type\Product\ProductFilterType']]
+              lazy: true

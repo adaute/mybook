@@ -1,0 +1,12 @@
+services:
+   ticket.ticket_send_ticket_listener:
+        class: TicketBundle\EventListener\SendMailTicketListener
+        tags:
+            - { name: kernel.event_listener, event: answer.send, method: onNewAnswerCreated }
+        arguments: ['@corebundle.mailer_service', '@twig', '@router','@ticket.ticket_manager',mail/ticket_mail.html.twig, '%email_from%']
+
+   ticket.ticket_send_new_ticket_listener:
+        class: TicketBundle\EventListener\SendMailTicketListener
+        tags:
+            - { name: kernel.event_listener, event: ticket.new, method: onNewTicketCreated }
+        arguments: ['@corebundle.mailer_service', '@twig', '@router','@ticket.ticket_manager',mail/ticket_mail.html.twig, '%email_from%']

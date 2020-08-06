@@ -1,0 +1,9 @@
+services:
+
+    topic.topic_repository:
+                class: TopicBundle\Repository\TopicRepository
+                factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                arguments: ['TopicBundle\Entity\Topic']
+                lazy: true
+
+

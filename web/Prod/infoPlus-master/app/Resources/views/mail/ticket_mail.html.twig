@@ -1,0 +1,12 @@
+{% block subject %}Ticket support{% endblock %}
+{% block body %}
+Bonjour,
+    {% if new == 0 %}
+Un modérateur vous a répondu cliquer <a href="{{ request_link }}">ici</a> pour voir la reponse.
+    {% else %}
+<br> Votre nouveau ticket support vient d'être crée nous vous répondrons dans les plus bref délais.
+<br>Pour consulter le ticket cliquer <a href="{{ request_link }}">ici</a> .
+{% endif %}
+
+{% endblock %}
+

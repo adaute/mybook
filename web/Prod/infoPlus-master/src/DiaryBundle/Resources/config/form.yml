@@ -1,0 +1,40 @@
+services:
+
+    diary.abstract_diary.form.handler.strategy:
+            abstract:  true
+            class: DiaryBundle\Form\Handler\Diary\AbstractDiaryFormHandlerStrategy
+            calls:
+               - [setDiaryManager, ['@diary.diary_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    diary.diary.form.handler:
+            class: DiaryBundle\Form\Handler\Diary\DiaryFormHandler
+            calls:
+                - [setNewDiaryFormHandlerStrategy, ['@diary.new_diary.form.handler.strategy']]
+                - [setUpdateDiaryFormHandlerStrategy, ['@diary.update_diary.form.handler.strategy']]
+
+    diary.new_diary.form.handler.strategy:
+            class: DiaryBundle\Form\Handler\Diary\NewDiaryFormHandlerStrategy
+            parent: diary.abstract_diary.form.handler.strategy
+            arguments:
+                - "@security.token_storage"
+
+    diary.update_diary.form.handler.strategy:
+            class: DiaryBundle\Form\Handler\Diary\UpdateDiaryFormHandlerStrategy
+            parent: diary.abstract_diary.form.handler.strategy
+            arguments:
+                - "@security.authorization_checker"
+
+    diary.diary_search.form:
+            class: DiaryBundle\Form\Type\DiaryFilterType
+            tags:
+                - { name: form.type }
+
+    diary.diary.form:
+            class: DiaryBundle\Form\Type\DiaryType
+            arguments:
+                - "@diary.diary_manager"
+            tags:
+                - { name: form.type }

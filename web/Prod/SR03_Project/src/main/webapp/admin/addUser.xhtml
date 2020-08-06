@@ -1,0 +1,23 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+
+    <ui:define name="css"> </ui:define>
+
+    <ui:define name="title">SR03-CrudUser </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Gestion des utilisateurs</h1><br/>
+
+        <b:container fluid="true">
+
+            <ui:include src="../WEB-INF/show_box/show_box_user_crud.xhtml"/>
+
+        </b:container>
+
+    </ui:define>
+</ui:composition>
+

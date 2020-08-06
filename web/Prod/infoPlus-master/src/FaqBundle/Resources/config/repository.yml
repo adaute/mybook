@@ -1,0 +1,7 @@
+services:
+
+    faq.faq.repository:
+           class: FaqBundle\Repository\FaqRepository
+           factory: ["@doctrine.orm.default_entity_manager", getRepository]
+           arguments: ['FaqBundle\Entity\Faq']
+           lazy: true

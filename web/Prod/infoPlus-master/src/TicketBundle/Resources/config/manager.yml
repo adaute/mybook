@@ -1,0 +1,12 @@
+services:
+
+  ticket.ticket_manager:
+          class: TicketBundle\Entity\Manager\TicketManager
+          arguments:  ["@ticket.ticket_repository",'@event_dispatcher']
+          calls:
+              - [setFormFactory, ['@form.factory']]
+              - [setRouter, ['@router']]
+              - [setSearchFormType, ['TicketBundle\Form\Type\Ticket\TicketFilterType']]
+              - [setAnswerFormType, ['TicketBundle\Form\Type\Ticket\AnswerType']]
+              - [setAnswerRepository, ['@ticket.answer_repository']]
+          lazy: true

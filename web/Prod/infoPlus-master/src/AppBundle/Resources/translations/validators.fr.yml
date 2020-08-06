@@ -1,0 +1,22 @@
+contact.firstname.notblank: Le prénom est obligatoire
+contact.lastname.notblank: Le nom de famille est obligatoire
+contact.email.notblank: L'email est obligatoire
+contact.category.notblank: Le choix d'une category est obligatoire
+contact.subject.notblank: Le sujet est obligatoire
+contact.additionnalInformation.notblank:  Les informations complémentaires sont oligatoire
+
+change_password.old_password.minlength: Le mot de passe doit avoir au moins {{ limit }} caractères
+
+registration.password.minlength: Le mot de passe doit avoir au moins {{ limit }} caractères
+registration.firstName.minlength: Le nom doit avoir au moins {{ limit }} caractères
+registration.lastName.minlength: Le prénom doit avoir au moins {{ limit }} caractères
+registration.email.notblank: L'email est obligatoire
+registration.cguRead: Vous devez accepter les CGU pour vous inscrire
+
+work.title.notblank: Le titre est obligatoire
+work.description.notblank: La description est obligatoire
+work.society.notblank: Le nom de la société est obligatoire
+work.email.notblank: L'email est obligatoire
+work.cellphone.notblank: Le n° de téléphone est obligatoire
+work.domain.notblank: Le domaine est obligatoire
+work.diplome.notblank: Le diplome est obligatoire

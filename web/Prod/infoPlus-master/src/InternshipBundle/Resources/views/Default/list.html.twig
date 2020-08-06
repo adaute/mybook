@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {{ render(controller('InternshipBundle:Internship:formFilter')) }}
+
+    <div style="text-align: center">
+        <h2>{{ 'internship.list'|trans() }}</h2>
+    </div>
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('internship_new') }}"><i class="glyphicon glyphicon-plus"></i></a>
+    {% endif %}
+
+    {% include 'InternshipBundle:Partials:internship.html.twig' with {'internship' : internship}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+
+{% endblock %}

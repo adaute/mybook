@@ -1,0 +1,40 @@
+services:
+
+    topic.abstract_topic.form.handler.strategy:
+            abstract: true
+            class: TopicBundle\Form\Handler\Topic\AbstractTopicFormHandlerStrategy
+            calls:
+               - [setTopicManager, ['@topic.topic_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    topic.topic.form.handler:
+            class: TopicBundle\Form\Handler\Topic\TopicFormHandler
+            calls:
+                - [setNewTopicFormHandlerStrategy, ['@topic.new_topic.form.handler.strategy']]
+                - [setUpdateTopicFormHandlerStrategy, ['@topic.update_topic.form.handler.strategy']]
+
+    topic.new_topic.form.handler.strategy:
+            class: TopicBundle\Form\Handler\Topic\NewTopicFormHandlerStrategy
+            parent: topic.abstract_topic.form.handler.strategy
+            arguments:
+                - "@security.token_storage"
+
+    topic.update_topic.form.handler.strategy:
+            class: TopicBundle\Form\Handler\Topic\UpdateTopicFormHandlerStrategy
+            parent: topic.abstract_topic.form.handler.strategy
+            arguments:
+                - "@security.authorization_checker"
+
+    topic.topic_search.form:
+            class: TopicBundle\Form\Type\TopicFilterType
+            tags:
+                - { name: form.type }
+
+    topic.topic.form:
+            class: TopicBundle\Form\Type\TopicType
+            arguments:
+                - "@topic.topic_manager"
+            tags:
+                - { name: form.type }

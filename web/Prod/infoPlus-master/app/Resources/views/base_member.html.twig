@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="row">
+
+        <div class="col-md-3">
+            {# block menu de l'espace membre #}
+            <ul class="nav nav-pills nav-stacked">
+                <li class="{% block active_setting %}{% endblock %}"><a href="{{ path('user_dashboard') }}">Home</a></li>
+                <li class="{% block active_invoice %}{% endblock %}"><a href="{{ path('user_invoice') }}">Facture(s)</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            {# block avec les onglets #}
+            <ul class="nav nav-tabs">
+                {% block nav_tab %}{% endblock %}
+            </ul>
+            {# block contenu des onglets #}
+            <div class="tab-content">
+                {% block nav_content %}{% endblock %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

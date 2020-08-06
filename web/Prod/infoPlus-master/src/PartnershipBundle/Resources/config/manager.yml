@@ -1,0 +1,10 @@
+services:
+
+    partnership.partnership_manager:
+              class: PartnershipBundle\Entity\Manager\PartnershipManager
+              arguments:  ["@partnership.partnership_repository",'@event_dispatcher']
+              calls:
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setSearchFormType, ['PartnershipBundle\Form\Type\PartnershipFilterType']]
+              lazy: true

@@ -1,0 +1,88 @@
+{% extends 'layout.html.twig' %}
+
+{% form_theme form 'DiaryBundle:Default:form_theme.html.twig' %}
+
+{% block title %}
+    {% if diary.id %}
+        {{ 'diary.modifier'|trans({'%titre%': diary.product.title}) }}
+    {% else %}
+        {{ 'diary.ajouter'|trans }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+            <fieldset>
+
+                {% if diary.id %}
+                    <legend><a href="{{ path('diary_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i> {{ 'edit' | trans({}, 'divers') }}
+                    </legend>
+                {% else %}
+                    <legend><a href="{{ path('diary_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        <i class="fa fa-lock"></i>{{ 'create' | trans({}, 'divers') }}
+                    </legend>
+                {% endif %}
+
+                <div class="form-group">
+                    <label for="title">{{ 'titre' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.product.title) }}
+                    {{ form_widget(form.product.title, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="description">{{ 'description' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.product.description) }}
+                    {{ form_widget(form.product.description, { 'attr': {'class': 'form-control'}}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="picture">{{ 'image' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.image) }}
+                    {{ form_row(form.image) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="lieu">{{ 'place' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.lieu) }}
+                    {{ form_widget(form.lieu, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="price">{{ 'price' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.product.price) }}
+                    {{ form_widget(form.product.price, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="remainingSpace">{{ 'remainingSpace' | trans({}, 'divers') }} :</label>
+                    {{ form_errors(form.remainingSpace) }}
+                    {{ form_widget(form.remainingSpace, { 'attr': {'class': 'form-control' }}) }}
+                </div>
+
+                <div class="form-group">
+                    <label for="dateDiary">{{ 'date' | trans({}, 'divers') }} :</label>
+                    {{ form_widget(form.dateDiary)}}
+                </div>
+
+                <div class="form-group">
+                    <label for="vip">{{ 'vip' | trans({}, 'divers') }} :</label>
+                    {{ form_widget(form.vip)}}
+                </div>
+
+              {% if  app.request.attributes.get('_route') != "diary_new" and diary.enabled != 0 %}
+                <div class="form-group">
+                    <label for="enabled">{{ 'enabled' | trans({}, 'divers') }} :</label>
+                    {{ form_widget(form.enabled)}}
+                </div>
+              {% endif %}
+
+            </fieldset>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'show' | trans({}, 'divers') }}{% endblock %}
+
+{% block active_diarys %}active{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            <legend>
+                <a href="{{ path('user_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                {{ user.username }}
+            </legend>
+
+            {% if user.image is not empty %}
+                <img
+                        src="{{ asset(user.image.getWebPath | imagine_filter('UserThumb')) }}"
+                        alt="{{ user.image.alt }}"
+                />
+            {% else %}
+                <img src="http://placehold.it/100X100&text=No image">
+            {% endif %}
+            <br><br>
+
+            <p><i class="glyphicon glyphicon-user"></i> {{ user.firstname }}-{{ user.lastname }}</p>
+            <p><i class="glyphicon glyphicon-envelope"></i> {{ user.email }}</p>
+            <p><i class="glyphicon glyphicon-star"></i> {{ user.roles[0] }}</p>
+            <p><i class="glyphicon glyphicon-heart"></i> {% if user.rank is null %}{{ 'none' | trans({}, 'divers') }}{% else %}{{ user.rank }}{% endif %}</p>
+            {% if user.citation is not null %}<p><i class="glyphicon glyphicon-comment"></i> {{ user.citation }}</p>{% endif %}
+
+        </div>
+    </div>
+{% endblock %}

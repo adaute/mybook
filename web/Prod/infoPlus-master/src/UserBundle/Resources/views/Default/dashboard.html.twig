@@ -1,0 +1,40 @@
+{# appel du squelette propre au menu setting #}
+{% extends 'UserBundle:Default/Setting:setting.html.twig' %}
+
+ {# block permettant de rendre l'onglet sur le menu tab actif #}
+{% block active_setting_tab %}active{% endblock %}
+
+ {# block contenu du tab #}
+{% block nav_content %}
+    <h3>{{ 'dashboard.title' |  trans }}</h3>
+    <p>{{ 'dashboard.message' |  trans }}</p>
+    <hr>
+    <p><a href="{{ path('userOnline_edit', { 'id': app.user.id })  }}"><i class="glyphicon glyphicon-pencil"></i></a> <b>{{ 'user.registration.image' |  trans }} : </b>
+        {% if app.user.image is not empty %}
+            <img
+                    src="{{ asset(app.user.image.getWebPath | imagine_filter('UserThumb')) }}"
+                    alt="{{ app.user.image.alt }}"
+            />
+        {% else %}
+            <img class="img-circle" src="http://placehold.it/100X100&text=No image">
+        {% endif %}
+    </p>
+    <hr>
+    <p><a href="{{ path('userOnline_edit', { 'id': app.user.id })  }}"><i class="glyphicon glyphicon-pencil"></i></a> <b>{{ 'user.registration.citation' |  trans }} :</b> {% if app.user.citation is null%} {{ 'none' | trans({}, 'divers') }} {% else %} {{ app.user.citation }}{% endif %} </p>
+    <hr>
+    <p><b>{{ 'user.registration.username' |  trans }} :</b> {{ app.user.username }}  </p>
+    <hr>
+    <p><b>{{ 'user.registration.firstName' |  trans }} :</b> {{ app.user.firstName }} </p>
+    <hr>
+    <p><b>{{ 'user.registration.lastName' |  trans }} :</b> {{ app.user.lastName }} </p>
+    <hr>
+    <p><b>{{ 'user.registration.email' |  trans }} :</b> {{ app.user.email }} </p>
+    <hr>
+    <p><b>{{ 'user.registration.roles' |  trans }} :</b> {{ app.user.roles[0] }}  </p>
+    <hr>
+    <p><b>{{ 'user.registration.rank' |  trans }} :</b> {% if app.user.rank is null%} {{ 'none' | trans({}, 'divers') }} {% else %} {{ app.user.rank }}{% endif %}</p>
+    <hr>
+    <a href="{{ path('user_unsubscribe', { 'id': app.user.id })  }}" class="btn btn-primary btn-lg btn-block"
+       role="button">{{ 'user.registration.unsubscribe' |  trans }}</a>
+{% endblock %}
+

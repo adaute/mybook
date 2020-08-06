@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {{ render(controller('TopicBundle:Topic:formFilter')) }}
+
+    <div style="text-align: center">
+        <h2>{{ 'topic.list'|trans() }}</h2>
+    </div>
+
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('topic_new') }}"><i class="glyphicon glyphicon-plus"></i></a>
+    {% endif %}
+
+    {% include 'TopicBundle:Partials:topic.html.twig' with {'topic' : topic} %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+services:
+
+    partnership.abstract_partnership.form.handler.strategy:
+            abstract:  true
+            class: PartnershipBundle\Form\Handler\Partnership\AbstractPartnershipFormHandlerStrategy
+            calls:
+               - [setPartnershipManager, ['@partnership.partnership_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    partnership.partnership.form.handler:
+            class: PartnershipBundle\Form\Handler\Partnership\PartnershipFormHandler
+            calls:
+                - [setNewPartnershipFormHandlerStrategy, ['@partnership.new_partnership.form.handler.strategy']]
+                - [setUpdatePartnershipFormHandlerStrategy, ['@partnership.update_partnership.form.handler.strategy']]
+
+    partnership.new_partnership.form.handler.strategy:
+            class: PartnershipBundle\Form\Handler\Partnership\NewPartnershipFormHandlerStrategy
+            parent: partnership.abstract_partnership.form.handler.strategy
+            arguments:
+                - "@security.token_storage"
+
+    partnership.update_partnership.form.handler.strategy:
+            class: PartnershipBundle\Form\Handler\Partnership\UpdatePartnershipFormHandlerStrategy
+            parent: partnership.abstract_partnership.form.handler.strategy
+            arguments:
+                - "@security.authorization_checker"
+
+    partnership.partnership_search.form:
+            class: PartnershipBundle\Form\Type\PartnershipFilterType
+            tags:
+                - { name: form.type }
+
+    partnership.partnership.form:
+            class: PartnershipBundle\Form\Type\PartnershipType
+            arguments:
+                - "@partnership.partnership_manager"
+            tags:
+                - { name: form.type }

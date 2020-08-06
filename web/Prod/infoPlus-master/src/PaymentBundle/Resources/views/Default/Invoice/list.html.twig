@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {{ render(controller('PaymentBundle:Invoice:formFilter')) }}
+
+    <div style="text-align: center">
+        <h2>{{ 'invoice.list'|trans() }}</h2>
+    </div>
+
+    {% include 'PaymentBundle:Partials:Invoice/invoice.html.twig' with {'invoice' : invoice}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

@@ -1,0 +1,155 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+    <ui:define name="css"></ui:define>
+
+    <ui:define name="title">SR03-CrudQuizz </ui:define>
+
+    <ui:define name="content">
+
+        <h1 style="text-align: center">Gestion d'un questionnaire (modification/création)</h1><br/>
+
+        <b:container fluid="true">
+
+            <b:panel>
+                <f:facet name="heading">
+                    <b:badge style="background-color:green" value="ADD"/>
+                </f:facet>
+
+                <b:form id="form">
+
+                    <b:inputText label="Titre:" value="#{surveyBean.survey.title}"
+                                 required="#{not empty param[done.clientId]}"/><br/>
+
+                    <b:row>
+                        <b:column span="10">
+                            <b:selectOneMenu value="#{surveyBean.survey.subject}" label="Thème :"
+                                             autoUpdate="true" binding="#{theme}">
+                                <f:selectItems value="#{surveyBean.mapSubject}"/>
+                            </b:selectOneMenu> `
+                        </b:column>
+                        <b:column span="2">
+
+                            <b:modal id="amodal" title="Ajouter un théme" styleClass="modalTheme">
+                                <b:inputText value="#{surveyBean.subject.subject}" label="Thème: "
+                                             labelStyle="width:160px;"
+                                             size="40" required="#{not empty param[theme.clientId]}"/>
+                                <f:facet name="footer">
+                                    <b:commandButton value="Ok" look="primary" action="#{surveyBean.addSubject}"
+                                                     update="@none"/>
+                                </f:facet>
+                            </b:modal>
+
+                            <b:commandButton look="success"
+                                             style="margin-top:24px"
+                                             iconAwesome="plus"
+                                             value="Nouveau Thème"
+                                             oncomplete="$('.modalTheme').modal()"
+                                             update="@none"/>
+                        </b:column>
+                    </b:row>
+
+                    <b:commandButton action="#{surveyBean.addQuestion}"
+                                     look="success"
+                                     update="@form"
+                                     iconAwesome="plus"
+                                     value="Ajouter une question"/>
+
+                    <ui:repeat value="#{surveyBean.list_questions}" var="question">
+
+                        <b:panel look="info">
+
+                            <h:outputText value="Question #{surveyBean.list_questions.indexOf(question)+1}"
+                                          style="font-size:22px;"/>
+
+
+                            <b:commandButton action="#{surveyBean.MoveQuestion(question,'up')}" look="info"
+                                             update="@form" style="margin-left:10px;margin-right:5px;"
+                                             iconAwesome="chevron-circle-up"
+                                             disabled="#{surveyBean.list_questions.indexOf(question)==0}"/>
+
+                            <b:commandButton action="#{surveyBean.MoveQuestion(question,'down')}" look="info"
+                                             update="@form" style="margin-right:5px;"
+                                             iconAwesome="chevron-circle-down"
+                                             disabled="#{surveyBean.list_questions.indexOf(question)==surveyBean.list_questions.size()-1}"/>
+
+
+                            <b:commandButton action="#{surveyBean.removeQuestion(question)}" look="danger"
+                                             update="@form" iconAwesome="trash"
+                                             disabled="#{surveyBean.list_questions.size()==1}"/>
+
+                            <b:selectOneMenu value="#{question.answerId}"
+                                             required="#{not empty param[done.clientId]}"
+                                             label="Indiquez le numéro de la réponse correct">
+                                <f:selectItem itemLabel="Réponse : #{surveyBean.answerToPos(question.answerId)}"
+                                              itemValue="#{surveyBean.answerToPos(question.answerId)-1}"/>
+                                <f:selectItems value="#{surveyBean.getAnswerUpdateCreate(question)}" var="answer"
+                                               itemLabel="#{surveyBean.getAnswerUpdateCreate(question).indexOf(answer)+1}"
+                                               itemValue="#{surveyBean.getAnswerUpdateCreate(question).indexOf(answer)}"/>
+                            </b:selectOneMenu>
+
+
+                            <b:inputText label="Intitulé:" value="#{question.title}"
+                                         required="#{not empty param[done.clientId]}"/>
+
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:outputText value="Réponses" style="font-size:20px;"/>
+                                <b:commandButton action="#{surveyBean.addAnswer(question)}" look="success"
+                                                 iconAwesome="plus" value="Nouvelle réponse"
+                                                 style="margin-left:30px;" ajax="true" update="@form"/>
+                            </h:panelGrid>
+
+                            <ui:repeat value="#{surveyBean.getAnswerUpdateCreate(question)}" var="answer">
+                                <h:panelGrid columns="5" cellpadding="5">
+
+                                    <b:inputText
+                                            label="Réponse #{surveyBean.getAnswerUpdateCreate(question).indexOf(answer)+1}:"
+                                            value="#{answer.label}"
+                                            required="#{not empty param[done.clientId]}"/>
+
+                                    <b:commandButton action="#{surveyBean.MoveAnswer(question,answer,'up')}" look="info"
+                                                     update="@form" iconAwesome="chevron-circle-up"
+                                                     style="margin-left:10px; margin-right:10px"
+                                                     disabled="#{surveyBean.getAnswerUpdateCreate(question).indexOf(answer)==0}"/>
+
+                                    <b:commandButton action="#{surveyBean.MoveAnswer(question,answer,'down')}"
+                                                     look="info"
+                                                     update="@form" style=" margin-right:10px"
+                                                     iconAwesome="chevron-circle-down"
+                                                     disabled="#{surveyBean.getAnswerUpdateCreate(question).indexOf(answer)==surveyBean.getAnswerUpdateCreate(question).size()-1}">
+                                    </b:commandButton>
+
+                                    <b:commandButton action="#{surveyBean.removeAnswer(question,answer)}"
+                                                     look="danger" update="@form" iconAwesome="trash"
+                                                     disabled="#{surveyBean.getAnswerUpdateCreate(question).size()==2}"/>
+
+                                </h:panelGrid>
+                            </ui:repeat>
+
+
+                        </b:panel>
+                    </ui:repeat>
+
+                    <b:commandButton id="send" value="Envoyer" action="#{surveyBean.createUpdateQuiz}"
+                                     look="primary" ajax="true" update="@form" binding="#{done}"/>
+
+                    <b:growl for="send" id="growlSpecific" placementFrom="top" show-detail="true"
+                             global-only="false"
+                             show-summary="true" allow-dismiss="true"
+                             animation-enter="animated bounceInDown"
+                             animation-exit="animated flipOutX"
+                             escape="true"/>
+
+                </b:form>
+
+            </b:panel>
+
+        </b:container>
+
+    </ui:define>
+
+</ui:composition>

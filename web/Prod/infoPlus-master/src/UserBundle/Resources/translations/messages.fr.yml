@@ -1,0 +1,64 @@
+user:
+    connexion:
+          new_password: Nouveau mot de passe
+          confirmation: Répétez le mot de passe
+          label: Connexion
+          username: Identifiant
+          password: Mot de passe
+          password_forgotten: Mot de passe oublié
+    registration:
+          label: Enregistrement
+          username: Identifiant
+          email: Email
+          firstName: Nom
+          lastName: Prénom
+          password: Mot de passe
+          confirm: Répéter le mot de passe
+          cguRead: J'ai lu et j'accepte les
+          cguLink: conditions générales d'utilisation
+          register: Envoyer
+          success: Your account has been created. An email has been sent to you.
+          roles: Role
+          rank: Rank
+          unsubscribe: Se désinscrire
+          citation: Citation
+          image: Avatar
+    change_password:
+          title: Changement de mot de passe
+          old_password: Ancien mot de passe
+          new_password: Nouveau mot de passe
+          repeat_new_password: Répéter le nouveau mot de passe
+          button: Modifier
+          success: Le mot passe est changé avec succè
+    reset_password:
+          identifier: Identifiant
+          button: Confirmer le changement
+          title: Réinitialisation du mot de passe
+          new_password: Nouveau mot de passe
+          repeat_new_password: Répéter le nouveau mot de passe
+          successful_reset: Your password has been resetted. You can login now.
+          success: A mail has been sent to your mailbox to reset your password.
+    request_password:
+          button: Envoyer la demande
+          title: Demande de changement de mot de passe
+          mail_sent: Un email vient de vous être envoyé pour modifier votre mot de passe
+    activation:
+         success: Votre compte est bien activé
+
+    list: Liste des utilisateurs
+
+dashboard:
+            cotisation: Vous avez déja cotisé pour cette année.
+            cotisationOn: Pour cotiser appuiyez sur le bouton
+            title: Bienvenue sur le dashboard
+            message: Bienvenue sur votre tableau de bord
+            setting:
+                    edit_profile: Editer mon profil
+                    edit_password: Edit mon mot de passe
+                    edit_subscription: Cotisation
+
+rank:
+    list: Liste des rangs
+
+invoice:
+   list_back: Retourner sur la liste de vos factures

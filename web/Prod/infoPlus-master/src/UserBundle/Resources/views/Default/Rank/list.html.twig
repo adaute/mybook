@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {{ render(controller('UserBundle:Rank:formFilter')) }}
+
+    <div style="text-align: center">
+        <h2>{{ 'rank.list'|trans() }}</h2>
+    </div>
+
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('rank_new') }}"><i class="glyphicon glyphicon-plus"></i></a>
+    {% endif %}
+
+    {% include 'UserBundle:Partials:Rank/rank.html.twig' with {'rank' : rank}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

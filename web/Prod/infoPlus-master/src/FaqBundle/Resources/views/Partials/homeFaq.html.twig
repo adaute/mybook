@@ -1,0 +1,61 @@
+{% extends 'layout.html.twig' %}
+{% block active_help %}active{% endblock %}
+{% block content %}
+
+    <div class="container">
+    <div class="col-md-4">
+        <ul class="nav nav-pills nav-stacked">
+            {% for categories in category %}
+                <li class="{% if loop.first %}active{% endif %}">
+                    <a data-toggle="tab" href="#{{ categories.slug }}">{{ categories.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <div class="tab-content">
+            {% for categories in category %}
+                <div id="{{ categories.slug }}" class="tab-pane fade {% if loop.first %}in active{% endif %}">
+                    <div class="panel-group" id="accordion{{ categories.id }}">
+                        {% for faqs in faq %}
+                            {% if faqs.category.slug == categories.slug %}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion{{ categories.id }}"
+                                               href="#{{ faqs.slug }}">
+                                                {% if app.request.locale == "en" %}
+                                                    {% if faqs.askEn is null %}
+                                                        {{ faqs.ask }}
+                                                    {% else %}
+                                                        {{ faqs.askEn }}
+                                                    {% endif %}
+                                                {% else %}
+                                                    {{ faqs.ask }}
+                                                {% endif %}
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="{{ faqs.slug }}" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            {% if app.request.locale == "en" %}
+                                                {% if faqs.answerEn is null %}
+                                                    {{ faqs.answer }}
+                                                {% else %}
+                                                    {{ faqs.answerEn }}
+                                                {% endif %}
+                                            {% else %}
+                                                {{ faqs.answer }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

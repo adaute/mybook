@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {{ render(controller('AppBundle:Category:formFilter'))}}
+
+    <div style="text-align: center">
+        <h2>{{ 'category.list'|trans() }}</h2>
+    </div>
+
+    {% if is_granted('ROLE_EDITOR') %}
+        <a class="btn btn-primary" href="{{ path('category_new') }}"> <i class="glyphicon glyphicon-plus"> </i> </a>
+    {% endif %}
+
+    {% include 'AppBundle:Partials:category.html.twig' with {'category' : category}  %}
+
+    <div style="text-align: center">
+        {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+    </div>
+{% endblock %}

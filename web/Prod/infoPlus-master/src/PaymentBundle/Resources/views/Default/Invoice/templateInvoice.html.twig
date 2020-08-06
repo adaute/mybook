@@ -1,0 +1,84 @@
+<link href="{{ asset('css/invoice.css') }}" rel="stylesheet">
+
+<div id="header" class="clearfix">
+       <h2>{{ website }}</h2>
+    <div class="company">
+        merchant_id : {{ invoice.MerchantId }} <br>
+        merchant_email : <a href="mailto:{{ invoice.MerchantEmail }}">  {{ invoice.MerchantEmail }} </a>
+    </div>
+</div>
+
+<div id="details" class="clearfix">
+
+    <div id="client">
+        <div class="to"> {{ invoice.recipientName }}</div>
+        <h2 class="name">{{ invoice.recipientName }}</h2>
+
+        <div class="address">
+            {{ invoice.line1 }} <br>
+            {{ invoice.postalCode }} {{ invoice.city }}
+            - {{ invoice.CountryCode }}
+        </div>
+    </div>
+
+    <div id="invoice">
+        <div class="date">
+            <h1>Invoice #{{ invoice.id }}</h1>
+            Date : {{ invoice.dateInvoice |date('d-m-Y H:i:s') }}<br/>
+        </div>
+    </div>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0">
+
+    <thead>
+    <tr>
+        <th class="no">#</th>
+        <th class="desc" style="text-align: center">Description</th>
+        <th class="qt">Quantité</th>
+        <th class="total">Sub Total</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td class="no">{{ invoice.product.id }}</td>
+            <td class="desc">{{ invoice.product.title }} : {{ invoice.product.description }}</td>
+            <td class="qt">1</td>
+            <td class="total">{{ invoice.product.price }} &euro;</td>
+        </tr>
+
+        {% if invoice.product.price != invoice.amountPrice %}
+            {% set reduction = invoice.product.price*(10/100) %}
+            <tr>
+                <td class="no"> </td>
+                <td class="desc"> Reduction de 10%</td>
+                <td class="qt">1</td>
+                <td class="total"> - {{ reduction }} &euro;</td>
+            </tr>
+        {% endif %}
+
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td colspan="2"></td>
+        <td class="first">Sub Total :</td>
+        <td class="first">{{ invoice.amountPrice }} &euro;</td>
+    </tr>
+
+    <tr>
+        <td colspan="2"></td>
+        <td class="first" colspan="1">TAX :</td>
+        <td class="first"> N/A</td>
+    </tr>
+
+    <tr>
+        <td colspan=2"></td>
+        <td class="last" colspan="1">Total :</td>
+        <td class="last">{{ invoice.amountPrice }} &euro;</td>
+    </tr>
+    </tfoot>
+</table>
+

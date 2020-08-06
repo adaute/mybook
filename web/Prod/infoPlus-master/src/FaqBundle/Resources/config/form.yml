@@ -1,0 +1,40 @@
+services:
+
+    faq.abstract_faq.form.handler.strategy:
+              abstract:  true
+              class: FaqBundle\Form\Handler\Faq\AbstractFaqFormHandlerStrategy
+              calls:
+                 - [setFaqManager, ['@faq.manager_service']]
+                 - [setFormFactory, ['@form.factory']]
+                 - [setRouter, ['@router']]
+                 - [setTranslator, ['@translator']]
+
+    faq.faq.form.handler:
+              class: FaqBundle\Form\Handler\Faq\FaqFormHandler
+              calls:
+                  - [setNewFaqFormHandlerStrategy, ['@faq.new_faq.form.handler.strategy']]
+                  - [setUpdateFaqFormHandlerStrategy, ['@faq.update_faq.form.handler.strategy']]
+
+    faq.new_faq.form.handler.strategy:
+              class: FaqBundle\Form\Handler\Faq\NewFaqFormHandlerStrategy
+              parent: faq.abstract_faq.form.handler.strategy
+              arguments:
+                  - "@security.token_storage"
+
+    faq.update_faq.form.handler.strategy:
+              class: FaqBundle\Form\Handler\Faq\UpdateFaqFormHandlerStrategy
+              parent: faq.abstract_faq.form.handler.strategy
+              arguments:
+                  - "@security.authorization_checker"
+
+    faq.faq_search.form:
+              class: FaqBundle\Form\Type\Faq\FaqFilterType
+              tags:
+                  - { name: form.type }
+
+    faq.faq.form:
+              class: FaqBundle\Form\Type\Faq\FaqType
+              arguments:
+                  - "@faq.manager_service"
+              tags:
+                  - { name: form.type }

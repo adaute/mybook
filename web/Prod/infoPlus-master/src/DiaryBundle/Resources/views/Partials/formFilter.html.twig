@@ -1,0 +1,61 @@
+{% form_theme form "bootstrap_3_horizontal_layout.html.twig" %}
+
+{{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+
+<div class="form-group">
+    {{ form_label(form.product.title) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.product.title) }}
+    </div>
+</div>
+
+<div class="form-group">
+    {{ form_label(form.product.price) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.product.price) }}
+    </div>
+</div>
+
+<div class="form-group">
+    {{ form_label(form.lieu) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.lieu) }}
+    </div>
+</div>
+<div class="form-group">
+    {{ form_label(form.remainingSpace) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.remainingSpace) }}
+    </div>
+</div>
+
+<div class="form-group">
+    {{ form_label(form.dateDiary) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.dateDiary) }}
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-2"></div>
+    {{ form_label(form.vip) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.vip) }}
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-2"></div>
+    {{ form_label(form.enabled) }}
+    <div class="col-sm-10">
+        {{ form_widget(form.enabled) }}
+    </div>
+</div>
+
+<div style="text-align: center">
+    <button type="submit" class="btn btn-primary btn-lg">{{ 'filter' | trans({}, 'divers') }}</button>
+    <input type="reset" class="btn btn-warning btn-lg" value="{{ 'reset' | trans({}, 'divers') }}" onclick="window.location.href='{{ path('diary_list') }}'"/>
+</div>
+<hr>
+{{ form_end(form) }}
+</form>

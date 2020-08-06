@@ -1,0 +1,73 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'header.diary'|trans }}{% endblock %}
+
+{% block active_diary %}active{% endblock %}
+
+{% block content %}
+    {% if diary is  not empty %}
+        <div class="row">
+            {% for diary in diary %}
+                <div class="col-xs-2 hidden-xs">
+                    <br><br>
+                    {% if diary.image %}
+                        <img
+                                src="{{ asset(diary.image.getWebPath | imagine_filter('diaryThumb')) }}"
+                                alt="{{ diary.image.alt }}"
+                        />
+                    {% else %}
+                        <img src="http://placehold.it/180X150&text=No image">
+                    {% endif %}
+                </div>
+
+                <div class="col-md-10">
+                    <h3>{% if diary.vip == true %}<i class="glyphicon glyphicon-star"></i>{% endif %}{{ diary.product.title }}
+                    </h3>
+                    <ul class="list-inline">
+                        <li><i class="glyphicon glyphicon-calendar"></i> {{ diary.dateDiary |date('d-m-Y H:i') }}</li>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> {{ diary.lieu }}</li>
+                        <li><i class="glyphicon glyphicon-barcode"></i> {{ diary.product.price }}&euro;</li>
+                    </ul>
+                    <p><i class="glyphicon glyphicon-warning-sign"></i> Place(s) restante(s)
+                        : {{ diary.remainingSpace }}</p>
+
+                    <p>{{ diary.product.description }}</p>
+
+                    {% set flag = 0 %}
+                    <p>
+                        {% if invoice is not empty %}
+                            {% for invoice in invoice %}
+                                {% if invoice.product.id  == diary.product.id %}
+                                    {% set flag = 1 %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {% if flag  == 0 %}
+                            {% if diary.vip == false %}
+                                <a href="{{ path('payment_diary', {'id': diary.id }) }}" class="btn btn-primary"
+                                   role="button">Participer</a>
+                            {% else %}
+                                {% if rank == null%}
+                                    <a href="{{ path('diary') }}" class="btn btn-primary"
+                                       role="button">Cotiser pour en profiter</a>
+                                {% else %}
+                                    <a href="{{ path('payment_diary', {'id': diary.id }) }}" class="btn btn-primary"
+                                       role="button">Participer</a>
+
+                                {% endif %}
+
+                            {% endif %}
+
+                        {% else %}
+                            <a href="{{ path('user_invoice') }}" class="btn btn-danger" role="button">Vous participez
+                                déja </a>
+                        {% endif %}
+                    </p>
+                </div>
+            {% endfor %}
+            <div style="text-align: center">
+                {% include 'CoreBundle:partials:pagination.html.twig' with {'pagination' : pagination} %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

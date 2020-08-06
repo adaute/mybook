@@ -1,0 +1,21 @@
+{% extends '::base_member.html.twig' %}
+
+ {# block permettant de rendre l'onglet sur le menu actif #}
+{% block active_setting %}active{% endblock %}
+
+ {# block menu du tab #}
+{% block nav_tab %}
+    <li class="{% block active_setting_tab %}{% endblock %}">
+        <a href="{{ path ('user_dashboard') }}">{{ 'dashboard.setting.edit_profile' |  trans }}</a>
+    </li>
+    <li class="{% block active_password_tab %}{% endblock %}">
+        <a href="{{ path ('change_password') }}">{{ 'dashboard.setting.edit_password' |  trans }}</a>
+    </li>
+    <li class="{% block active_subscription_tab %}{% endblock %}">
+        <a href="{{ path ('user_cotisation') }}">{{ 'dashboard.setting.edit_subscription' |  trans }}</a>
+    </li>
+{% endblock %}
+
+ {# block contenu du tab #}
+{% block nav_content %}{% endblock %}
+

@@ -1,0 +1,7 @@
+services:
+
+    diary.diary_repository:
+                class: DiaryBundle\Repository\DiaryRepository
+                factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                arguments: ['DiaryBundle\Entity\Diary']
+                lazy: true

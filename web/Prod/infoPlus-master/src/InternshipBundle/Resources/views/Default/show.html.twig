@@ -1,0 +1,36 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'internship.fiche'|trans({ '%titre%': internship.title}) }}{% endblock %}
+
+{% block active_internships %}active{% endblock %}
+
+{% block content %}
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="well">
+            <legend>
+                {% if is_granted('ROLE_EDITOR') %}
+                    <a href="{{ path('internship_list') }}"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                    {{ internship.title }}
+                    {% if  internship.enabled == 1 %}
+                        <i class="glyphicon glyphicon glyphicon-ok"></i>
+                    {% else %}
+                        <i class="glyphicon glyphicon-remove"></i>
+                    {% endif %}
+                {% endif %}
+            </legend>
+            <ul class="list-inline">
+                <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> {{ internship.society }} </li>
+                {% if  internship.phone %}
+                    <li><i class="glyphicon glyphicon-phone"></i> {{ internship.phone }}</li>{% endif %}
+                <li><i class="glyphicon glyphicon-envelope"></i> {{ internship.email }}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><i class="glyphicon glyphicon-calendar"></i> {{ internship.createdAt |date('d-m-Y') }}</li>
+                <li><i class="glyphicon glyphicon-modal-window"></i> {{ internship.field }} </li>
+                <li><i class="glyphicon glyphicon-education"></i> {{ internship.diploma }}</li>
+            </ul>
+            <p>{{ internship.description }}</p>
+            <br>
+        </div>
+    </div>
+{% endblock %}

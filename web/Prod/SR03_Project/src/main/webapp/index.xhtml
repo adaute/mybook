@@ -1,0 +1,26 @@
+<ui:composition template="/WEB-INF/templatetags/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:define name="title">SR03-Index </ui:define>
+    <ui:define name="content">
+        <b:container fluid="true">
+            <b:row>
+                <b:column col-md="11">
+                    <b:well>
+                        <center>
+                            <b:image value="assets/images/utc.png" alt="" width="72" height="72"/>
+                            <h3>Welcome!</h3>
+                            <b:button icon-size="3x" iconAwesome="thumbs-up"
+                                      value="Commencer la visite !" href="#{appUrlStore.loginUrl}"
+                                      look="info" title="icon-size='3x'"/>
+                        </center>
+                    </b:well>
+                </b:column>
+            </b:row>
+        </b:container>
+    </ui:define>
+</ui:composition>
+
+

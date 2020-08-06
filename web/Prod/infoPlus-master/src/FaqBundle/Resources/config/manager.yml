@@ -1,0 +1,12 @@
+services:
+
+    faq.manager_service:
+          class: FaqBundle\Entity\Manager\FaqManager
+          arguments:  ["@faq.faq.repository"]
+          calls:
+             - [setFormFactory, ['@form.factory']]
+             - [setRouter, ['@router']]
+             - [setSearchFormType, ['FaqBundle\Form\Type\Faq\FaqFilterType']]
+          lazy: true
+          tags:
+              - { name: faq.manager_services }

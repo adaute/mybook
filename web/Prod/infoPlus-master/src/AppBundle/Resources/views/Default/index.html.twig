@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'header.home'|trans }}{% endblock %}
+
+{% block active_home %}active{% endblock %}
+
+{% block content %}
+    {{ render(controller('TopicBundle:Topic:home')) }}
+
+    <hr><br>
+
+    {{ render(controller('UserBundle:Rank:rank')) }}
+
+    <hr>
+
+{% endblock %}

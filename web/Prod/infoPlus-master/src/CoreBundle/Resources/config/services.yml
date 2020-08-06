@@ -1,0 +1,14 @@
+services:
+
+   corebundle.mailer_service:
+      class: CoreBundle\Services\Mailer
+      arguments:
+          - "@mailer"
+
+   corebundle.collection_converter:
+      class: CoreBundle\Entity\Converter\Collection
+      arguments:
+          - "@doctrine"
+          - "@service_container"
+      tags:
+          - { name: request.param_converter, converter: project_collection_converter }

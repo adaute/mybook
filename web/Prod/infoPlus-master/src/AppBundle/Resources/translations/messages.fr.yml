@@ -1,0 +1,29 @@
+# Menu
+header :
+    home : Accueil
+    diary : Agenda
+    internship : Stages
+    internshipSend: Déposer une annonce
+    internshipOffers: Offres de stages
+    partner : Partenaires
+    contact_us : Contactez-nous
+    language : Langue
+    help : Aide
+    login_subscription : Login/Inscription
+
+admin:
+      topic: Administration des actualités
+      rank: Administration des rangs
+      diary: Administration des êvenements
+      category: Administration des catégories
+      faq: Administration des F.A.Q
+      product: Administration des produits
+      invoice: Administration des factures
+      ticket: Administration des tickets
+      user: Administration des utilisateurs
+      partnership: Administration des partenaires
+      internship: Administration des stages
+category:
+      list: Liste des category
+      fiche: CategoryShow
+      list_back: Retourner sur la liste des category

@@ -1,0 +1,125 @@
+services:
+    user.user_registration.handler:
+        class: UserBundle\Form\Handler\User\RegistrationFormHandler
+        arguments: ['@user.user_manager']
+
+    user.user_change_password.handler:
+        class: UserBundle\Form\Handler\User\ChangePasswordFormHandler
+        arguments: ['@user.user_manager']
+
+    user.user_request_password.handler:
+        class: UserBundle\Form\Handler\User\RequestPasswordFormHandler
+        arguments: ['@user.user_manager']
+
+    user.user_reset_password.handler:
+        class: UserBundle\Form\Handler\User\ResetPasswordFormHandler
+        arguments: ['@user.user_manager']
+
+    form.type.change_password:
+        class: UserBundle\Form\Type\User\ChangePasswordType
+        tags:
+            - { name: form.type }
+        arguments: ['@user.user_manager']
+
+    form.type.request_password:
+        class: UserBundle\Form\Type\User\RequestPasswordType
+        tags:
+            - { name: form.type }
+        arguments: ['@user.user_manager']
+
+    form.type.reset_password:
+        class: UserBundle\Form\Type\User\ResetPasswordType
+        tags:
+            - { name: form.type }
+        arguments: ['@user.user_manager', '@request_stack']
+
+    user.abstract_rank.form.handler.strategy:
+        abstract:  true
+        class: UserBundle\Form\Handler\Rank\AbstractRankFormHandlerStrategy
+        calls:
+            - [setRankManager, ['@user.rank_manager']]
+            - [setFormFactory, ['@form.factory']]
+            - [setRouter, ['@router']]
+            - [setTranslator, ['@translator']]
+
+    user.rank.form.handler:
+        class: UserBundle\Form\Handler\Rank\RankFormHandler
+        calls:
+            - [setNewRankFormHandlerStrategy, ['@user.new_rank.form.handler.strategy']]
+            - [setUpdateRankFormHandlerStrategy, ['@user.update_rank.form.handler.strategy']]
+
+    user.new_rank.form.handler.strategy:
+        class: UserBundle\Form\Handler\Rank\NewRankFormHandlerStrategy
+        parent: user.abstract_rank.form.handler.strategy
+        arguments:
+                  - "@security.token_storage"
+
+    user.update_rank.form.handler.strategy:
+        class: UserBundle\Form\Handler\Rank\UpdateRankFormHandlerStrategy
+        parent: user.abstract_rank.form.handler.strategy
+        arguments:
+                  - "@security.authorization_checker"
+
+    user.rank_search.form:
+        class: UserBundle\Form\Type\Rank\RankFilterType
+        tags:
+            - { name: form.type }
+
+    user.rank.form:
+        class: UserBundle\Form\Type\Rank\RankType
+        tags:
+            - { name: form.type }
+        arguments: ['@user.rank_manager']
+
+
+    user.abstract_user.form.handler.strategy:
+                abstract:  true
+                class: UserBundle\Form\Handler\User\AbstractUserFormHandlerStrategy
+                calls:
+                   - [setUserManager, ['@user.user_manager']]
+                   - [setFormFactory, ['@form.factory']]
+                   - [setRouter, ['@router']]
+                   - [setTranslator, ['@translator']]
+
+    user.user.form.handler:
+                class: UserBundle\Form\Handler\User\UserFormHandler
+                calls:
+                    - [setNewUserFormHandlerStrategy, ['@user.new_user.form.handler.strategy']]
+                    - [setUpdateUserFormHandlerStrategy, ['@user.update_user.form.handler.strategy']]
+                    - [setProfilUserFormHandlerStrategy, ['@user.profil_user.form.handler.strategy']]
+
+    user.new_user.form.handler.strategy:
+                class: UserBundle\Form\Handler\User\NewUserFormHandlerStrategy
+                parent: user.abstract_user.form.handler.strategy
+                arguments:
+                    - "@security.token_storage"
+
+    user.profil_user.form.handler.strategy:
+                class: UserBundle\Form\Handler\User\ProfilUserFormHandlerStrategy
+                parent: user.abstract_user.form.handler.strategy
+                arguments:
+                    - "@security.authorization_checker"
+
+    user.update_user.form.handler.strategy:
+                class: UserBundle\Form\Handler\User\UpdateUserFormHandlerStrategy
+                parent: user.abstract_user.form.handler.strategy
+                arguments:
+                    - "@security.authorization_checker"
+
+    user.user_search.form:
+                class: UserBundle\Form\Type\User\UserFilterType
+                tags:
+                    - { name: form.type }
+
+    user.user.form:
+                class: UserBundle\Form\Type\User\UserType
+                arguments:
+                    - "@user.user_manager"
+                tags:
+                    - { name: form.type }
+    user.profil.form:
+                    class: UserBundle\Form\Type\User\UserOnlineType
+                    arguments:
+                        - "@user.user_manager"
+                    tags:
+                        - { name: form.type }

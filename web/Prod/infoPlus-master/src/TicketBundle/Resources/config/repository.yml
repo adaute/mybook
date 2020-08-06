@@ -1,0 +1,13 @@
+services:
+
+     ticket.ticket_repository:
+                class: TicketBundle\Repository\TicketRepository
+                factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                arguments: ['TicketBundle\Entity\Ticket']
+                lazy: true
+
+     ticket.answer_repository:
+                     class: TicketBundle\Repository\AnswerRepository
+                     factory: ["@doctrine.orm.default_entity_manager", getRepository]
+                     arguments: ['TicketBundle\Entity\Answer']
+                     lazy: true

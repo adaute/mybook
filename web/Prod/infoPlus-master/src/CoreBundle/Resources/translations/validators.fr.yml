@@ -1,0 +1,2 @@
+change_password.new_password.minlength: Le mot de passe doit avoir au moins {{ limit }} caractères
+positive_value : Le nombres doit être possitif

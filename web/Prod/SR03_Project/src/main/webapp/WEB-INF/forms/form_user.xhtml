@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<div class="form-group">
+    <h:outputLabel for="firstname">Prénom</h:outputLabel>
+    <h:inputText id="firstname" class="form-control" value="#{userBean.user.firstName}" required="true" label="Prénom">
+        <f:validateLength for="firstname" minimum="3"/>
+    </h:inputText>
+</div>
+<div class="form-group">
+    <h:outputLabel for="lastname">Nom</h:outputLabel>
+    <h:inputText id="lastname" class="form-control" value="#{userBean.user.lastName}" required="true" label="Nom">
+        <f:validateLength for="lastname" minimum="3"/>
+    </h:inputText>
+</div>
+<div class="form-group">
+    <h:outputLabel for="email">Email</h:outputLabel>
+    <h:inputText id="email" class="form-control" value="#{userBean.user.email}" required="true" label="Email"/>
+</div>
+
+<div class="form-group">
+    <h:outputLabel for="compagny">Societé</h:outputLabel>
+    <h:inputText id="compagny" class="form-control" value="#{userBean.user.compagny}" required="true" label="Société">
+        <f:validateLength for="compagny" minimum="3"/>
+    </h:inputText>
+</div>
+
+<div class="form-group">
+    <h:outputLabel for="phone">Téléphone</h:outputLabel>
+    <h:inputText id="phone" class="form-control" value="#{userBean.user.phone}" placeholder="06XXXXXXXX" required="true"
+                 label="Téléphone">
+        <f:validateLength for="compagny" minimum="10"/>
+    </h:inputText>
+</div>
+
+<div class="form-check">
+    <h:outputLabel class="form-check-h:outputLabel" for="isAdmin">Statut</h:outputLabel>
+    <h:selectOneMenu class="form-control" id="isAdmin" value="#{userBean.user.statutUser}">
+        <f:selectItem itemValue="1" itemLabel="Admin"/>
+        <f:selectItem itemValue="0" itemLabel="Stagiaire"/>
+    </h:selectOneMenu>
+</div>
+
+<div class="form-check">
+    <h:selectBooleanCheckbox class="form-check-input" id="isActive" value="#{userBean.user.status}"/>
+    <h:outputLabel class="form-check-h:outputLabel" for="isActive">Est actif</h:outputLabel>
+</div>
+</html>

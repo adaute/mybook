@@ -1,0 +1,40 @@
+services:
+
+    internship.abstract_internship.form.handler.strategy:
+            abstract:  true
+            class: InternshipBundle\Form\Handler\Internship\AbstractInternshipFormHandlerStrategy
+            calls:
+               - [setInternshipManager, ['@internship.internship_manager']]
+               - [setFormFactory, ['@form.factory']]
+               - [setRouter, ['@router']]
+               - [setTranslator, ['@translator']]
+
+    internship.internship.form.handler:
+            class: InternshipBundle\Form\Handler\Internship\InternshipFormHandler
+            calls:
+                - [setNewInternshipFormHandlerStrategy, ['@internship.new_internship.form.handler.strategy']]
+                - [setUpdateInternshipFormHandlerStrategy, ['@internship.update_internship.form.handler.strategy']]
+
+    internship.new_internship.form.handler.strategy:
+            class: InternshipBundle\Form\Handler\Internship\NewInternshipFormHandlerStrategy
+            parent: internship.abstract_internship.form.handler.strategy
+            arguments:
+                - "@security.token_storage"
+
+    internship.update_internship.form.handler.strategy:
+            class: InternshipBundle\Form\Handler\Internship\UpdateInternshipFormHandlerStrategy
+            parent: internship.abstract_internship.form.handler.strategy
+            arguments:
+                - "@security.authorization_checker"
+
+    internship.internship_search.form:
+            class: InternshipBundle\Form\Type\InternshipFilterType
+            tags:
+                - { name: form.type }
+
+    internship.internship.form:
+            class: InternshipBundle\Form\Type\InternshipType
+            arguments:
+                - "@internship.internship_manager"
+            tags:
+                - { name: form.type }

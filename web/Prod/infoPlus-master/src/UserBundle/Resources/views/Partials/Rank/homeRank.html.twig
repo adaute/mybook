@@ -1,0 +1,26 @@
+{% if rank is not empty %}
+    <div class="row">
+        {% for rank in rank %}
+            {% for user in user %}
+                {% if user.rank is not empty %}
+                    {% if rank.id == user.rank.id and rank.enabled == 1 and user.enabled == 1%}
+                        <div class="col-md-4 text-center">
+                            {% if user.image is not empty %}
+                                <img
+                                        src="{{ asset(user.image.getWebPath | imagine_filter('UserThumb')) }}"
+                                        alt="{{ user.image.alt }}"
+                                />
+                            {% else %}
+                                <img class="img-circle" src="http://placehold.it/100X100&text=No image">
+                            {% endif %}
+                            <h3>{{ user.rank.title }}</h3>
+                            <h5>{ {{ user.firstName }}-{{ user.lastName }} }</h5>
+                            <p>{{ user.citation }}</p>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endif %}
+

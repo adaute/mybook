@@ -1,0 +1,18 @@
+services:
+
+    paypal_payment.paypal:
+        class: PaymentBundle\Services\Paypal
+        arguments:
+            - "%payment.payment_organisms%"
+            - "%kernel.root_dir%"
+        lazy: true
+
+    paypal_payment.auth:
+        class: PaymentBundle\Services\PaymentAuthService
+        arguments:
+            - "@paypal_payment.paypal"
+
+    paypal_payment.payment:
+        class: PaymentBundle\Services\PaymentManagerService
+        arguments:
+            - "@paypal_payment.auth"
